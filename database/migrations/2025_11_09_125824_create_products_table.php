@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('slug')->unique()->nullable();
             $table->longText('description')->nullable();
             $table->integer('price')->nullable();
+            $table->string('certificate_image')->nullable();
             $table->timestamps();
         });
     }
