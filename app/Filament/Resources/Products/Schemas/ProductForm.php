@@ -42,13 +42,13 @@ class ProductForm
                 TextInput::make('price')
                     ->default(null),
 
-             FileUpload::make('certificate_image')
-    ->label('Certificate Image')
-    ->image()
-    ->disk('public')          // disk شما
-    ->directory('certificates') // مسیر داخل disk
-    ->preserveFilenames()     // اختیاری، اگر می‌خواهید اسم فایل تغییر نکند
-  
+                FileUpload::make('certificate_image')
+                    ->label('Certificate Image')
+                    ->image()
+                    ->disk('public')          // disk شما
+                    ->directory('certificates') // مسیر داخل disk
+                    ->preserveFilenames()     // اختیاری، اگر می‌خواهید اسم فایل تغییر نکند
+
 
 
             ]);
