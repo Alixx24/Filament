@@ -2,16 +2,16 @@
 
 namespace App\Filament\Resources\Products\Schemas;
 
-use App\Models\Category;
 use App\Models\Product;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Schema;
 use Illuminate\Support\Str;
 use Filament\Schemas\Components\Utilities\Set;
-use Filament\Tables\Columns\TextColumn;
 
 class ProductForm
 {
@@ -19,12 +19,15 @@ class ProductForm
     {
         return $schema
             ->components([
-                Select::make('category.name') // استفاده از relationship صحیح
+                // 🔹 انتخاب دسته‌بندی
+                Select::make('category_id') // بهتره به جای category.name، مستقیماً category_id استفاده بشه
                     ->label('Category')
                     ->relationship('category', 'name')
                     ->searchable()
                     ->placeholder('Select category')
                     ->preload(),
+
+                // 🔹 نام محصول
 
                 TextInput::make('name')
 
@@ -38,18 +41,39 @@ class ProductForm
                     ->dehydrated()
                     ->required()
                     ->unique(Product::class, 'slug', ignoreRecord: true),
+
+                // 🔹 توضیحات
                 Textarea::make('description'),
+
+                // 🔹 قیمت
                 TextInput::make('price')
+                    ->numeric()
                     ->default(null),
 
-                FileUpload::make('certificate_image')
-                    ->label('Certificate Image')
-                    ->image()
-                    ->disk('public')          // disk شما
-                    ->directory('certificates') // مسیر داخل disk
-                    ->preserveFilenames()     // اختیاری، اگر می‌خواهید اسم فایل تغییر نکند
+                Repeater::make('images')
+                    ->relationship('images')
+                    ->label('Product Images')
+                    ->schema([
+                        FileUpload::make('path')
+                            ->label('Image')
+                            ->image()
+                            ->disk('public')
+                            ->directory('products')
+                            ->preserveFilenames()
+                            ->visibility('public') 
+                            ->previewable(true) 
+                            ->openable()
+                            ->downloadable(), 
 
+                        TextInput::make('alt')
+                            ->label('Alt Text'),
 
+                        Toggle::make('is_main')
+                            ->label('Main Image'),
+                    ])
+                    ->columns(2)
+                    ->collapsed()
+                    ->createItemButtonLabel('➕ Add new image')
 
             ]);
     }

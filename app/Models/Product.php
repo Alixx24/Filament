@@ -9,10 +9,10 @@ class Product extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['category_id', 'name', 'slug', 'description', 'price', 'is_visible','certificate_image'];
-protected $casts = [
-    'certificate_images' => 'array',
-];
+    protected $fillable = ['category_id', 'name', 'slug', 'description', 'price', 'is_visible', 'certificate_image'];
+    protected $casts = [
+        'certificate_images' => 'array',
+    ];
 
     public function category()
     {
@@ -22,5 +22,10 @@ protected $casts = [
     public function attaches()
     {
         return $this->hasMany(Attach::class);
+    }
+
+    public function images()
+    {
+        return $this->morphMany(Image::class, 'imageable');
     }
 }
