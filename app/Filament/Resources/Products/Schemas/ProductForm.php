@@ -19,15 +19,13 @@ class ProductForm
     {
         return $schema
             ->components([
-                // 🔹 انتخاب دسته‌بندی
-                Select::make('category_id') // بهتره به جای category.name، مستقیماً category_id استفاده بشه
+              
+                Select::make('category_id') 
                     ->label('Category')
                     ->relationship('category', 'name')
                     ->searchable()
                     ->placeholder('Select category')
                     ->preload(),
-
-                // 🔹 نام محصول
 
                 TextInput::make('name')
 
@@ -42,10 +40,10 @@ class ProductForm
                     ->required()
                     ->unique(Product::class, 'slug', ignoreRecord: true),
 
-                // 🔹 توضیحات
+         
                 Textarea::make('description'),
 
-                // 🔹 قیمت
+               
                 TextInput::make('price')
                     ->numeric()
                     ->default(null),
