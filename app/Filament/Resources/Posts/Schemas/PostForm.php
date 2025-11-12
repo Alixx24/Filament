@@ -20,18 +20,23 @@ class PostForm
             ->components([
                 TextInput::make('title')
                     ->required(),
-                TextInput::make('slug')
-                    ->required(),
+            TextInput::make('slug')
+    ->required()
+    ->unique(
+        table: 'posts', // نام جدول دیتابیس
+        column: 'slug', // ستون مورد نظر
+        ignorable: fn ($record) => $record // تا در هنگام ویرایش خطا ندهد
+    ),
                 Textarea::make('summary')
                     ->default(null)
                     ->columnSpanFull(),
 
                 MarkdownEditor::make('content')->required()->columnSpanFull(),
 
-
-                TextInput::make('user_id')
-                    ->required()
-                    ->numeric(),
+   TextInput::make('user_id')
+    ->default(auth()->user()->id)
+    ->hidden()
+    ->required(),
                 Select::make('category_id')
                     ->label('Category')
                     ->relationship('category', 'name')

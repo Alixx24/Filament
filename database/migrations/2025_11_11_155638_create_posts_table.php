@@ -6,9 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
+
     public function up(): void
     {
         Schema::create('posts', function (Blueprint $table) {
@@ -19,7 +17,7 @@ return new class extends Migration
             $table->text('summary')->nullable(); 
             $table->longText('content'); 
 
-            // اطلاعات نویسنده و دسته‌بندی
+            
             $table->foreignId('user_id')->constrained()->onDelete('cascade'); 
             $table->foreignId('category_id')->nullable()->constrained()->nullOnDelete(); 
 
