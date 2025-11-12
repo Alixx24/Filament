@@ -3,7 +3,10 @@
 namespace App\Filament\Resources\Posts\Schemas;
 
 use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\Toggle;
@@ -22,19 +25,25 @@ class PostForm
                 Textarea::make('summary')
                     ->default(null)
                     ->columnSpanFull(),
-                Textarea::make('content')
-                    ->required()
-                    ->columnSpanFull(),
+
+                MarkdownEditor::make('content')->required()->columnSpanFull(),
+
+
                 TextInput::make('user_id')
                     ->required()
                     ->numeric(),
-                TextInput::make('category_id')
-                    ->numeric()
-                    ->default(null),
+                Select::make('category_id')
+                    ->label('Category')
+                    ->relationship('category', 'name')
+                    ->searchable()
+                    ->preload()
+                    ->required(),
                 Select::make('status')
                     ->options(['draft' => 'Draft', 'published' => 'Published', 'archived' => 'Archived'])
                     ->default('draft')
                     ->required(),
+
+                TagsInput::make('tags')->required(),
                 DateTimePicker::make('published_at'),
                 TextInput::make('meta_title')
                     ->default(null),
@@ -44,8 +53,13 @@ class PostForm
                     ->default(null),
                 TextInput::make('canonical_url')
                     ->default(null),
-                TextInput::make('thumbnail')
-                    ->default(null),
+
+                FileUpload::make('thumbnail')->disk('public')->directory('thumbnails')->default(null),
+
+
+
+
+
                 TextInput::make('alt_text')
                     ->default(null),
                 TextInput::make('views')

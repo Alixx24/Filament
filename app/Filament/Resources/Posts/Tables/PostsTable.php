@@ -8,6 +8,7 @@ use Filament\Actions\EditAction;
 use Filament\Actions\ForceDeleteBulkAction;
 use Filament\Actions\RestoreBulkAction;
 use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
@@ -22,10 +23,10 @@ class PostsTable
                     ->searchable(),
                 TextColumn::make('slug')
                     ->searchable(),
-                TextColumn::make('user_id')
+                TextColumn::make('author.name')
                     ->numeric()
                     ->sortable(),
-                TextColumn::make('category_id')
+                TextColumn::make('category.name')
                     ->numeric()
                     ->sortable(),
                 TextColumn::make('status'),
@@ -40,8 +41,11 @@ class PostsTable
                     ->searchable(),
                 TextColumn::make('canonical_url')
                     ->searchable(),
-                TextColumn::make('thumbnail')
-                    ->searchable(),
+         ImageColumn::make('thumbnail')
+    ->label('thumbnail')
+    ->getStateUsing(fn ($record) => asset('storage/' . $record->thumbnail))
+    ->height(80) // ارتفاع دلخواه
+    ->width(120),
                 TextColumn::make('alt_text')
                     ->searchable(),
                 TextColumn::make('views')

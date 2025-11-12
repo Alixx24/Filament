@@ -26,13 +26,15 @@ class Post extends Model
         'alt_text',
         'views',
         'is_featured',
+        'tags'
     ];
 
      protected $casts = [
         'published_at' => 'datetime',
         'is_featured' => 'boolean',
         'views' => 'integer',
-    ];
+        'tags' => 'array',
+        ];
 
 
     public function author()

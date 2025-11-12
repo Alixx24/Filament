@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('posts', function (Blueprint $table) {
-           
+              $table->id();
+
             $table->string('title'); 
             $table->string('slug')->unique(); 
             $table->text('summary')->nullable(); 
@@ -31,7 +32,8 @@ return new class extends Migration
             $table->string('meta_description', 300)->nullable(); 
             $table->string('meta_keywords')->nullable(); 
             $table->string('canonical_url')->nullable(); 
-
+            $table->json('tags')->nullable();
+            
             // images info
             $table->string('thumbnail')->nullable(); // تصویر شاخص
             $table->string('alt_text')->nullable(); // متن جایگزین برای تصویر (برای SEO تصاویر)
