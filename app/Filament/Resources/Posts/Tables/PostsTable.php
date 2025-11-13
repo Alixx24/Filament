@@ -41,11 +41,11 @@ class PostsTable
                     ->searchable(),
                 TextColumn::make('canonical_url')
                     ->searchable(),
-         ImageColumn::make('thumbnail')
-    ->label('thumbnail')
-    ->getStateUsing(fn ($record) => asset('storage/' . $record->thumbnail))
-    ->height(80) // ارتفاع دلخواه
-    ->width(120),
+                ImageColumn::make('thumbnail')
+                    ->label('thumbnail')
+                    ->getStateUsing(fn($record) => asset('storage/' . $record->thumbnail))
+                    ->height(80) 
+                    ->width(120),
                 TextColumn::make('alt_text')
                     ->searchable(),
                 TextColumn::make('views')
