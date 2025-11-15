@@ -3,10 +3,9 @@
       <footer class="text-center">
         <!-- Grid container -->
     
-        <div >
-         
-          <a class="text-body text-decoration-none" href="https://mdbootstrap.com/" >© 2025 Designed and Developed by Ali Mohammadi</a>
-        </div>
-      </footer>
+    <footer>
+  <p>© 2025 Growvixo. ყველა უფლება დაცულია.</p>
+</footer>
+
       <!-- Footer -->
     </section>

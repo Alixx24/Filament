@@ -68,8 +68,72 @@
             </div>
 
 
+{{-- services --}}
+
+<section id="services">
+  <h2>ჩვენი მომსახურება</h2>
+  <div class="service-cards">
+    <div class="card">
+      <h3>ციფრული მარკეტინგი</h3>
+      <p>ბრენდის ცნობადობის გაზრდა და მომხმარებელთა მოზიდვა.</p>
+    </div>
+    <div class="card">
+      <h3>სოციალური მედია</h3>
+      <p>ფეისბუქი, ინსტაგრამი და სხვა პლატფორმების მენეჯმენტი.</p>
+    </div>
+    <div class="card">
+      <h3>SEO & Analytics</h3>
+      <p>ძებნის სისტემებში უკეთესი პოზიციონირება და მონაცემთა ანალიზი.</p>
+    </div>
+  </div>
+</section>
+
+{{-- Portfolio --}}
+
+<section id="portfolio">
+  <h2>პორტფოლიო</h2>
+  <div class="projects">
+    <div class="project-card">
+      <img src="project1.jpg" alt="პროექტი 1">
+      <h3>პროექტი 1</h3>
+    </div>
+    <div class="project-card">
+      <img src="project2.jpg" alt="პროექტი 2">
+      <h3>პროექტი 2</h3>
+    </div>
+  </div>
+</section>
 
 
+
+{{-- blog  --}}
+
+<section id="blog">
+  <h2>ბლოგი</h2>
+  <div class="blog-posts">
+    <div class="post-card">
+      <h3>ციფრული მარკეტინგის ტენდენციები 2025-ში</h3>
+      <p>შეიტყვეთ, რა მიმართულებით ვითარდება ინდუსტრია.</p>
+    </div>
+    <div class="post-card">
+      <h3>SEO საუკეთესო პრაქტიკები</h3>
+      <p>როგორ მოიტანოთ მეტი ტრაფიკი ორგანული გზით.</p>
+    </div>
+  </div>
+</section>
+
+{{-- Contact --}}
+
+<section id="contact">
+  <h2>კონტაქტი</h2>
+  <p>გაგვიზიარეთ თქვენი პროექტი ან შეკითხვა, ჩვენ დაგიკავშირდებით.</p>
+  <form>
+    <input type="text" placeholder="სახელი" required>
+    <input type="email" placeholder="ელ.ფოსტა" required>
+    <textarea placeholder="შეტყობინება"></textarea>
+    <button type="submit">გაგზავნა</button>
+  </form>
+</section>
 
             {{-- 3 cards --}}
             <div class="d-flex justify-content-center gap-3 mt-5" style="flex-wrap: nowrap;">

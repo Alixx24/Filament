@@ -432,6 +432,210 @@
                 height: 450px;
             }
         }
+
+
+
+
+
+
+
+/* Services */
+
+        #services {
+    padding: 80px 20px;
+    text-align: center;
+    background: #f7f9fc;
+}
+
+#services h2 {
+    font-size: 36px;
+    color: #4A6CF7;
+    margin-bottom: 50px;
+}
+
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    max-width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: #00C8A0;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.card p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+
+
+/* Portfolio */
+#portfolio {
+    padding: 80px 20px;
+    background: #eef2f6;
+    text-align: center;
+}
+
+#portfolio h2 {
+    font-size: 36px;
+    color: #4A6CF7;
+    margin-bottom: 50px;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.project-card {
+    width: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.project-card img {
+    width: 100%;
+    display: block;
+}
+
+.project-card h3 {
+    background: #4A6CF7;
+    color: white;
+    margin: 0;
+    padding: 15px 0;
+    font-size: 20px;
+}
+
+
+
+/* Blog */
+#blog {
+    padding: 80px 20px;
+    background: white;
+    text-align: center;
+}
+
+#blog h2 {
+    font-size: 36px;
+    color: #4A6CF7;
+    margin-bottom: 50px;
+}
+
+.blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.post-card {
+    background: #f7f9fc;
+    border-radius: 12px;
+    padding: 25px;
+    max-width: 300px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.post-card:hover {
+    transform: translateY(-10px);
+}
+
+.post-card h3 {
+    color: #00C8A0;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.post-card p {
+    color: #555;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+/* Contact */
+#contact {
+    padding: 80px 20px;
+    background: #eef2f6;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 36px;
+    color: #4A6CF7;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+#contact form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact input, #contact textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+}
+
+#contact button {
+    background: #4A6CF7;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#contact button:hover {
+    background: #00C8A0;
+}
+
     </style>
 
 
