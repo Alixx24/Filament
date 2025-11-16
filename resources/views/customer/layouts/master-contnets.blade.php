@@ -9,7 +9,7 @@
 
     <title>@yield('title', 'HRM Project')</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css" integrity="..."
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -638,6 +638,116 @@
         }
     </style>
 
+    <style>
+      * { margin:0; padding:0; box-sizing:border-box; font-family: 'Poppins', sans-serif; }
+body { background-color: #EEF2F6; }
+
+header {
+  width: 100%;
+  background-color: #EEF2F6;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.logo { font-size: 24px; font-weight: bold; color: #00C8A0; }
+
+.nav-menu ul { list-style:none; display:flex; gap:25px; }
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-menu ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #00C8A0;
+  transition: width 0.3s;
+}
+
+.nav-menu ul li a:hover::after,
+.nav-menu ul li.active a::after {
+  width: 100%;
+}
+
+.cta-btn {
+  background-color: #00C8A0;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-btn:hover { background-color: #00A887; transform: translateY(-2px); }
+
+/* Hamburger */
+.hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; z-index: 1100; }
+.hamburger span { width: 25px; height: 3px; background-color: #00C8A0; border-radius: 2px; transition: all 0.3s; }
+
+/* Close button inside menu */
+.close-btn {
+  display: none;
+  font-size: 30px;
+  color: #00C8A0;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-btn:hover { color: #008f7a; }
+
+/* Responsive */
+@media (max-width: 992px) {
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100%;
+    background-color: #EEF2F6;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    gap: 20px;
+    transition: right 0.4s cubic-bezier(0.77,0,0.175,1);
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  }
+
+  .nav-menu.active { right: 0; }
+
+  .nav-menu ul { flex-direction: column; gap: 20px; padding-left: 20px; }
+
+  .hamburger { display: flex; }
+
+  .close-btn { display: block; }
+}
+
+    </style>
 
 </head>
 
@@ -645,7 +755,7 @@
 
     <div id="particles-js" class="style-particles" style=""></div>
 
-    @include('customer.layouts.header')
+    @include('customer.layouts.header-content')
 
     <main class="hero-section">
         @yield('content')
