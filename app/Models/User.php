@@ -54,4 +54,10 @@ class User extends Authenticatable implements FilamentUser
     {
          return $this->hasRole('Admin');
     }
+
+    
+        public function comments()
+    {
+        return $this->morphMany(Comment::class, 'commentable');
+    }
 }

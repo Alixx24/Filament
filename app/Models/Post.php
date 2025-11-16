@@ -77,4 +77,9 @@ class Post extends Model
     {
         return $value ?: Str::limit(strip_tags($this->summary ?? $this->content), 160);
     }
+
+    public function comments()
+    {
+        return $this->morphMany(Comment::class, 'commentable');
+    }
 }
