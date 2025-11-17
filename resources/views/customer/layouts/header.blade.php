@@ -14,8 +14,11 @@
     <div id="particles-js"></div>
 
     <div class="hero-content">
-        <h1>Radošais digitālais mārketings jūsu biznesa izaugsmei</h1>
-        <p>Ar plānošanas un stratēģijas palīdzību jūsu zīmolu pacelsim nākamajā līmenī.</p>
+        <h1>Growvixo – Radošais digitālais mārketings un web dizains jūsu biznesa izaugsmei</h1>
+        <p>Ar mūsu SEO optimizētām stratēģijām, sociālo tīklu pārvaldību un profesionālu mājaslapu izstrādi mēs
+            palīdzēsim jūsu zīmolu pacelt nākamajā līmenī, palielināt redzamību tiešsaistē un piesaistīt vairāk klientu.
+        </p>
+
         {{-- start btn --}}
         <a class="cta-btn" href="#" id="start">Sākt</a>
     </div>
