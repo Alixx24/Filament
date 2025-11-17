@@ -9,7 +9,7 @@ use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Schema;
-use Illuminate\Support\Str; 
+use Illuminate\Support\Str;
 
 class CategoryForm
 {
@@ -23,15 +23,19 @@ class CategoryForm
                     ->placeholder('Select parent category')
                     ->preload(),
 
-           
+
                 TextInput::make('name')
                     ->label('Name')
                     ->required()
                     ->maxLength(255)
-                    ->debounce(700) 
+                    ->debounce(700)
                     ->afterStateUpdated(function (Set $set, $state) {
                         $set('slug', Str::slug($state));
                     }),
+                TextInput::make('name_latvia')
+                    ->label('name latvia')
+                    ->maxLength(255),
+                  
 
                 TextInput::make('slug')
                     ->required(),

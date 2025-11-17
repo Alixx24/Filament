@@ -20,6 +20,8 @@ class CategoriesTable
                     ->sortable(),
                 TextColumn::make('name')
                     ->searchable(),
+                TextColumn::make('name_latvia')
+                    ->searchable(),
                 TextColumn::make('slug')
                     ->searchable(),
                 TextColumn::make('position')
