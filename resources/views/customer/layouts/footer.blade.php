@@ -1,11 +1,10 @@
-    <section>
-      <!-- Footer -->
-      <footer class="text-center">
-        <!-- Grid container -->
+<section>
+  <!-- Footer -->
+  <footer class="text-center">
+    <!-- Grid container -->
+  
+      <p>© 2025 Growvixo. Visas tiesības aizsargātas.</p>
     
-    <footer>
-  <p>© 2025 Growvixo. ყველა უფლება დაცულია.</p>
-</footer>
-
-      <!-- Footer -->
-    </section>
+  </footer>
+  <!-- Footer -->
+</section>

@@ -71,35 +71,36 @@
             {{-- services --}}
 
             <section id="services">
-                <h2>ჩვენი მომსახურება</h2>
+                <h2>Mūsu pakalpojumi</h2>
                 <div class="service-cards">
                     <div class="card">
-                        <h3>ციფრული მარკეტინგი</h3>
-                        <p>ბრენდის ცნობადობის გაზრდა და მომხმარებელთა მოზიდვა.</p>
+                        <h3>Digitālais mārketings</h3>
+                        <p>Zīmola atpazīstamības palielināšana un klientu piesaiste.</p>
                     </div>
                     <div class="card">
-                        <h3>სოციალური მედია</h3>
-                        <p>ფეისბუქი, ინსტაგრამი და სხვა პლატფორმების მენეჯმენტი.</p>
+                        <h3>Sociālie tīkli</h3>
+                        <p>Facebook, Instagram un citu platformu pārvaldība.</p>
                     </div>
                     <div class="card">
-                        <h3>SEO & Analytics</h3>
-                        <p>ძებნის სისტემებში უკეთესი პოზიციონირება და მონაცემთა ანალიზი.</p>
+                        <h3>SEO un analītika</h3>
+                        <p>Labāka pozicionēšana meklētājsistēmās un datu analīze.</p>
                     </div>
                 </div>
             </section>
 
+
             {{-- Portfolio --}}
 
             <section id="portfolio">
-                <h2>პორტფოლიო</h2>
+                <h2>Portfelis</h2>
                 <div class="projects">
                     <div class="project-card">
-                        <img src="project1.jpg" alt="პროექტი 1">
-                        <h3>პროექტი 1</h3>
+                        <img src="project1.jpg" alt="Projekts 1">
+                        <h3>Projekts 1</h3>
                     </div>
                     <div class="project-card">
-                        <img src="project2.jpg" alt="პროექტი 2">
-                        <h3>პროექტი 2</h3>
+                        <img src="project2.jpg" alt="Projekts 2">
+                        <h3>Projekts 2</h3>
                     </div>
                 </div>
             </section>
@@ -109,38 +110,36 @@
             {{-- blog  --}}
 
             <section id="blog">
-                <h2>ბლოგი</h2>
+                <h2>Blogs</h2>
                 <div class="blog-posts">
                     @foreach ($posts as $post)
                         <div class="post-card">
                             <h3>{{ $post['title'] }}</h3>
-                         
-                        <p>{{ \Illuminate\Support\Str::limit($post['summary'], 42, '...') }}</p>
-
-
-                            <a class="btn btn-success" href="{{ route('customer.post.show', $post['slug']) }}">See</a>
-
+                            <p>{{ \Illuminate\Support\Str::limit($post['summary'], 42, '...') }}</p>
+                            <a class="btn btn-success" href="{{ route('customer.post.show', $post['slug']) }}">Skatīt</a>
                         </div>
                     @endforeach
                     <div class="post-card">
-                        <h3>SEO საუკეთესო პრაქტიკები</h3>
-                        <p>როგორ მოიტანოთ მეტი ტრაფიკი ორგანული გზით.</p>
+                        <h3>SEO labākās prakses</h3>
+                        <p>Kā iegūt vairāk organiskā satiksme.</p>
                     </div>
                 </div>
             </section>
 
+
             {{-- Contact --}}
 
             <section id="contact">
-                <h2>კონტაქტი</h2>
-                <p>გაგვიზიარეთ თქვენი პროექტი ან შეკითხვა, ჩვენ დაგიკავშირდებით.</p>
+                <h2>Kontakti</h2>
+                <p>Dalieties ar savu projektu vai jautājumu, un mēs ar jums sazināsimies.</p>
                 <form>
-                    <input type="text" placeholder="სახელი" required>
-                    <input type="email" placeholder="ელ.ფოსტა" required>
-                    <textarea placeholder="შეტყობინება"></textarea>
-                    <button type="submit">გაგზავნა</button>
+                    <input type="text" placeholder="Vārds" required>
+                    <input type="email" placeholder="E-pasts" required>
+                    <textarea placeholder="Ziņa"></textarea>
+                    <button type="submit">Nosūtīt</button>
                 </form>
             </section>
+
 
             {{-- 3 cards --}}
             <div class="d-flex justify-content-center gap-3 mt-5" style="flex-wrap: nowrap;">
