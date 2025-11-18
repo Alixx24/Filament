@@ -17,7 +17,7 @@
 
 <body class="bg-of-body">
 
-    <div id="particles-js" class="style-particles" style=""></div>
+    <div id="particles-js" class="style-particles"></div>
 
     @include('customer.layouts.header-content')
 

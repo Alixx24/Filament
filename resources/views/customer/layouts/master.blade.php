@@ -9,7 +9,9 @@
     <title>@yield('title', 'HRM Project')</title>
     @include('customer.layouts.head-tag')
 </head>
-
+<style>
+     
+</style>
 <body class="bg-of-body">
 
     <div id="particles-js" class="style-particles" style=""></div>
@@ -27,7 +29,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
+  
     <script>
         particlesJS('particles-js', {
             "particles": {

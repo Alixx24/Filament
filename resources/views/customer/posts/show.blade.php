@@ -16,17 +16,9 @@
 @endsection
 
 @section('content')
-    <style>
-        .p-mt-head {
-            margin-top: 135px !important;
-            margin-bottom: 25px;
-        }
-    </style>
-
     <section class="p-2 m-3 bg-light p-mt-head">
         <!--title  -->
         <h1>{{ $post->title }}</h1>
-
         <hr>
 
         <!--  content -->
@@ -55,6 +47,5 @@
             </div>
         @endif
     </section>
-
     @vite(['resources/views/customer/layouts/js/header.ts', 'resources/css/app.css'])
 @endsection
