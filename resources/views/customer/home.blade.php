@@ -560,7 +560,6 @@
         </div>
 
 
-        @vite(['resources/views/customer/layouts/js/me.ts', 'resources/css/app.css'])
 
 
     </section>
