@@ -10,5 +10,6 @@ Route::get('/', function () {
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/about-us', [HomeController::class, 'about'])->name('about');
 
 Route::get('/post/{slug}', [PostController::class, 'show'])->name('customer.post.show');
