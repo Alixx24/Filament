@@ -20,7 +20,7 @@ return new class extends Migration
             $table->unsignedSmallInteger('position')->default(0);
             $table->boolean('is_visible')->default(false);
             $table->string('seo_title', 60)->nullable();
-            $table->string('seo_description', 160)->nullable();
+            $table->string('seo_description', 1000)->nullable();
 
             $table->timestamps();
         });

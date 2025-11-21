@@ -17,35 +17,33 @@
 
 @section('content')
     <section class="p-2 m-3 bg-light p-mt-head">
-        <!--title  -->
+
         <h1>{{ $post->title }}</h1>
         <hr>
 
-        <!--  content -->
         <div class="p-show">
             {!! \Illuminate\Support\Str::markdown($post->content) !!}
         </div>
 
-        <!-- summary -->
         @if ($post->summary)
             <div class="p-show mt-4">
-                <strong>kopsavilkums:</strong> {{ $post->summary }}
+                <strong>ամփոփում:</strong> {{ $post->summary }}
             </div>
         @endif
 
-        <!-- tags -->
         @php
             $tags = is_array($post->tags) ? $post->tags : explode(',', $post->tags ?? '');
         @endphp
 
         @if ($tags && count($tags) > 0)
             <div class="mt-3">
-                <strong>birkas:</strong>
+                <strong>թեգեր:</strong>
                 @foreach ($tags as $tag)
                     <a href="#" class="badge bg-secondary">{{ trim($tag) }}</a>
                 @endforeach
             </div>
         @endif
+
     </section>
     <script src="../js/header.js"></script>
 @endsection
