@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>@yield('title', 'HRM Project')</title>
+    <title>@yield('title', 'Growvixo')</title>
     @include('customer.layouts.head-tag')
 </head>
 <style>

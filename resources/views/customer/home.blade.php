@@ -1,5 +1,5 @@
 @extends('customer.layouts.master')
-@section('title', 'AlixDev')
+@section('title', 'Growvixo')
 
 @section('content')
 
@@ -11,20 +11,20 @@
 
             <div id="uniqueCarouselExample" class="carousel slide unique-carousel-container z-show" data-bs-ride="carousel">
                 <div class="carousel-inner unique-carousel-inner z-show">
-                 <div class="carousel-item">
-    <img src="{{ asset('customer/banner/b14.webp') }}" class="d-block w-100"
-        alt="Growvixo - թվային մարքեթինգի ծառայություններ, SEO օպտիմալացում և վաճառքի կայքերի նախագծում բիզնեսի զարգացման համար">
-</div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('customer/banner/b14.webp') }}" class="d-block w-100"
+                            alt="Growvixo - թվային մարքեթինգի ծառայություններ, SEO օպտիմալացում և վաճառքի կայքերի նախագծում բիզնեսի զարգացման համար">
+                    </div>
 
-<div class="carousel-item active">
-    <img src="{{ asset('customer/banner/b23.webp') }}" class="d-block w-100"
-        alt="Մասնագիտական կայքերի ստեղծում, SEO օպտիմալացում և վաճառքի կայքերի նախագծում Growvixo-ի կողմից">
-</div>
+                    <div class="carousel-item active">
+                        <img src="{{ asset('customer/banner/b23.webp') }}" class="d-block w-100"
+                            alt="Մասնագիտական կայքերի ստեղծում, SEO օպտիմալացում և վաճառքի կայքերի նախագծում Growvixo-ի կողմից">
+                    </div>
 
-<div class="carousel-item">
-    <img src="{{ asset('customer/banner/b13.webp') }}" class="d-block w-100"
-        alt="Growvixo սոցիալական մեդիայի կառավարում, առցանց գովազդային լուծումներ և վաճառքի կայքերի ստեղծում բիզնեսների համար">
-</div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('customer/banner/b13.webp') }}" class="d-block w-100"
+                            alt="Growvixo սոցիալական մեդիայի կառավարում, առցանց գովազդային լուծումներ և վաճառքի կայքերի ստեղծում բիզնեսների համար">
+                    </div>
 
 
 
@@ -112,12 +112,12 @@
                 <div class="projects">
 
                     <div class="project-card z-show">
-                        <img src="project1.jpg" alt="Growvixo նախագծի օրինակ 1՝ թվային մարքեթինգ և կայքի զարգացում">
+                        <img src="{{ asset('customer/images/project-me.webp') }}" alt="Growvixo նախագծի օրինակ 1՝ թվային մարքեթինգ և կայքի զարգացում">
                         <h3>Նախագիծ 1</h3>
                     </div>
 
                     <div class="project-card z-show">
-                        <img src="project2.jpg"
+                        <img src="{{ asset('customer/images/project-me3.webp') }}"
                             alt="Growvixo նախագծի օրինակ 2՝ սոցիալական մեդիայի կառավարում և SEO արդյունքներ">
                         <h3>Նախագիծ 2</h3>
                     </div>
@@ -579,14 +579,7 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-
-
         </div>
-
-
-
-
     </section>
 @endsection

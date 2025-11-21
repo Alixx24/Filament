@@ -47,5 +47,5 @@
             </div>
         @endif
     </section>
-    @vite(['resources/views/customer/layouts/js/header.ts', 'resources/css/app.css'])
+    <script src="../js/header.js"></script>
 @endsection
