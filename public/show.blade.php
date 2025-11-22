@@ -25,7 +25,7 @@
         <div class="p-show m-3">
             {!! \Illuminate\Support\Str::markdown($post->content) !!}
         </div>
-<img src="{{ asset('storage/' . $post->thumbnail) }}" class="d-block w-100" alt="{{ $post->alt_text }}">
+       <img src="https://growvixo.com/storage/{{ $post->thumbnail }}" class="d-block w-100" alt="{{ $post->alt_text }}">
 
         <div class="p-show mt-4">
             <strong>ամփոփում:</strong> {{ $post->summary }}
