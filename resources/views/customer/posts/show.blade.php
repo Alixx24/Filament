@@ -15,9 +15,9 @@
     <meta property="og:description" content="{{ $post->meta_description ?? $post->summary }}">
 @endsection
 
+
 @section('content')
     <section class="p-2 m-3 bg-light p-mt-head border border-primary rounded-3">
-
 
         <h1 class="m-3">{{ $post->title }}</h1>
         <hr>
@@ -25,12 +25,11 @@
         <div class="p-show m-3">
             {!! \Illuminate\Support\Str::markdown($post->content) !!}
         </div>
-<img src="{{ asset('storage/' . $post->thumbnail) }}" class="d-block w-100" alt="{{ $post->alt_text }}">
+        <img src="{{ asset('storage/' . $post->thumbnail) }}" alt="{{ $post->alt_text }}" class="w-img">
 
         <div class="p-show mt-4">
             <strong>ամփոփում:</strong> {{ $post->summary }}
         </div>
-
 
         @php
             $tags = is_array($post->tags) ? $post->tags : explode(',', $post->tags ?? '');

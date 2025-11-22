@@ -924,3 +924,9 @@ header {
     color: #007bff;
     text-decoration: none;
 }
+
+   .w-img {
+        width: 350px;
+        height: 350px;
+        object-fit: cover;
+    }
