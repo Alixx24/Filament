@@ -3,8 +3,15 @@
 @section('title', $post->meta_title ?? $post->title)
 
 @section('meta')
+    <meta name="robots" content="index, follow">
+
     <meta name="description" content="{{ $post->meta_description ?? $post->summary }}">
     <meta name="keywords" content="{{ $post->meta_keywords }}">
+    <meta name="author" content="GrowVixo">
+    <meta name="publisher" content="GrowVixo">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:type" content="article">
+
     @if ($post->canonical_url)
         <link rel="canonical" href="{{ $post->canonical_url }}">
     @endif
