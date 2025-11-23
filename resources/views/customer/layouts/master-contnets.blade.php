@@ -26,11 +26,11 @@
     </main>
 
     {{-- FOOTER --}}
-    <section class="z-show display-footer">
-        <!-- Footer -->
-        <footer class="text-center z-show div-footer">
-            <!-- Grid container -->
-
+  <section class="z-show display-footer">
+    <!-- Footer -->
+    <footer class="text-center z-show div-footer">
+        <!-- Grid container -->
+     
 
             <!-- Footer text -->
             <p style="font-size: 14px; margin-bottom: 20px;">
@@ -77,14 +77,14 @@
 
             <!-- Quick Links -->
             <div class="footer-links" style="margin-top: 30px;">
-                <a class="m-footer" href="/about">About Us</a>
-                <a class="m-footer" href="/contact">Contact</a>
-                <a class="m-footer" href="/services">Services</a>
+                <a class="m-footer" href="{{ route('about') }}">About Us</a>
+                <a class="m-footer" href="{{ route('contact') }}">Contact</a>
+                <a class="m-footer" href="{{ route('services') }}">Services</a>
             </div>
-
-        </footer>
-        <!-- Footer -->
-    </section>
+       
+    </footer>
+    <!-- Footer -->
+</section>
 
 
     {{-- SCRIPTS --}}
@@ -95,21 +95,11 @@
     <script>
         particlesJS('particles-js', {
             "particles": {
-                "number": {
-                    "value": 80
-                },
-                "color": {
-                    "value": "#90A4C7"
-                },
-                "shape": {
-                    "type": "circle"
-                },
-                "opacity": {
-                    "value": 0.3
-                },
-                "size": {
-                    "value": 3
-                },
+                "number": {"value": 80},
+                "color": {"value": "#90A4C7"},
+                "shape": {"type": "circle"},
+                "opacity": {"value": 0.3},
+                "size": {"value": 3},
                 "line_linked": {
                     "enable": true,
                     "distance": 150,
@@ -117,18 +107,10 @@
                     "opacity": 0.4,
                     "width": 1
                 },
-                "move": {
-                    "enable": true,
-                    "speed": 2
-                }
+                "move": {"enable": true, "speed": 2}
             },
             "interactivity": {
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "repulse"
-                    }
-                }
+                "events": {"onhover": {"enable": true, "mode": "repulse"}}
             }
         });
     </script>

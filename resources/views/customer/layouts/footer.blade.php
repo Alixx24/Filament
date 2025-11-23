@@ -49,12 +49,11 @@
 
             <!-- Quick Links -->
             <div class="footer-links" style="margin-top: 30px;">
-                <a class="m-footer" href="/about">About Us</a>
-                <a class="m-footer" href="/contact">Contact</a>
-                <a class="m-footer" href="/services">Services</a>
+                <a class="m-footer" href="{{ route('about') }}">About Us</a>
+                <a class="m-footer" href="{{ route('contact') }}">Contact</a>
+                <a class="m-footer" href="{{ route('services') }}">Services</a>
             </div>
         </div>
     </footer>
-    <!-- Footer -->
 </section>
 
