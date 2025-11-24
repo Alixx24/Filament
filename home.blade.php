@@ -25,6 +25,12 @@
                         <img src="{{ asset('customer/banner/b13.webp') }}" class="d-block w-100"
                             alt="Growvixo սոցիալական մեդիայի կառավարում, առցանց գովազդային լուծումներ և վաճառքի կայքերի ստեղծում բիզնեսների համար">
                     </div>
+
+
+
+                    {{-- <!--   <div class="carousel-item">-->
+                    <!--    <img src="{{ asset('customer/banner/b8.webp') }}" class="d-block w-100" alt="...">-->
+                    <!--</div>--> --}}
                 </div>
                 <button class="carousel-control-prev unique-carousel-control-prev z-show" type="button"
                     data-bs-target="#uniqueCarouselExample" data-bs-slide="prev">
@@ -119,6 +125,8 @@
                 </div>
             </section>
 
+
+
             {{-- blog  --}}
 
             <section id="blog" class="z-show">
@@ -159,6 +167,12 @@
             </section>
 
 
+
+
+
+
+
+
             {{-- text dont worry --}}
             <div class="container my-5">
                 <div class="row justify-content-center ">
@@ -190,7 +204,7 @@
 
                                 <p>Անկախ նրանից, թե ձեզ անհրաժեշտ է <strong>մասնագիտական վեբ կայքի մշակում</strong>, SEO
                                     օպտիմալացում կամ առցանց գովազդի ռազմավարություն, Growvixo-ն ձեր վստահելի գործընկերն է:
-                                    <strong>Վաճառքի կայքերի նախագծում(Խանութի կայքի դիզայն)</strong> մեր փորձը բարձրակարգ և արդյունավետ է:
+                                    <strong>Վաճառքի կայքերի նախագծում</strong> մեր փորձը բարձրակարգ և արդյունավետ է:
                                 </p>
 
                                 <p>Ընտրելով Growvixo, դուք ստանում եք ռազմավարական գործընկեր, որը օգնում է ավելի շատ
@@ -323,6 +337,7 @@
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
 
@@ -438,6 +453,10 @@
                 </div>
 
 
+
+
+
+
                 <div class="text-center text-dark bg-home-div">
                     <h1>Growvixo – Ստեղծագործ թվային մարքեթինգ և web դիզայն ձեր բիզնեսի աճի համար</h1>
                     <p>
@@ -537,7 +556,7 @@
                         <h2 class="accordion-header" id="headingFour">
                             <button class="z-show accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                🛒 Տեղեկություններ Growvixo-ի կողմից՝ Առցանց խանութի նախագծում (Խանութի կայքի դիզայն)
+                                🛒 Տեղեկություններ Growvixo-ի կողմից՝ Առցանց խանութի նախագծում
                             </button>
                         </h2>
                         <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
