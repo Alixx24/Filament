@@ -867,7 +867,8 @@ header {
     flex-wrap: wrap;
 }
 
-.mission-myproject, .vision-myproject {
+.mission-myproject,
+.vision-myproject {
     flex: 1;
     padding: 20px;
     background-color: #f8f8f8;
@@ -875,17 +876,20 @@ header {
     border-radius: 8px;
 }
 
-.mission-myproject h3, .vision-myproject h3 {
+.mission-myproject h3,
+.vision-myproject h3 {
     font-size: 22px;
     color: #333;
 }
 
-.mission-myproject p, .vision-myproject p {
+.mission-myproject p,
+.vision-myproject p {
     font-size: 16px;
     color: #555;
 }
 
-.mission-myproject:last-child, .vision-myproject:last-child {
+.mission-myproject:last-child,
+.vision-myproject:last-child {
     margin-right: 0;
 }
 
@@ -925,8 +929,108 @@ header {
     text-decoration: none;
 }
 
-   .w-img {
-        width: 350px;
-        height: 350px;
-        object-fit: cover;
-    }
+.w-img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+}
+
+
+
+.lux-cta-wrapper {
+    max-width: 720px;
+    margin: 90px auto;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    color: #141414;
+}
+
+.lux-cta-title {
+    font-size: 44px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    letter-spacing: -1px;
+}
+
+.lux-cta-desc {
+    font-size: 18px;
+    opacity: .7;
+    margin-bottom: 45px;
+    line-height: 1.75;
+}
+
+.lux-cta-form {
+    background: #ffffff;
+    padding: 45px;
+    border-radius: 26px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    backdrop-filter: blur(12px);
+}
+
+.lux-cta-label {
+    font-weight: 600;
+    opacity: .85;
+    font-size: 15px;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.lux-cta-input,
+.lux-cta-textarea {
+    width: 100%;
+    padding: 15px 18px;
+    border-radius: 16px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    transition: all .25s ease;
+    margin-bottom: 22px;
+    background: #fafafa;
+}
+
+.lux-cta-input:focus,
+.lux-cta-textarea:focus {
+    border-color: #000;
+    transform: scale(1.01);
+    outline: none;
+    background: #fff;
+}
+
+.lux-cta-button {
+    width: 100%;
+    padding: 17px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 16px;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: .6px;
+    transition: .25s ease;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.lux-cta-button:hover {
+    background: #2c2c2c;
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+}
+
+.lux-cta-alt {
+    margin-top: 32px;
+    font-size: 16px;
+    opacity: .75;
+}
+
+.lux-cta-alt a {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+.lux-cta-alt a:hover {
+    opacity: .5;
+}
+

@@ -14,4 +14,6 @@ Route::get('/about-us', [HomeController::class, 'about'])->name('about');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
 
+Route::get('/post/khanuti-kayqi-dizayn-armenia', [HomeController::class, 'serviceStore'])->name('services.store');
+
 Route::get('/post/{slug}', [PostController::class, 'show'])->name('customer.post.show');

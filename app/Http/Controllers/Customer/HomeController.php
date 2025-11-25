@@ -8,23 +8,28 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index()
-    {
-        $posts = Post::all();
-        return view('customer.home', compact('posts'));
-    }
+  public function index()
+  {
+    $posts = Post::all();
+    return view('customer.home', compact('posts'));
+  }
 
-      public function about()
-    {
-        return view('customer.about');
-    }
+  public function serviceStore()
+  {
+    return view('customer.posts.store-design');
+  }
 
-      public function contact()
-    {
-        dd(2);
-    }
-      public function services()
-    {
-       dd('3');
-    }
+  public function about()
+  {
+    return view('customer.about');
+  }
+
+  public function contact()
+  {
+    dd(2);
+  }
+  public function services()
+  {
+    dd('3');
+  }
 }
