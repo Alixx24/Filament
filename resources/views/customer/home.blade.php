@@ -133,12 +133,6 @@
                             </a>
                         </div>
                     @endforeach
-
-                    <div class="post-card z-show">
-                        <h3>SEO լավագույն պրակտիկաներ</h3>
-                        <p>Ինչպես բարձրացնել օրգանական տրաֆիկը և բարելավել որոնողական համակարգերի դիրքերը:</p>
-                        <a class="btn btn-success" href="#">Կարդալ ավելին</a>
-                    </div>
                 </div>
             </section>
 
