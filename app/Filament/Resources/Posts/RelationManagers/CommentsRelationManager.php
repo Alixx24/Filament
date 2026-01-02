@@ -25,8 +25,8 @@ class CommentsRelationManager extends RelationManager
     {
         return $schema
             ->components([
-               Select::make('user_id')->relationship('user', 'name')->searchable()->preload(),
-               TextInput::make('comment'),
+                Select::make('user_id')->relationship('user', 'name')->searchable()->preload(),
+                TextInput::make('comment'),
             ]);
     }
 
@@ -35,12 +35,12 @@ class CommentsRelationManager extends RelationManager
         return $table
             ->recordTitleAttribute('comment')
             ->columns([
-                                    TextColumn::make('user.name'),
- TextColumn::make('commentable_type'),
-                    TextColumn::make('commentable_id'),
+                TextColumn::make('user.name'),
+                TextColumn::make('commentable_type'),
+                TextColumn::make('commentable_id'),
                 TextColumn::make('comment')
                     ->searchable(),
-                   
+
             ])
             ->filters([
                 //

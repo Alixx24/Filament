@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Post extends Model
 {
-    use HasFactory,SoftDeletes;
-      protected $fillable = [
+    use HasFactory, SoftDeletes;
+    protected $fillable = [
         'title',
         'slug',
         'summary',
@@ -29,12 +29,12 @@ class Post extends Model
         'tags'
     ];
 
-     protected $casts = [
+    protected $casts = [
         'published_at' => 'datetime',
         'is_featured' => 'boolean',
         'views' => 'integer',
         'tags' => 'array',
-        ];
+    ];
 
 
     public function author()
@@ -47,32 +47,26 @@ class Post extends Model
         return $this->belongsTo(Category::class);
     }
 
-      public function scopePublished($query)
+    public function scopePublished($query)
     {
         return $query->where('status', 'published')
-                     ->whereNotNull('published_at')
-                     ->where('published_at', '<=', now());
+            ->whereNotNull('published_at')
+            ->where('published_at', '<=', now());
     }
 
-    /**
-     * لینک کامل مقاله (برای نمایش در سایت)
-     */
+
     public function getUrlAttribute(): string
     {
         return url('/posts/' . $this->slug);
     }
 
-    /**
-     * اگر meta_title خالی بود، از title استفاده کن
-     */
+
     public function getMetaTitleAttribute($value)
     {
         return $value ?: $this->title;
     }
 
-    /**
-     * اگر meta_description خالی بود، از summary استفاده کن
-     */
+
     public function getMetaDescriptionAttribute($value)
     {
         return $value ?: Str::limit(strip_tags($this->summary ?? $this->content), 160);
@@ -81,5 +75,10 @@ class Post extends Model
     public function comments()
     {
         return $this->morphMany(Comment::class, 'commentable');
+    }
+
+    public function lang()
+    {
+        return $this->belongsTo(Language::class);
     }
 }

@@ -31,6 +31,13 @@ class PostForm
                                 column: 'slug', // ستون مورد نظر
                                 ignorable: fn($record) => $record // تا در هنگام ویرایش خطا ندهد
                             ),
+                        Select::make('lang_id')
+                            ->label('lang')
+                            ->relationship('lang', 'name')
+                            ->searchable()
+                            ->preload()
+                            ->required(),
+
                         Textarea::make('summary')
                             ->default(null)
                             ->columnSpanFull(),
