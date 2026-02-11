@@ -1,5 +1,15 @@
 @extends('customer.layouts.master-contnets')
+@php
+    $langCode = match ($post->lang_id) {
+        1 => 'lv',
+        2 => 'si',
+        3 => 'hy',
+        default => 'lv',
+    };
+@endphp
 
+<!DOCTYPE html>
+<html lang="{{ $langCode }}">
 @section('title', $post->meta_title ?? $post->title)
 
 @section('meta')

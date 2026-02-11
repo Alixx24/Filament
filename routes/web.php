@@ -17,3 +17,5 @@ Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/services/khanuti-kayqi-dizayn-armenia', [HomeController::class, 'serviceStore'])->name('services.store');
 
 Route::get('/post/{slug}', [PostController::class, 'show'])->name('customer.post.show');
+
+Route::get('/اکانت-chatgpt', [PostController::class, 'chatGptPricing'])->name('customer.pricing.index');

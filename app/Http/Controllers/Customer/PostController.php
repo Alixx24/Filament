@@ -14,4 +14,9 @@ class PostController extends Controller
      
         return view('customer.posts.show', compact('post'));
     }
+
+    public function chatGptPricing()
+    {
+        return view('customer.pricing.chatgpt');
+    }
 }
