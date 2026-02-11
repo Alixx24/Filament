@@ -1,8 +1,16 @@
 <?php
 
+use App\Http\Controllers\Customer\AuthController;
+use App\Http\Controllers\Customer\DashboardController;
 use App\Http\Controllers\Customer\HomeController;
 use App\Http\Controllers\Customer\PostController;
+use App\Http\Controllers\Panel\PaymentController;
 use Illuminate\Support\Facades\Route;
+use Laravel\Socialite\Facades\Socialite;
+
+Route::get('/login', [AuthController::class, 'showLogin'])->name('login.form');
+Route::post('/login', [AuthController::class, 'login'])->name('login.post');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout.post');
 
 Route::get('/', function () {
     return view('welcome');
@@ -19,3 +27,38 @@ Route::get('/services/khanuti-kayqi-dizayn-armenia', [HomeController::class, 'se
 Route::get('/post/{slug}', [PostController::class, 'show'])->name('customer.post.show');
 
 Route::get('/اکانت-chatgpt', [PostController::class, 'chatGptPricing'])->name('customer.pricing.index');
+
+//pay
+Route::get('/payment', [PaymentController::class, 'pay'])->name('payment.pay'); 
+Route::get('/payment/callback', [PaymentController::class, 'callback'])->name('payment.callback'); 
+Route::get('/payment/success', [PaymentController::class, 'success'])->name('payment.success'); 
+Route::get('/payment/failed', [PaymentController::class, 'failed'])->name('payment.failed'); 
+
+//user
+
+Route::get('/register', [AuthController::class, 'showRegister'])->name('register.form');
+Route::post('/register', [AuthController::class, 'register'])->name('register.post');
+Route::get('/verify-email/{token}', [AuthController::class, 'verifyEmail'])->name('verify.email');
+
+Route::get('login/github', function () {
+
+    return Socialite::driver('github')->redirect();
+});
+//github
+
+Route::get('login/github/callback', [AuthController::class, 'githubCallBack'])->name('login.callBack.github');
+
+Route::get('/auth/google', function () {
+    return Socialite::driver('google')->redirect();
+});
+
+Route::get('/auth/google/callback', [AuthController::class, 'gmailCallBack'])->name('login.callBack.gmail');
+
+
+Route::prefix('/user/dashboard')->middleware('auth')->group(function () {
+    Route::get('/{id}', [DashboardController::class, 'index'])->name('dashboard.index');
+    Route::get('/analysis/{linkId}/{id}', [DashboardController::class, 'analysis'])->name('dashboard.analysis.link.index');
+    Route::post('/store', [DashboardController::class, 'store'])->name('dashboard.request.store');
+    Route::delete('/analysis/delete/{linkId}/{id}', [DashboardController::class, 'delete'])->name('dashboard.request.delete');
+    Route::post('/update-status/{id}', [DashboardController::class, 'updateStatus']);
+});

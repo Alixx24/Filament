@@ -8,13 +8,10 @@
     };
 @endphp
 
-<!DOCTYPE html>
-<html lang="{{ $langCode }}">
-@section('title', $post->meta_title ?? $post->title)
+@section('title', $post->meta_title ?? $post->title ?? 'عنوان پیش‌فرض مقاله')
 
 @section('meta')
     <meta name="robots" content="index, follow">
-
     <meta name="description" content="{{ $post->meta_description ?? $post->summary }}">
     <meta name="keywords" content="{{ $post->meta_keywords }}">
     <meta name="author" content="GrowVixo">
@@ -30,10 +27,47 @@
     @endif
     <meta property="og:title" content="{{ $post->meta_title ?? $post->title }}">
     <meta property="og:description" content="{{ $post->meta_description ?? $post->summary }}">
+    {{-- Schema.org JSON-LD --}}
+    @php
+        $jsonLd = [
+            '@context' => 'https://schema.org',
+            '@type' => 'BlogPosting',
+            'headline' => $post->meta_title ?? $post->title,
+            'description' => $post->meta_description ?? $post->summary,
+            'image' => $post->thumbnail ? asset('storage/' . $post->thumbnail) : '',
+            'author' => [
+                '@type' => 'Organization',
+                'name' => 'GrowVixo',
+            ],
+            'publisher' => [
+                '@type' => 'Organization',
+                'name' => 'GrowVixo',
+                'logo' => [
+                    '@type' => 'ImageObject',
+                    'url' => asset('storage/logo.png'),
+                ],
+            ],
+            'url' => url()->current(),
+            'datePublished' => $post->created_at->toIso8601String(),
+            'dateModified' => $post->updated_at->toIso8601String(),
+            'mainEntityOfPage' => [
+                '@type' => 'WebPage',
+                '@id' => url()->current(),
+            ],
+        ];
+    @endphp
+
+
+    <script type="application/ld+json">
+{!! json_encode($jsonLd, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT) !!}
+</script>
+
 @endsection
 
 
+
 @section('content')
+
     <section class="p-2 m-3 bg-light p-mt-head border border-primary rounded-3">
 
         <h1 class="m-3">{{ $post->title }}</h1>

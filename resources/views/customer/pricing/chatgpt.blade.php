@@ -1,4 +1,4 @@
-@extends('customer.layouts.master-contnets')
+@extends('customer.layouts.master-shop')
 
 {{-- ====================== Title Section ====================== --}}
 @section('title', 'Խանութի կայքի դիզայն և Social Media Marketing Հայաստանում – GrowVixo')
