@@ -4,17 +4,17 @@ namespace App\Http\Controllers\Panel;
 
 use App\Http\Controllers\Controller;
 use Shetabit\Payment\Facade\Payment;
+use Shetabit\Multipay\Invoice;
 use Shetabit\Multipay\Exceptions\InvalidPaymentException;
 use Illuminate\Http\Request;
 use App\Models\Payment as PaymentModel;
-use Illuminate\Support\Facades\Log;
 use App\Models\Order;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\DB;
 
 class PaymentController extends Controller
 {
-    
+    // پرداخت اصلی
     public function pay(Request $request)
     {
    
@@ -23,49 +23,45 @@ class PaymentController extends Controller
         }
 
      
+
         $order = Order::find(1);
 
-     
-        if (!$order) {
-            return redirect()->route('home')->withErrors(['error' => 'سفارشی با این شناسه پیدا نشد.']);
-        }
- 
-        $amount = 2000; 
-        $amountInRial = $amount * 1;
+    
+        $amountInRial = 1000;// مبلغ ریال
 
-      
-        $invoice = (new \Shetabit\Multipay\Invoice)->amount($amountInRial);
+        $invoice = (new Invoice)->amount($amountInRial);
 
         try {
-        
             $payment = Payment::via('zarinpal')->purchase($invoice, function ($driver, $transactionId) use ($order, $amountInRial) {
-               
+
+                // ذخیره تراکنش در DB
                 PaymentModel::create([
                     'order_id' => $order->id,
-                    'user_id' => auth()->user()->id ?? null,
+                    'user_id' => auth()->id(),
                     'transaction_id' => $transactionId,
                     'amount' => $amountInRial,
-                    'currency' => 'R',  
-                    'status' => 'pending',  
+                    'currency' => 'R',
+                    'status' => 'pending',
                 ]);
 
-              
+                // ذخیره اطلاعات برای session
                 session(['payment' => [
-                    'user_id' => auth()->user()->id ?? null,
+                    'user_id' => auth()->id(),
                     'amount' => $amountInRial,
                     'order_id' => $order->id,
                 ]]);
             });
 
-         
+            // هدایت به درگاه
             return $payment->pay()->render();
+
         } catch (\Exception $e) {
-            Log::error('Payment Gateway Error:', ['error' => $e->getMessage()]);
+            Log::error('Payment Gateway Error: ' . $e->getMessage());
             return redirect()->route('payment.failed')->withErrors(['payment' => $e->getMessage()]);
         }
     }
 
- 
+    // callback زرین‌پال
     public function callback(Request $request)
     {
         DB::beginTransaction();
@@ -78,7 +74,6 @@ class PaymentController extends Controller
                 throw new \Exception('پارامتر Authority یافت نشد.');
             }
 
-         
             $payment = PaymentModel::where('transaction_id', $authority)->first();
 
             if (!$payment) {
@@ -90,10 +85,12 @@ class PaymentController extends Controller
                 return redirect()->route('payment.failed')->withErrors(['payment' => 'پرداخت توسط کاربر لغو شد.']);
             }
 
-            $amount = $payment->amount;
-            $receipt = Payment::via('zarinpal')->transactionId($authority)->amount($amount)->verify();
+            // Verify با همان مبلغ ریال
+            $receipt = Payment::via('zarinpal')
+                ->transactionId($authority)
+                ->amount($payment->amount)
+                ->verify();
 
-       
             $payment->update([
                 'status' => 'paid',
                 'ref_id' => $receipt->getReferenceId(),
@@ -110,6 +107,7 @@ class PaymentController extends Controller
                 $payment->update(['status' => 'failed']);
             }
             return redirect()->route('payment.failed')->withErrors(['payment' => $e->getMessage()]);
+
         } catch (\Exception $e) {
             DB::rollBack();
             if (isset($payment)) {
@@ -119,22 +117,20 @@ class PaymentController extends Controller
         }
     }
 
-
+    // صفحه موفقیت
     public function success()
     {
         $payment = session('payment');
-                $userId =  auth()->user()->id;
+        if (!$payment) {
+            return redirect()->route('payment.failed')->withErrors(['payment' => 'اطلاعات پرداخت در دسترس نیست.']);
+        }
 
-       if (!$payment) {
-        return redirect()->route('payment.failed')->withErrors(['payment' => 'اطلاعات پرداخت در دسترس نیست.']);
+        $userId = auth()->id();
+        return redirect()->route('dashboard.index', ['id' => $userId]);
     }
 
-      
-          return redirect()->route('dashboard.index', ['id' => $userId]);
-    }
-
-
-    public function failed(Request $request)
+    // صفحه خطا
+    public function failed()
     {
         $errors = session('errors');
         return view('payment.failed', compact('errors'));
