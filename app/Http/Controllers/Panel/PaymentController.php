@@ -19,7 +19,7 @@ class PaymentController extends Controller
     {
    
         if (!auth()->check()) {
-            return redirect()->route('login')->withErrors(['error' => 'لطفاً وارد حساب کاربری خود شوید.']);
+            return redirect()->route('home')->withErrors(['error' => 'لطفاً وارد حساب کاربری خود شوید.']);
         }
 
      

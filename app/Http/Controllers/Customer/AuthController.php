@@ -148,7 +148,6 @@ class AuthController extends Controller
         }
         // بررسی کاربر در دیتابیس
         $user = User::where('github_id', $githubUser->id)->first();
-dd($user);
         if (!$user) {
             // اگر کاربر وجود ندارد، ایجاد کن
             $user = User::create([
