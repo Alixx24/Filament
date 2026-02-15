@@ -199,7 +199,83 @@
                         </div>
                     </div>
                 </div>
-           
+                <hr>
+                <h1 class="text-center mb-5" itemprop="name">خرید اکانت جمنای - قیمت مناسب و خدمات ویژه</h1>
+                <div class="row ms-2">
+                    <!-- کارت 1 -->
+                   <div class="col-md-3 col-sm-6 col-12 mb-4">
+                        <div class="card custom-card" itemscope itemtype="https://schema.org/Product">
+                            <div style="padding: 20px; text-align: center; margin-top:65px;margin-bottom:65px;">
+                                <img src="/customer/images/gemeni.webp" class="card-img-top"
+                                    style="max-width: 80%; height: auto; display: inline-block;"
+                                    alt="کارت معرفی اکانت جمنای با تصویر جذاب" title="کارت خرید اکانت جمنای">
+                            </div>
+                            <div class="text-center">
+                                <h2 class="card-title" itemprop="name">اکانت جمنای 1</h2>
+                                <p class="card-text" itemprop="description">اکانت جمنای با قیمت مناسب و ویژگی‌های خاص.
+                                    بهترین انتخاب برای خرید ارز دیجیتال.</p>
+                                <a href="#" class="btn btn-primary" aria-label="خرید اکانت جمنای 1"
+                                    itemprop="url">خرید الآن</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- کارت 2 -->
+                    <div class="col-md-3 col-sm-6 col-12 mb-4">
+                        <div class="card custom-card" itemscope itemtype="https://schema.org/Product">
+                            <div style="padding: 20px; text-align: center; margin-top:65px;margin-bottom:65px;">
+                                <img src="/customer/images/gemeni.webp" class="card-img-top"
+                                    style="max-width: 80%; height: auto; display: inline-block;"
+                                    alt="کارت معرفی اکانت جمنای با تصویر جذاب" title="کارت خرید اکانت جمنای">
+                            </div>
+                            <div class="text-center">
+                                <h2 class="card-title" itemprop="name">اکانت جمنای 2</h2>
+                                <p class="card-text" itemprop="description">اکانت جمنای با امنیت بالا و قیمت رقابتی. امکان
+                                    خرید سریع و راحت.</p>
+                                <a href="#" class="btn btn-primary" aria-label="خرید اکانت جمنای 2"
+                                    itemprop="url">خرید الآن</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- کارت 3 -->
+                 <div class="col-md-3 col-sm-6 col-12 mb-4">
+                        <div class="card custom-card" itemscope itemtype="https://schema.org/Product">
+                            <div style="padding: 20px; text-align: center; margin-top:65px;margin-bottom:65px;">
+                                <img src="/customer/images/gemeni.webp" class="card-img-top"
+                                    style="max-width: 80%; height: auto; display: inline-block;"
+                                    alt="کارت معرفی اکانت جمنای با تصویر جذاب" title="کارت خرید اکانت جمنای">
+                            </div>
+                            <div class="text-center">
+                                <h2 class="card-title" itemprop="name">اکانت جمنای 3</h2>
+                                <p class="card-text" itemprop="description">اکانت جمنای برای تریدرهای حرفه‌ای. قیمت مناسب
+                                    و
+                                    سرعت بالا در خرید و فروش.</p>
+                                <a href="#" class="btn btn-primary" aria-label="خرید اکانت جمنای 3"
+                                    itemprop="url">خرید الآن</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- کارت 4 -->
+                     <div class="col-md-3 col-sm-6 col-12 mb-4">
+                        <div class="card custom-card" itemscope itemtype="https://schema.org/Product">
+                            <div style="padding: 20px; text-align: center; margin-top:65px;margin-bottom:65px;">
+                                <img src="/customer/images/gemeni.webp" class="card-img-top"
+                                    style="max-width: 80%; height: auto; display: inline-block;"
+                                    alt="کارت معرفی اکانت جمنای با تصویر جذاب" title="کارت خرید اکانت جمنای">
+                            </div>
+                            <div class="text-center">
+                                <h2 class="card-title" itemprop="name">اکانت جمنای 4</h2>
+                                <p class="card-text" itemprop="description">یکی دیگر از اکانت‌های با کیفیت جمنای. امنیت
+                                    بالا
+                                    و قیمت مناسب برای شما.</p>
+                                <a href="#" class="btn btn-primary" aria-label="خرید اکانت جمنای 4"
+                                    itemprop="url">خرید الآن</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <li style="margin-top: 1500px !important;">
                 <strong>Support & Continuous Growth:</strong>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Customer\AiProductsController;
 use App\Http\Controllers\Customer\AuthController;
 use App\Http\Controllers\Customer\DashboardController;
 use App\Http\Controllers\Customer\HomeController;
@@ -26,7 +27,16 @@ Route::get('/services/khanuti-kayqi-dizayn-armenia', [HomeController::class, 'se
 
 Route::get('/post/{slug}', [PostController::class, 'show'])->name('customer.post.show');
 
-Route::get('/اکانت-chatgpt', [PostController::class, 'chatGptPricing'])->name('customer.pricing.index');
+Route::get('/اکانت-chatgpt', [PostController::class, 'chatGptPricing'])->name('customer.pricing.chatgpt.index');
+Route::get('/اکانت-ai', [PostController::class, 'chatAiPricing'])->name('customer.pricing.ai.index');
+Route::get('/اکانت-gemeni', [PostController::class, 'chatGemeniPricing'])->name('customer.pricing.gemeni.index');
+
+//ai products
+Route::get('/product/chatgpt-go', [AiProductsController::class, 'setPrice'])->name('product.go');
+Route::get('/product/chatgpt-plus', [AiProductsController::class, 'setPrice'])->name('product.plus');
+Route::get('/product/chatgpt-pro', [AiProductsController::class, 'setPrice'])->name('product.pro');
+Route::get('/product/gemini-4', [AiProductsController::class, 'setPrice'])->name('product.gemini4');
+
 
 //pay
 Route::get('/payment', [PaymentController::class, 'pay'])->name('payment.pay'); 
