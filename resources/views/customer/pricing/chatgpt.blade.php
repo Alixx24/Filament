@@ -47,9 +47,7 @@
         <h1>Խանութի կայքի դիզայն և Social Media Marketing Հայաստանում</h1>
         <p>
             Հայաստանի e-commerce շուկան շարունակ աճում է, և բիզնեսների համար կարևոր է ունենալ ոչ միայն գեղեցիկ և
-            fully responsive <strong>Խանութի կայքի դիզայն</strong>, այլև արդյունավետ Social Media presence:
-            Մեր թիմը առաջարկում է ամբողջական լուծումներ՝ Facebook, Instagram, Telegram և այլ հարթակներում բրենդի
-            տեսանելիությունը բարձրացնելու, հաճախորդների ներգրավվածությունը մեծացնելու և առցանց վաճառքը առաջացնելու համար:
+            fully responsive
         </p>
 
 
@@ -115,6 +113,15 @@
                 background-color: #0056b3;
                 transform: translateY(-3px);
                 /* حرکت دکمه به سمت بالا */
+            }
+
+
+            @media (min-width: 768px) {
+                .desktop-row {
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding: 25px !important;
+                }
             }
         </style>
         </head>
@@ -205,6 +212,12 @@
                     display: block;
                     font-size: 14px;
                 }
+
+                @media (max-width: 767px) {
+                    .mt-mobile {
+                        margin-top: 2466px !important;
+                    }
+                }
             </style>
 
             <script>
@@ -230,123 +243,194 @@
 
 
             <!-- محتوای صفحه -->
-            <div class="container" style="margin-top: 800px !important;">
-                <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
+
+
+            <style>
+                /* استایل مخصوص دسکتاپ - فقط در سایزهای بالای 992px اعمال می‌شود */
+                @media (min-width: 992px) {
+                    .desktop-product-grid {
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        gap: 20px;
+                        margin-top: 0 !important;
+                        padding: 0;
+                    }
+
+                    .desktop-product-card {
+                        transition: all 0.3s ease;
+                        border: 1px solid #e9ecef;
+                        border-radius: 16px;
+                        overflow: hidden;
+                        background: #ffffff;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    .desktop-product-card:hover {
+                        transform: translateY(-5px);
+                        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+                        border-color: transparent;
+                    }
+
+                    .desktop-product-image {
+                        padding: 20px 20px 10px 20px;
+                        text-align: center;
+                        background: #f8f9fa;
+                    }
+
+                    .desktop-product-image img {
+                        max-width: 70%;
+                        height: 140px;
+                        object-fit: contain;
+                        transition: transform 0.3s ease;
+                    }
+
+                    .desktop-product-card:hover .desktop-product-image img {
+                        transform: scale(1.05);
+                    }
+
+                    .desktop-product-content {
+                        padding: 0 20px 20px 20px;
+                        text-align: center;
+                        flex-grow: 1;
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    .desktop-product-title {
+                        font-size: 1.1rem;
+                        font-weight: 600;
+                        color: #212529;
+                        margin-bottom: 8px;
+                    }
+
+                    .desktop-product-description {
+                        font-size: 0.85rem;
+                        color: #6c757d;
+                        line-height: 1.5;
+                        margin-bottom: 15px;
+                        flex-grow: 1;
+                    }
+
+                    .desktop-product-button {
+                        display: inline-block;
+                        width: 80%;
+                        margin: 0 auto;
+                        padding: 10px 0;
+                        background: #212529;
+                        color: white;
+                        border-radius: 50px;
+                        text-decoration: none;
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                        transition: all 0.3s ease;
+                        border: 1px solid #212529;
+                    }
+
+                    .desktop-product-button:hover {
+                        background: white;
+                        color: #212529;
+                        text-decoration: none;
+                    }
+
+                    /* لینک بدون تغییر ظاهر */
+                    .desktop-product-link {
+                        text-decoration: none;
+                        color: inherit;
+                        display: block;
+                        height: 100%;
+                    }
+
+                    /* حذف فاصله از بالای کانتینر */
+                    .desktop-container {
+                        margin-top: 0 !important;
+                        padding-top: 0 !important;
+                    }
+                    .mt-desktop{
+                        margin-top:999px;
+                    }
+                }
+
+                /* استایل موبایل (اختیاری) */
+                @media (max-width: 991px) {
+                    .desktop-product-grid {
+                        display: block;
+                    }
+
+                    .col-md-3 {
+                        width: 100%;
+                        margin-bottom: 15px;
+                    }
+                }
+            </style>
+            <div class="container mt-mobile">
+                <div class="row justify-content-center align-items-center mt-desktop">
                     <h1 class="text-center mb-5" itemprop="name">
-                        خرید اکانت ChatGpt - قیمت مناسب و خدمات ویژه
+
                     </h1>
 
-                    <!-- کارت‌ها -->
-                    <div class="row">
-
-                        <!-- کارت 1 -->
-                        <div class="col-md-3 col-sm-6 col-12 mb-4">
-                            <a href="#" class="text-decoration-none text-dark">
-                                <div class="card custom-card h-100" itemscope itemtype="https://schema.org/Product">
-                                    <div class="text-center p-4">
-                                        <img src="/customer/images/cgatgpt.webp" class="card-img-top"
-                                            style="max-width: 80%; height: auto;" alt="کارت معرفی اکانت ChatGpt Go"
-                                            title="کارت خرید اکانت ChatGpt Go">
-                                    </div>
-                                    <div class="text-center p-3">
-                                        <h2 class="card-title" itemprop="name">ChatGpt Go اکانت</h2>
-                                        <p class="card-text" itemprop="description">
-                                            اکانت جمنای با قیمت مناسب و ویژگی‌های خاص. بهترین انتخاب برای خرید ارز دیجیتال.
-                                        </p>
-                                        <span class="btn btn-dark w-75 mt-3 rounded-pill"
-                                            aria-label="خرید اکانت ChatGpt Go">
-                                            خرید الآن
-                                        </span>
-                                    </div>
+                    <!-- کارت‌ها برای موبایل (فقط در موبایل نمایش داده شود) -->
+                    <div class="d-block d-lg-none">
+                        <div class="row">
+                            @foreach ($products as $product)
+                                <div class="col-12 mb-4">
+                                    <a href="" class="text-decoration-none text-dark">
+                                        <div class="card custom-card h-100" itemscope itemtype="https://schema.org/Product">
+                                            <div class="text-center p-4">
+                                                <img src="/customer/images/cgatgpt.webp" class="card-img-top"
+                                                    style="max-width: 80%; height: auto;" alt="{{ $product->name }}"
+                                                    title="{{ $product->name }}">
+                                            </div>
+                                            <div class="text-center p-3">
+                                                <h2 class="card-title" itemprop="name">{{ $product->name }}</h2>
+                                                <p class="card-text" itemprop="description">
+                                                    {{ Str::limit($product->description, 66) }}
+                                                </p>
+                                                <span class="btn btn-dark w-75 mt-3 rounded-pill"
+                                                    aria-label="خرید {{ $product->name }}">
+                                                    خرید الآن
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
+                            @endforeach
                         </div>
+                    </div>
 
-                        <!-- کارت 2 -->
-                        <div class="col-md-3 col-sm-6 col-12 mb-4">
-                            <a href="#" class="text-decoration-none text-dark">
-                                <div class="card custom-card h-100" itemscope itemtype="https://schema.org/Product">
-                                    <div class="text-center p-4">
-                                        <img src="/customer/images/cgatgpt.webp" class="card-img-top"
-                                            style="max-width: 80%; height: auto;" alt="کارت معرفی اکانت ChatGpt Plus"
-                                            title="کارت خرید اکانت ChatGpt Plus">
-                                    </div>
-                                    <div class="text-center p-3">
-                                        <h2 class="card-title" itemprop="name">ChatGpt Plus اکانت</h2>
-                                        <p class="card-text" itemprop="description">
-                                            اکانت جمنای با امنیت بالا و قیمت رقابتی. امکان خرید سریع و راحت.
-                                        </p>
-                                        <span class="btn btn-dark w-75 mt-3 rounded-pill"
-                                            aria-label="خرید اکانت ChatGpt Plus">
-                                            خرید الآن
-                                        </span>
-                                    </div>
+                    <!-- کارت‌ها برای دسکتاپ (فقط در دسکتاپ نمایش داده شود) -->
+                    <div class="d-none d-lg-block w-100">
+                        <div class="desktop-product-grid">
+                            @foreach ($products as $product)
+                                <div>
+                                    <a href="" class="desktop-product-link">
+                                        <div class="desktop-product-card">
+                                            <div class="desktop-product-image">
+                                                <img src="/customer/images/cgatgpt.webp" alt="{{ $product->name }}"
+                                                    title="{{ $product->name }}">
+                                            </div>
+                                            <div class="desktop-product-content">
+                                                <h2 class="desktop-product-title">{{ $product->name }}</h2>
+                                                <p class="desktop-product-description">
+                                                    {{ Str::limit($product->description, 66) }}
+                                                </p>
+                                                <span class="desktop-product-button">
+                                                    خرید الآن
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
+                            @endforeach
                         </div>
-
-                        <!-- کارت 3 -->
-                        <div class="col-md-3 col-sm-6 col-12 mb-4">
-                            <a href="#" class="text-decoration-none text-dark">
-                                <div class="card custom-card h-100" itemscope itemtype="https://schema.org/Product">
-                                    <div class="text-center p-4">
-                                        <img src="/customer/images/cgatgpt.webp" class="card-img-top"
-                                            style="max-width: 80%; height: auto;" alt="کارت معرفی اکانت ChatGpt Pro"
-                                            title="کارت خرید اکانت ChatGpt Pro">
-                                    </div>
-                                    <div class="text-center p-3">
-                                        <h2 class="card-title" itemprop="name">ChatGpt Pro اکانت</h2>
-                                        <p class="card-text" itemprop="description">
-                                            اکانت جمنای برای تریدرهای حرفه‌ای. قیمت مناسب و سرعت بالا در خرید و فروش.
-                                        </p>
-                                        <span class="btn btn-dark w-75 mt-3 rounded-pill"
-                                            aria-label="خرید اکانت ChatGpt Pro">
-                                            خرید الآن
-                                        </span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- کارت 4 -->
-                        <div class="col-md-3 col-sm-6 col-12 mb-4">
-                            <a href="#" class="text-decoration-none text-dark">
-                                <div class="card custom-card h-100" itemscope itemtype="https://schema.org/Product">
-                                    <div class="text-center p-4">
-                                        <img src="/customer/images/cgatgpt.webp" class="card-img-top"
-                                            style="max-width: 80%; height: auto;" alt="کارت معرفی اکانت جمنای 4"
-                                            title="کارت خرید اکانت جمنای 4">
-                                    </div>
-                                    <div class="text-center p-3">
-                                        <h2 class="card-title" itemprop="name">اکانت جمنای 4</h2>
-                                        <p class="card-text" itemprop="description">
-                                            یکی دیگر از اکانت‌های با کیفیت جمنای. امنیت بالا و قیمت مناسب برای شما.
-                                        </p>
-                                        <span class="btn btn-dark w-75 mt-3 rounded-pill" aria-label="خرید اکانت جمنای 4">
-                                            خرید الآن
-                                        </span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
                     </div>
                 </div>
             </div>
 
-            <li style="margin-top: 1500px !important;">
-                <strong>Support & Continuous Growth:</strong>
-                <ul>
-                    <li>Training for internal teams → managing Social Media channels</li>
-                    <li>Continuous strategy updates → aligned with market trends</li>
-                    <li>Ongoing optimization → maximize ROI and engagement</li>
-                </ul>
-            </li>
-            </ol>
-
             {{-- CTA Section --}}
             <section class="lux-cta-wrapper">
-                <h2 class="lux-cta-title">Հետադարձ կապ և CTA</h2>
+                <h2 class="lux-cta-title" style="margin-top: 2666px !important;">Հետադարձ կապ և CTA</h2>
                 <p class="lux-cta-desc">
                     Պատրա՞ստ եք բարձրացնել Ձեր e-commerce բրենդը Հայաստանում՝ Social Media Marketing-ի և
                     Խանութի կայքի դիզայն-ի միջոցով։ Սկսեք Ձեր աճի ճանապարհը հիմա:
