@@ -34,23 +34,14 @@
 
             <!-- Footer text -->
             <p style="font-size: 14px; margin-bottom: 20px;">
+                                <a referrerpolicy='origin' target='_blank' href='https://trustseal.enamad.ir/?id=703000&Code=oBqG9M3Yan78S2nE0Mgw1OyqNHA6eDPA'><img referrerpolicy='origin' src='https://trustseal.enamad.ir/logo.aspx?id=703000&Code=oBqG9M3Yan78S2nE0Mgw1OyqNHA6eDPA' alt='' style='cursor:pointer' code='oBqG9M3Yan78S2nE0Mgw1OyqNHA6eDPA'></a>
+
                 <span>© 2025 <strong>Growvixo</strong></span>. <span>Ամբողջ իրավունքները պաշտպանված են:</span>
             </p>
 
             <!-- Key services -->
             <div class="footer-services" style="margin-bottom: 30px;">
-                <p style="font-size: 16px; font-weight: 600; line-height: 1.6;">
-                    <strong>Growvixo</strong> առաջարկում է <strong>Թվային գովազդ</strong>, <strong>SEO
-                        օպտիմալացում</strong>, <strong>Վեբ կայքի մշակում</strong> (համալրված <strong>ձեռնարկությունների
-                        առցանց խանութ</strong>) և <strong>Սոցիալական մեդիայի ռազմավարություններ</strong>՝ ձեր բիզնեսի
-                    թվային աճի համար:
-                </p>
-
-                <p style="font-size: 16px; font-weight: 600; line-height: 1.6;">
-                    Մենք օժանդակում ենք <strong>Բրենդի ճանաչելիություն</strong> և <strong>Առցանց վաճառքի աճ</strong>՝
-                    տրամադրելով որակյալ <strong>Բովանդակություն</strong> և <strong>Արշավների վերլուծություն</strong>:
-                </p>
-
+              
                 <!-- New addition: Ecommerce Website Design -->
                 <p style="font-size: 16px; font-weight: 600; line-height: 1.6;">
                     <strong>Growvixo</strong> առաջարկում է մասնագիտացված <strong>դիզայն ու մշակում</strong>

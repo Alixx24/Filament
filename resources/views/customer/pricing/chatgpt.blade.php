@@ -120,87 +120,220 @@
         </head>
 
         <body>
+            <!-- آیکون چت -->
+            <div class="chat-wrapper">
+                <button class="chat-button" id="chatToggle">
+                    <i class="fas fa-comments"></i>
+                </button>
+
+                <div class="chat-box" id="chatBox">
+                    <ul>
+                        <li><a href="#">چت با پشتیبانی</a></li>
+                        <li><a href="#">سوالات متداول</a></li>
+                        <li><a href="#">تماس با ما</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <style>
+                .chat-wrapper {
+                    position: fixed;
+                    bottom: 20px;
+                    right: 20px;
+                    z-index: 9999;
+                }
+
+                /* دکمه اصلی */
+                .chat-button {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    border: none;
+                    background: linear-gradient(135deg, #4e73df, #1cc88a);
+                    color: white;
+                    font-size: 22px;
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                }
+
+                .chat-button:hover {
+                    transform: scale(1.1);
+                }
+
+                /* باکس چت */
+                .chat-box {
+                    position: absolute;
+                    bottom: 75px;
+                    right: 0;
+                    width: 220px;
+                    background: white;
+                    border-radius: 15px;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+                    padding: 10px 0;
+                    opacity: 0;
+                    transform: translateY(20px);
+                    pointer-events: none;
+                    transition: all 0.3s ease-in-out;
+                }
+
+                /* وقتی فعال میشه */
+                .chat-box.active {
+                    opacity: 1;
+                    transform: translateY(0);
+                    pointer-events: auto;
+                }
+
+                .chat-box ul {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .chat-box li {
+                    padding: 10px 20px;
+                    transition: background 0.2s;
+                }
+
+                .chat-box li:hover {
+                    background: #f8f9fc;
+                }
+
+                .chat-box a {
+                    text-decoration: none;
+                    color: #333;
+                    display: block;
+                    font-size: 14px;
+                }
+            </style>
+
+            <script>
+                const chatToggle = document.getElementById("chatToggle");
+                const chatBox = document.getElementById("chatBox");
+
+                // باز و بسته شدن با دکمه
+                chatToggle.addEventListener("click", function(e) {
+                    e.stopPropagation(); // جلوگیری از بسته شدن فوری
+                    chatBox.classList.toggle("active");
+                });
+
+                // جلوگیری از بسته شدن وقتی داخل باکس کلیک میشه
+                chatBox.addEventListener("click", function(e) {
+                    e.stopPropagation();
+                });
+
+                // بستن هنگام کلیک بیرون
+                document.addEventListener("click", function() {
+                    chatBox.classList.remove("active");
+                });
+            </script>
+
 
             <!-- محتوای صفحه -->
-            <div class="row justify-content-center align-items-center" style="height: 100vh;">
-                <h1 class="text-center mb-5" itemprop="name">خرید اکانت ChatGpt - قیمت مناسب و خدمات ویژه</h1>
+            <div class="container" style="margin-top: 800px !important;">
+                <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
+                    <h1 class="text-center mb-5" itemprop="name">
+                        خرید اکانت ChatGpt - قیمت مناسب و خدمات ویژه
+                    </h1>
 
-                <div class="row ms-2">
-                    <!-- کارت 1 -->
-                    <div class="col-md-3 col-sm-6 col-12 mb-4">
-                        <div class="card custom-card" itemscope itemtype="https://schema.org/Product">
-                            <div style="padding: 20px; text-align: center;">
-                                <img src="/customer/images/cgatgpt.webp" class="card-img-top"
-                                    style="max-width: 80%; height: auto; display: inline-block;"
-                                    alt="کارت معرفی اکانت جمنای با تصویر جذاب" title="کارت خرید اکانت جمنای">
-                            </div>
-                            <div class="text-center">
-                                <h2 class="card-title" itemprop="name">ChatGpt Go اکانت</h2>
-                                <p class="card-text" itemprop="description">اکانت جمنای با قیمت مناسب و ویژگی‌های خاص.
-                                    بهترین انتخاب برای خرید ارز دیجیتال.</p>
-                                <a href="#" class="btn btn-primary" aria-label="خرید اکانت جمنای 1"
-                                    itemprop="url">خرید الآن</a>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- کارت‌ها -->
+                    <div class="row">
 
-                    <!-- کارت 2 -->
-                    <div class="col-md-3 col-sm-6 col-12 mb-4">
-                        <div class="card custom-card" itemscope itemtype="https://schema.org/Product">
-                            <div style="padding: 20px; text-align: center;">
-                                <img src="/customer/images/cgatgpt.webp" class="card-img-top"
-                                    style="max-width: 80%; height: auto; display: inline-block;"
-                                    alt="کارت معرفی اکانت جمنای با تصویر جذاب" title="کارت خرید اکانت جمنای">
-                            </div>
-                            <div class="text-center">
-                                <h2 class="card-title" itemprop="name">ChatGpt Plus اکانت</h2>
-                                <p class="card-text" itemprop="description">اکانت جمنای با امنیت بالا و قیمت رقابتی. امکان
-                                    خرید سریع و راحت.</p>
-                                <a href="#" class="btn btn-primary" aria-label="خرید اکانت جمنای 2"
-                                    itemprop="url">خرید الآن</a>
-                            </div>
+                        <!-- کارت 1 -->
+                        <div class="col-md-3 col-sm-6 col-12 mb-4">
+                            <a href="#" class="text-decoration-none text-dark">
+                                <div class="card custom-card h-100" itemscope itemtype="https://schema.org/Product">
+                                    <div class="text-center p-4">
+                                        <img src="/customer/images/cgatgpt.webp" class="card-img-top"
+                                            style="max-width: 80%; height: auto;" alt="کارت معرفی اکانت ChatGpt Go"
+                                            title="کارت خرید اکانت ChatGpt Go">
+                                    </div>
+                                    <div class="text-center p-3">
+                                        <h2 class="card-title" itemprop="name">ChatGpt Go اکانت</h2>
+                                        <p class="card-text" itemprop="description">
+                                            اکانت جمنای با قیمت مناسب و ویژگی‌های خاص. بهترین انتخاب برای خرید ارز دیجیتال.
+                                        </p>
+                                        <span class="btn btn-dark w-75 mt-3 rounded-pill"
+                                            aria-label="خرید اکانت ChatGpt Go">
+                                            خرید الآن
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                    </div>
 
-                    <!-- کارت 3 -->
-                    <div class="col-md-3 col-sm-6 col-12 mb-4">
-                        <div class="card custom-card" itemscope itemtype="https://schema.org/Product">
-                            <div style="padding: 20px; text-align: center;">
-                                <img src="/customer/images/cgatgpt.webp" class="card-img-top"
-                                    style="max-width: 80%; height: auto; display: inline-block;"
-                                    alt="کارت معرفی اکانت جمنای با تصویر جذاب" title="کارت خرید اکانت جمنای">
-                            </div>
-                            <div class="text-center">
-                                <h2 class="card-title" itemprop="name">ChatGpt Pro اکانت</h2>
-                                <p class="card-text" itemprop="description">اکانت جمنای برای تریدرهای حرفه‌ای. قیمت مناسب و
-                                    سرعت بالا در خرید و فروش.</p>
-                                <a href="#" class="btn btn-primary" aria-label="خرید اکانت جمنای 3"
-                                    itemprop="url">خرید الآن</a>
-                            </div>
+                        <!-- کارت 2 -->
+                        <div class="col-md-3 col-sm-6 col-12 mb-4">
+                            <a href="#" class="text-decoration-none text-dark">
+                                <div class="card custom-card h-100" itemscope itemtype="https://schema.org/Product">
+                                    <div class="text-center p-4">
+                                        <img src="/customer/images/cgatgpt.webp" class="card-img-top"
+                                            style="max-width: 80%; height: auto;" alt="کارت معرفی اکانت ChatGpt Plus"
+                                            title="کارت خرید اکانت ChatGpt Plus">
+                                    </div>
+                                    <div class="text-center p-3">
+                                        <h2 class="card-title" itemprop="name">ChatGpt Plus اکانت</h2>
+                                        <p class="card-text" itemprop="description">
+                                            اکانت جمنای با امنیت بالا و قیمت رقابتی. امکان خرید سریع و راحت.
+                                        </p>
+                                        <span class="btn btn-dark w-75 mt-3 rounded-pill"
+                                            aria-label="خرید اکانت ChatGpt Plus">
+                                            خرید الآن
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                    </div>
 
-                    <!-- کارت 4 -->
-                    <div class="col-md-3 col-sm-6 col-12 mb-4">
-                        <div class="card custom-card" itemscope itemtype="https://schema.org/Product">
-                            <div style="padding: 20px; text-align: center;">
-                                <img src="/customer/images/cgatgpt.webp" class="card-img-top"
-                                    style="max-width: 80%; height: auto; display: inline-block;"
-                                    alt="کارت معرفی اکانت جمنای با تصویر جذاب" title="کارت خرید اکانت جمنای">
-                            </div>
-                            <div class="text-center">
-                                <h2 class="card-title" itemprop="name">اکانت جمنای 4</h2>
-                                <p class="card-text" itemprop="description">یکی دیگر از اکانت‌های با کیفیت جمنای. امنیت
-                                    بالا
-                                    و قیمت مناسب برای شما.</p>
-                                <a href="#" class="btn btn-primary" aria-label="خرید اکانت جمنای 4"
-                                    itemprop="url">خرید الآن</a>
-                            </div>
+                        <!-- کارت 3 -->
+                        <div class="col-md-3 col-sm-6 col-12 mb-4">
+                            <a href="#" class="text-decoration-none text-dark">
+                                <div class="card custom-card h-100" itemscope itemtype="https://schema.org/Product">
+                                    <div class="text-center p-4">
+                                        <img src="/customer/images/cgatgpt.webp" class="card-img-top"
+                                            style="max-width: 80%; height: auto;" alt="کارت معرفی اکانت ChatGpt Pro"
+                                            title="کارت خرید اکانت ChatGpt Pro">
+                                    </div>
+                                    <div class="text-center p-3">
+                                        <h2 class="card-title" itemprop="name">ChatGpt Pro اکانت</h2>
+                                        <p class="card-text" itemprop="description">
+                                            اکانت جمنای برای تریدرهای حرفه‌ای. قیمت مناسب و سرعت بالا در خرید و فروش.
+                                        </p>
+                                        <span class="btn btn-dark w-75 mt-3 rounded-pill"
+                                            aria-label="خرید اکانت ChatGpt Pro">
+                                            خرید الآن
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
+
+                        <!-- کارت 4 -->
+                        <div class="col-md-3 col-sm-6 col-12 mb-4">
+                            <a href="#" class="text-decoration-none text-dark">
+                                <div class="card custom-card h-100" itemscope itemtype="https://schema.org/Product">
+                                    <div class="text-center p-4">
+                                        <img src="/customer/images/cgatgpt.webp" class="card-img-top"
+                                            style="max-width: 80%; height: auto;" alt="کارت معرفی اکانت جمنای 4"
+                                            title="کارت خرید اکانت جمنای 4">
+                                    </div>
+                                    <div class="text-center p-3">
+                                        <h2 class="card-title" itemprop="name">اکانت جمنای 4</h2>
+                                        <p class="card-text" itemprop="description">
+                                            یکی دیگر از اکانت‌های با کیفیت جمنای. امنیت بالا و قیمت مناسب برای شما.
+                                        </p>
+                                        <span class="btn btn-dark w-75 mt-3 rounded-pill" aria-label="خرید اکانت جمنای 4">
+                                            خرید الآن
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
                     </div>
                 </div>
-           
             </div>
+
             <li style="margin-top: 1500px !important;">
                 <strong>Support & Continuous Growth:</strong>
                 <ul>
