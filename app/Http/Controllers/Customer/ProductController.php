@@ -24,4 +24,11 @@ class ProductController extends Controller
 
         return view('customer.pricing.chatgpt', compact('products'));
     }
+
+    public function chatGptDetail($slug)
+    {
+        $product = Product::where('slug', $slug)->get()[0];
+
+        return view('customer.pricing.detail-gpt', compact('product'));
+    }
 }

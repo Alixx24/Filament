@@ -41,19 +41,7 @@
 
 {{-- ====================== Content Section ====================== --}}
 @section('content')
-
-    <section id="social-media-marketing" class="p-4 m-3 bg-light p-mt-head border border-primary rounded-3">
-
-        <h1>Խանութի կայքի դիզայն և Social Media Marketing Հայաստանում</h1>
-        <p>
-            Հայաստանի e-commerce շուկան շարունակ աճում է, և բիզնեսների համար կարևոր է ունենալ ոչ միայն գեղեցիկ և
-            fully responsive
-        </p>
-
-
-        {{-- Step-by-Step Process --}}
-
-        <style>
+   <style>
             .custom-card {
                 border-radius: 20px;
                 /* مرز گرد */
@@ -123,27 +111,7 @@
                     padding: 25px !important;
                 }
             }
-        </style>
-        </head>
-
-        <body>
-            <!-- آیکون چت -->
-            <div class="chat-wrapper">
-                <button class="chat-button" id="chatToggle">
-                    <i class="fas fa-comments"></i>
-                </button>
-
-                <div class="chat-box" id="chatBox">
-                    <ul>
-                        <li><a href="#">چت با پشتیبانی</a></li>
-                        <li><a href="#">سوالات متداول</a></li>
-                        <li><a href="#">تماس با ما</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <style>
-                .chat-wrapper {
+                      .chat-wrapper {
                     position: fixed;
                     bottom: 20px;
                     right: 20px;
@@ -218,35 +186,8 @@
                         margin-top: 2466px !important;
                     }
                 }
-            </style>
 
-            <script>
-                const chatToggle = document.getElementById("chatToggle");
-                const chatBox = document.getElementById("chatBox");
-
-                // باز و بسته شدن با دکمه
-                chatToggle.addEventListener("click", function(e) {
-                    e.stopPropagation(); // جلوگیری از بسته شدن فوری
-                    chatBox.classList.toggle("active");
-                });
-
-                // جلوگیری از بسته شدن وقتی داخل باکس کلیک میشه
-                chatBox.addEventListener("click", function(e) {
-                    e.stopPropagation();
-                });
-
-                // بستن هنگام کلیک بیرون
-                document.addEventListener("click", function() {
-                    chatBox.classList.remove("active");
-                });
-            </script>
-
-
-            <!-- محتوای صفحه -->
-
-
-            <style>
-                /* استایل مخصوص دسکتاپ - فقط در سایزهای بالای 992px اعمال می‌شود */
+                              /* استایل مخصوص دسکتاپ - فقط در سایزهای بالای 992px اعمال می‌شود */
                 @media (min-width: 992px) {
                     .desktop-product-grid {
                         display: grid;
@@ -347,8 +288,9 @@
                         margin-top: 0 !important;
                         padding-top: 0 !important;
                     }
-                    .mt-desktop{
-                        margin-top:999px;
+
+                    .mt-desktop {
+                        margin-top: 999px;
                     }
                 }
 
@@ -363,19 +305,76 @@
                         margin-bottom: 15px;
                     }
                 }
-            </style>
+        </style>
+    <section id="social-media-marketing" class="p-4 m-3 bg-light p-mt-head border border-primary rounded-3">
+
+
+        <h3 style="text-align: right; ">!<strong> بدون دردسر ChatGpt اکانت</strong></h3>
+        <p style="text-align: right; font-family: Vazir, Tahoma, Arial, sans-serif; line-height: 1.8;">
+            با توجه به محدودیت‌های موجود برای کاربران ایرانی در دسترسی به ChatGpt ما فرآیند ثبت‌نام و خرید را برای شما
+            آسان
+            کرده‌ایم. اکانت‌های مدنظر شما عزیزان را، به آسانی تنها در کوتاه‌ترین زمان ممکن در اختیار شما قرار می‌گیرد
+        </p>
+
+
+
+
+
+        {{-- Step-by-Step Process --}}
+
+     
+        </head>
+
+        <body>
+            <!-- chat icon -->
+            <div class="chat-wrapper">
+                <button class="chat-button" id="chatToggle">
+                    <i class="fas fa-comments"></i>
+                </button>
+
+                <div class="chat-box" id="chatBox">
+                    <ul>
+                        <li><a href="#">چت با پشتیبانی</a></li>
+                        <li><a href="#">سوالات متداول</a></li>
+                        <li><a href="#">تماس با ما</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <script>
+                const chatToggle = document.getElementById("chatToggle");
+                const chatBox = document.getElementById("chatBox");
+
+                // باز و بسته شدن با دکمه
+                chatToggle.addEventListener("click", function(e) {
+                    e.stopPropagation(); // جلوگیری از بسته شدن فوری
+                    chatBox.classList.toggle("active");
+                });
+
+                // جلوگیری از بسته شدن وقتی داخل باکس کلیک میشه
+                chatBox.addEventListener("click", function(e) {
+                    e.stopPropagation();
+                });
+
+                // بستن هنگام کلیک بیرون
+                document.addEventListener("click", function() {
+                    chatBox.classList.remove("active");
+                });
+            </script>
+
+
             <div class="container mt-mobile">
                 <div class="row justify-content-center align-items-center mt-desktop">
                     <h1 class="text-center mb-5" itemprop="name">
 
                     </h1>
 
-                    <!-- کارت‌ها برای موبایل (فقط در موبایل نمایش داده شود) -->
+                    <!-- moobile-->
                     <div class="d-block d-lg-none">
                         <div class="row">
                             @foreach ($products as $product)
                                 <div class="col-12 mb-4">
-                                    <a href="" class="text-decoration-none text-dark">
+                                    <a href="{{ route('customer.doc.chatgpt.detail', ['slug' => $product->slug]) }}" class="text-decoration-none text-dark">
                                         <div class="card custom-card h-100" itemscope itemtype="https://schema.org/Product">
                                             <div class="text-center p-4">
                                                 <img src="/customer/images/cgatgpt.webp" class="card-img-top"
@@ -399,12 +398,12 @@
                         </div>
                     </div>
 
-                    <!-- کارت‌ها برای دسکتاپ (فقط در دسکتاپ نمایش داده شود) -->
+                    <!-- desktop-->
                     <div class="d-none d-lg-block w-100">
                         <div class="desktop-product-grid">
                             @foreach ($products as $product)
                                 <div>
-                                    <a href="" class="desktop-product-link">
+                                    <a href="{{ route('customer.doc.chatgpt.detail', ['slug' => $product->slug]) }}" class="desktop-product-link">
                                         <div class="desktop-product-card">
                                             <div class="desktop-product-image">
                                                 <img src="/customer/images/cgatgpt.webp" alt="{{ $product->name }}"

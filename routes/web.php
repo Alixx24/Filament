@@ -33,7 +33,7 @@ Route::get('/اکانت-ai', [PostController::class, 'chatAiPricing'])->name('cu
 Route::get('/اکانت-gemeni', [PostController::class, 'chatGemeniPricing'])->name('customer.pricing.gemeni.index');
 
 //ChatGpt
-// Route::get('/اکانت-chatgpt', [ProductController::class, 'chatGpt'])->name('customer.doc.chatgpt.index');
+Route::get('/اکانت-chatgpt/{slug}', [ProductController::class, 'chatGptDetail'])->name('customer.doc.chatgpt.detail');
 
 
 //ai products
