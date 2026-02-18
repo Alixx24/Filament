@@ -5,12 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>@yield('title', 'HRM Project')</title>
+    <title>@yield('title', 'اکانت هوش مصنوعی')</title>
     @include('customer.layouts.head-tag-content')
-    
+
     <style>
         /* استایل‌های اصلی برای چسباندن فوتر */
-        html, body {
+        html,
+        body {
             height: 100%;
             margin: 0;
             padding: 0;
@@ -53,7 +54,7 @@
             color: #fff;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 -10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.2);
         }
 
         /* افکت موج در بالای فوتر */
@@ -77,13 +78,18 @@
             right: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
             animation: gvFooterGlow 15s linear infinite;
         }
 
         @keyframes gvFooterGlow {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         /* لوگو و نماد اعتماد */
@@ -232,9 +238,17 @@
             }
 
             @keyframes gvMobilePulse {
-                0% { transform: scale(1); }
-                50% { transform: scale(1.05); }
-                100% { transform: scale(1); }
+                0% {
+                    transform: scale(1);
+                }
+
+                50% {
+                    transform: scale(1.05);
+                }
+
+                100% {
+                    transform: scale(1);
+                }
             }
 
             /* آیکون‌های اجتماعی متحرک */
@@ -251,14 +265,32 @@
                 animation-delay: calc(0.1s * var(--i));
             }
 
-            .gv-social-link:nth-child(1) { --i: 1; }
-            .gv-social-link:nth-child(2) { --i: 2; }
-            .gv-social-link:nth-child(3) { --i: 3; }
-            .gv-social-link:nth-child(4) { --i: 4; }
+            .gv-social-link:nth-child(1) {
+                --i: 1;
+            }
+
+            .gv-social-link:nth-child(2) {
+                --i: 2;
+            }
+
+            .gv-social-link:nth-child(3) {
+                --i: 3;
+            }
+
+            .gv-social-link:nth-child(4) {
+                --i: 4;
+            }
 
             @keyframes gvMobileBounce {
-                0%, 100% { transform: translateY(0); }
-                50% { transform: translateY(-5px); }
+
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+
+                50% {
+                    transform: translateY(-5px);
+                }
             }
 
             .gv-social-link:hover {
@@ -305,8 +337,15 @@
             }
 
             @keyframes gvMobileFade {
-                0%, 100% { opacity: 1; }
-                50% { opacity: 0.8; }
+
+                0%,
+                100% {
+                    opacity: 1;
+                }
+
+                50% {
+                    opacity: 0.8;
+                }
             }
         }
 
@@ -346,16 +385,28 @@
             animation: gvFadeInUp 0.5s ease backwards;
         }
 
-        .gv-social-link:nth-child(1) { animation-delay: 0.1s; }
-        .gv-social-link:nth-child(2) { animation-delay: 0.2s; }
-        .gv-social-link:nth-child(3) { animation-delay: 0.3s; }
-        .gv-social-link:nth-child(4) { animation-delay: 0.4s; }
+        .gv-social-link:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .gv-social-link:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .gv-social-link:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .gv-social-link:nth-child(4) {
+            animation-delay: 0.4s;
+        }
 
         @keyframes gvFadeInUp {
             from {
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -389,6 +440,16 @@
             z-index: 0;
             pointer-events: none;
         }
+
+        .footer-copy {
+            text-align: center;
+            /* اگر می‌خوای وسط باشه */
+            direction: rtl;
+            /* برای درست نمایش دادن فارسی */
+            line-height: 1.8;
+            font-size: 14px;
+            color: #ffffff;
+        }
     </style>
 </head>
 
@@ -399,7 +460,7 @@
     @include('customer.layouts.header-shop')
 
     {{-- PAGE CONTENT --}}
-    <main class="hero-section"> 
+    <main class="hero-section">
         @yield('content')
     </main>
 
@@ -415,8 +476,11 @@
                         alt='' style='cursor:pointer' code='oBqG9M3Yan78S2nE0Mgw1OyqNHA6eDPA'>
                 </a>
                 <br>
-                <span>© 2025 <strong>Growvixo</strong></span>
-                <span>Ամբողջ իրավունքները պաշտպանված են:</span>
+                   <div class="footer-copy">
+                    © 2025 <strong>Growvixo</strong><br>
+                    تمامی حقوق این وب‌سایت محفوظ است.
+                </div>
+
             </p>
 
             <!-- Social Media Icons -->
@@ -437,9 +501,9 @@
 
             <!-- Quick Links -->
             <div class="gv-footer-links">
-                <a class="gv-footer-link" href="{{ route('about') }}">About Us</a>
-                <a class="gv-footer-link" href="{{ route('contact') }}">Contact</a>
-                <a class="gv-footer-link" href="{{ route('services') }}">Services</a>
+                <a class="gv-footer-link" href="{{ route('about') }}">درباره ما</a>
+                <a class="gv-footer-link" href="{{ route('contact') }}">تماس باما</a>
+                <a class="gv-footer-link" href="{{ route('services') }}">خدمات</a>
             </div>
         </footer>
     </section>
@@ -447,7 +511,7 @@
     {{-- SCRIPTS --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    
+
     <script>
         particlesJS('particles-js', {
             "particles": {
@@ -498,13 +562,13 @@
                     }
                 });
             });
-            
+
             if (footer) {
                 observer.observe(footer);
             }
         }
     </script>
-
     <script src="/js/header.js"></script>
 </body>
+
 </html>
