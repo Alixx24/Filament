@@ -309,9 +309,9 @@
     <section id="social-media-marketing" class="p-4 m-3 p-mt-head border border-primary rounded-3">
 
 
-        <h3 style="text-align: right; ">!<strong> بدون دردسر ChatGpt اکانت</strong></h3>
+        <h3 style="text-align: right; ">!<strong> بدون دردسر Gemini اکانت</strong></h3>
         <p style="text-align: right; font-family: Vazir, Tahoma, Arial, sans-serif; line-height: 1.8;">
-            با توجه به محدودیت‌های موجود برای کاربران ایرانی در دسترسی به ChatGpt ما فرآیند ثبت‌نام و خرید را برای شما
+            با توجه به محدودیت‌های موجود برای کاربران ایرانی در دسترسی به Gemini ما فرآیند ثبت‌نام و خرید را برای شما
             آسان
             کرده‌ایم. اکانت‌های مدنظر شما عزیزان را، به آسانی تنها در کوتاه‌ترین زمان ممکن در اختیار شما قرار می‌گیرد
         </p>
@@ -374,10 +374,10 @@
                         <div class="row">
                             @foreach ($products as $product)
                                 <div class="col-12 mb-4">
-                                    <a href="{{ route('customer.doc.chatgpt.detail', ['slug' => $product->slug]) }}" class="text-decoration-none text-dark">
+                                    <a href="{{ route('customer.doc.gemini.detail', ['slug' => $product->slug]) }}" class="text-decoration-none text-dark">
                                         <div class="card custom-card h-100" itemscope itemtype="https://schema.org/Product">
                                             <div class="text-center p-4">
-                                                <img src="/customer/images/cgatgpt.webp" class="card-img-top"
+                                                <img src="/customer/images/gemini.webp" class="card-img-top mb-3 mt-3"
                                                     style="max-width: 80%; height: auto;" alt="{{ $product->name }}"
                                                     title="{{ $product->name }}">
                                             </div>
@@ -403,10 +403,10 @@
                         <div class="desktop-product-grid">
                             @foreach ($products as $product)
                                 <div>
-                                    <a href="{{ route('customer.doc.chatgpt.detail', ['slug' => $product->slug]) }}" class="desktop-product-link">
+                                    <a href="{{ route('customer.doc.gemini.detail', ['slug' => $product->slug]) }}" class="desktop-product-link">
                                         <div class="desktop-product-card">
                                             <div class="desktop-product-image">
-                                                <img src="/customer/images/cgatgpt.webp" alt="{{ $product->name }}"
+                                                <img src="/customer/images/gemini.webp" alt="{{ $product->name }}"
                                                     title="{{ $product->name }}">
                                             </div>
                                             <div class="desktop-product-content">
@@ -429,7 +429,7 @@
 
             {{-- CTA Section --}}
             <section class="lux-cta-wrapper">
-                <h2 class="lux-cta-title" style="margin-top: 100px !important;">Հետադարձ կապ և CTA</h2>
+                <h2 class="lux-cta-title" style="margin-top: 66px !important;">Հետադարձ կապ և CTA</h2>
                 <p class="lux-cta-desc">
                     Պատրա՞ստ եք բարձրացնել Ձեր e-commerce բրենդը Հայաստանում՝ Social Media Marketing-ի և
                     Խանութի կայքի դիզայն-ի միջոցով։ Սկսեք Ձեր աճի ճանապարհը հիմա:

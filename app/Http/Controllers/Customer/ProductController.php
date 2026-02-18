@@ -15,14 +15,23 @@ class ProductController extends Controller
 
     public function chatGpt()
     {
-        $products = Product::where(function($query) {
+        $products = Product::where(function ($query) {
             $query->where('name', 'LIKE', '%chatgpt%')
-            ->orWhere->orWhere('name', 'LIKE', '%ChatGPT%');
+                ->orWhere->orWhere('name', 'LIKE', '%ChatGPT%');
         })
-       ->where('status',1)
+            ->where('status', 1)
             ->get();
 
         return view('customer.pricing.chatgpt', compact('products'));
+    }
+  
+    public function chatGemeniPricing()
+    {
+        $products = Product::where('name', 'LIKE', '%Gemini%')
+        ->where('status', 1)
+        ->get();
+
+        return view('customer.pricing.gemini', compact('products'));
     }
 
     public function chatGptDetail($slug)
@@ -30,5 +39,12 @@ class ProductController extends Controller
         $product = Product::where('slug', $slug)->get()[0];
 
         return view('customer.pricing.detail-gpt', compact('product'));
+    }
+
+     public function geminiDetail($slug)
+    {
+        $product = Product::where('slug', $slug)->get()[0];
+
+        return view('customer.pricing.detail-gemini', compact('product'));
     }
 }

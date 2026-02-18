@@ -20,11 +20,6 @@ class PostController extends Controller
         return view('customer.pricing.ai');
     }
 
-     public function chatGemeniPricing()
-    {
-        return view('customer.pricing.gemeni');
-    }
-
     public function chatGptPricing()
     {
         return view('customer.pricing.chatgpt');

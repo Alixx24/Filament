@@ -30,10 +30,14 @@ Route::get('/post/{slug}', [PostController::class, 'show'])->name('customer.post
 
 Route::get('/اکانت-chatgpt', [ProductController::class, 'chatGpt'])->name('customer.pricing.chatgpt.index');
 Route::get('/اکانت-ai', [PostController::class, 'chatAiPricing'])->name('customer.pricing.ai.index');
-Route::get('/اکانت-gemeni', [PostController::class, 'chatGemeniPricing'])->name('customer.pricing.gemeni.index');
+Route::get('/اکانت-gemini', [ProductController::class, 'chatGemeniPricing'])->name('customer.pricing.gemini.index');
 
 //ChatGpt
 Route::get('/اکانت-chatgpt/{slug}', [ProductController::class, 'chatGptDetail'])->name('customer.doc.chatgpt.detail');
+
+//gemini
+Route::get('/اکانت-gemini/{slug}', [ProductController::class, 'geminiDetail'])->name('customer.doc.gemini.detail');
+
 
 
 //ai products
