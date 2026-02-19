@@ -470,10 +470,10 @@
             <!-- Footer text -->
             <p class="gv-footer-copyright">
                 <a referrerpolicy='origin' target='_blank'
-                    href='https://trustseal.enamad.ir/?id=703000&Code=oBqG9M3Yan78S2nE0Mgw1OyqNHA6eDPA'>
+                    href='#'>
                     <img referrerpolicy='origin'
-                        src='https://trustseal.enamad.ir/logo.aspx?id=703000&Code=oBqG9M3Yan78S2nE0Mgw1OyqNHA6eDPA'
-                        alt='' style='cursor:pointer' code='oBqG9M3Yan78S2nE0Mgw1OyqNHA6eDPA'>
+                        src='https://growvixo.com/customer/images/namad.webp'
+                        alt='' style='cursor:pointer' code=''>
                 </a>
                 <br>
                    <div class="footer-copy">

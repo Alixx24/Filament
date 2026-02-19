@@ -37,7 +37,10 @@
                         ChatGpt</a></li>
                 <li data-link="about"><a class="me-3 fs-5" href="{{ route('customer.pricing.gemini.index') }}">اکانت
                         Gemini</a></li>
-                <li data-link="about"><a class="me-3 fs-5" href="{{ route('about') }}">اکانت Cursor</a></li>
+                <li data-link="about"><a class="me-3 fs-5" href="{{ route('customer.pricing.cursor.index') }}">اکانت
+                        Cursor</a></li>
+                <li data-link="about"><a class="me-3 fs-5" href="{{ route('customer.pricing.claude.index') }}">اکانت
+                         Claude</a></li>
                 <li data-link="contact"><a class="me-3 fs-5" href="{{ route('contact') }}">اکانت تلگرام</a></li>
 
             </ul>

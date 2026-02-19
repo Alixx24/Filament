@@ -31,6 +31,8 @@ Route::get('/post/{slug}', [PostController::class, 'show'])->name('customer.post
 Route::get('/اکانت-chatgpt', [ProductController::class, 'chatGpt'])->name('customer.pricing.chatgpt.index');
 Route::get('/اکانت-ai', [PostController::class, 'chatAiPricing'])->name('customer.pricing.ai.index');
 Route::get('/اکانت-gemini', [ProductController::class, 'chatGemeniPricing'])->name('customer.pricing.gemini.index');
+Route::get('/اکانت-claude', [ProductController::class, 'chatClaudePricing'])->name('customer.pricing.claude.index');
+Route::get('/اکانت-cursor', [ProductController::class, 'chatCursorPricing'])->name('customer.pricing.cursor.index');
 
 //ChatGpt
 Route::get('/اکانت-chatgpt/{slug}', [ProductController::class, 'chatGptDetail'])->name('customer.doc.chatgpt.detail');
@@ -38,7 +40,11 @@ Route::get('/اکانت-chatgpt/{slug}', [ProductController::class, 'chatGptDeta
 //gemini
 Route::get('/اکانت-gemini/{slug}', [ProductController::class, 'geminiDetail'])->name('customer.doc.gemini.detail');
 
+//claude
+Route::get('/اکانت-claude/{slug}', [ProductController::class, 'claudeDetail'])->name('customer.doc.claude.detail');
 
+//claude
+Route::get('/اکانت-cursor/{slug}', [ProductController::class, 'cursorDetail'])->name('customer.doc.cursor.detail');
 
 //ai products
 Route::get('/product/chatgpt-go', [AiProductsController::class, 'setPrice'])->name('product.go');

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <title>@yield('title', 'اکانت هوش مصنوعی')</title>
+       <title>@yield('title', 'اکانت هوش مصنوعی')</title>
 
     @include('customer.layouts.head-tag-content')
     <style>
@@ -474,11 +474,11 @@
                 <!-- Footer text -->
                 <p class="gv-footer-copyright">
                     <a referrerpolicy='origin' target='_blank'
-                        href='https://trustseal.enamad.ir/?id=703000&Code=oBqG9M3Yan78S2nE0Mgw1OyqNHA6eDPA'>
-                        <img referrerpolicy='origin'
-                            src='https://trustseal.enamad.ir/logo.aspx?id=703000&Code=oBqG9M3Yan78S2nE0Mgw1OyqNHA6eDPA'
-                            alt='' style='cursor:pointer' code='oBqG9M3Yan78S2nE0Mgw1OyqNHA6eDPA'>
-                    </a>
+                    href='#'>
+                    <img referrerpolicy='origin'
+                        src='https://growvixo.com/customer/images/namad.webp'
+                        alt='' style='cursor:pointer' code=''>
+                </a>
                     <br>
                 <div class="footer-copy">
                     © 2025 <strong>Growvixo</strong><br>

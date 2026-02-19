@@ -1,7 +1,7 @@
 @extends('customer.layouts.master-shop')
 
 {{-- ====================== Title Section ====================== --}}
-@section('title', 'Խանութի կայքի դիզայն և Social Media Marketing Հայաստանում – GrowVixo')
+@section('title', 'GrowVixo - اکانت هوش مصنوعی')
 
 {{-- ====================== Meta Section ====================== --}}
 @section('meta')
@@ -9,7 +9,7 @@
     <meta name="robots" content="index, follow">
 
     {{-- Page Title --}}
-    <title>Խանութի կայքի դիզայն և Social Media Marketing Հայաստանում – GrowVixo</title>
+    <title>اکانت هوش مصنوعی – GrowVixo</title>
 
     {{-- Meta Description --}}
     <meta name="description"
@@ -291,7 +291,7 @@
             }
 
             .mt-desktop {
-                margin-top: 999px;
+                margin-top: 60px;
             }
         }
 
