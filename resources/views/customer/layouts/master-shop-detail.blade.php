@@ -109,7 +109,6 @@
             margin-bottom: 15px;
             transition: all 0.3s ease;
             border-radius: 10px;
-            background: white;
             padding: 5px;
             display: inline-block;
         }
@@ -469,17 +468,15 @@
         <footer style="margin-top:380px !important;" class="gv-footer-container text-center">
             <!-- Footer text -->
             <p class="gv-footer-copyright">
-                <a referrerpolicy='origin' target='_blank'
-                    href='#'>
-                    <img referrerpolicy='origin'
-                        src='https://growvixo.com/customer/images/namad.webp'
-                        alt='' style='cursor:pointer' code=''>
+                <a referrerpolicy='origin' target='_blank' href='#'>
+                    <img referrerpolicy='origin' src='https://growvixo.com/customer/images/namad.webp' alt=''
+                        style='cursor:pointer' code=''>
                 </a>
                 <br>
-                   <div class="footer-copy">
-                    © 2025 <strong>Growvixo</strong><br>
-                    تمامی حقوق این وب‌سایت محفوظ است.
-                </div>
+            <div class="footer-copy">
+                © 2025 <strong>Growvixo</strong><br>
+                تمامی حقوق این وب‌سایت محفوظ است.
+            </div>
 
             </p>
 

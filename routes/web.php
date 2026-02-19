@@ -33,6 +33,8 @@ Route::get('/اکانت-ai', [PostController::class, 'chatAiPricing'])->name('cu
 Route::get('/اکانت-gemini', [ProductController::class, 'chatGemeniPricing'])->name('customer.pricing.gemini.index');
 Route::get('/اکانت-claude', [ProductController::class, 'chatClaudePricing'])->name('customer.pricing.claude.index');
 Route::get('/اکانت-cursor', [ProductController::class, 'chatCursorPricing'])->name('customer.pricing.cursor.index');
+Route::get('/اکانت-spotify', [ProductController::class, 'spotifyPricing'])->name('customer.pricing.spotify.index');
+Route::get('/اکانت-tradingView', [ProductController::class, 'tradingViewPricing'])->name('customer.pricing.TradingView.index');
 
 //ChatGpt
 Route::get('/اکانت-chatgpt/{slug}', [ProductController::class, 'chatGptDetail'])->name('customer.doc.chatgpt.detail');
@@ -46,12 +48,17 @@ Route::get('/اکانت-claude/{slug}', [ProductController::class, 'claudeDetail
 //claude
 Route::get('/اکانت-cursor/{slug}', [ProductController::class, 'cursorDetail'])->name('customer.doc.cursor.detail');
 
-//ai products
-Route::get('/product/chatgpt-go', [AiProductsController::class, 'setPrice'])->name('product.go');
-Route::get('/product/chatgpt-plus', [AiProductsController::class, 'setPrice'])->name('product.plus');
-Route::get('/product/chatgpt-pro', [AiProductsController::class, 'setPrice'])->name('product.pro');
-Route::get('/product/gemini-4', [AiProductsController::class, 'setPrice'])->name('product.gemini4');
+//claude
+Route::get('/اکانت-spotify/{slug}', [ProductController::class, 'spotifyDetail'])->name('customer.doc.spotify.detail');
 
+//spotify
+Route::get('/اکانت-tradingView/{slug}', [ProductController::class, 'TradingViewDetail'])->name('customer.doc.tradingView.detail');
+
+//ai products
+// Route::get('/product/chatgpt-go', [AiProductsController::class, 'setPrice'])->name('product.go');
+// Route::get('/product/chatgpt-plus', [AiProductsController::class, 'setPrice'])->name('product.plus');
+// Route::get('/product/chatgpt-pro', [AiProductsController::class, 'setPrice'])->name('product.pro');
+// Route::get('/product/gemini-4', [AiProductsController::class, 'setPrice'])->name('product.gemini4');
 
 //pay
 Route::get('/payment', [PaymentController::class, 'pay'])->name('payment.pay'); 

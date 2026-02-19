@@ -110,7 +110,7 @@
             margin-bottom: 15px;
             transition: all 0.3s ease;
             border-radius: 10px;
-            background: white;
+      
             padding: 5px;
             display: inline-block;
         }
