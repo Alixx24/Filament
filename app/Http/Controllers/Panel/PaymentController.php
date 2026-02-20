@@ -14,20 +14,15 @@ use Illuminate\Support\Facades\DB;
 
 class PaymentController extends Controller
 {
-    // پرداخت اصلی
     public function pay(Request $request)
     {
-   
-        if (!auth()->check()) {
-            return redirect()->route('home')->withErrors(['error' => 'لطفاً وارد حساب کاربری خود شوید.']);
-        }
-
-     
+        // if (!auth()->check()) {
+        //     return redirect()->route('home')->withErrors(['error' => 'لطفاً وارد حساب کاربری خود شوید.']);
+        // }
 
         $order = Order::find(1);
 
-    
-        $amountInRial = 1000;// مبلغ ریال
+        $amountInRial = 1000;
 
         $invoice = (new Invoice)->amount($amountInRial);
 
@@ -52,7 +47,6 @@ class PaymentController extends Controller
                 ]]);
             });
 
-            // هدایت به درگاه
             return $payment->pay()->render();
 
         } catch (\Exception $e) {

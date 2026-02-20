@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-       <title>@yield('title', 'اکانت هوش مصنوعی')</title>
+    <title>@yield('title', 'اکانت هوش مصنوعی')</title>
 
     @include('customer.layouts.head-tag-content')
     <style>
@@ -110,7 +110,7 @@
             margin-bottom: 15px;
             transition: all 0.3s ease;
             border-radius: 10px;
-      
+            background: white;
             padding: 5px;
             display: inline-block;
         }
@@ -451,6 +451,298 @@
             font-size: 14px;
             color: #ffffff;
         }
+
+
+
+             .custom-card {
+            border-radius: 20px;
+            /* مرز گرد */
+            overflow: hidden;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            /* سایه نرم */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* انیمیشن حرکت */
+        }
+
+        .custom-card:hover {
+            transform: translateY(-15px);
+            /* حرکت کارت به سمت بالا */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            /* سایه بیشتر */
+        }
+
+        .card-img-top {
+            transition: transform 0.4s ease-in-out;
+            /* انیمیشن تصویر */
+        }
+
+        .custom-card:hover .card-img-top {
+            transform: scale(1.05);
+            /* بزرگ شدن تصویر هنگام هاور */
+        }
+
+        .card-body {
+            background-color: #fff;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .card-text {
+            color: #777;
+            font-size: 1rem;
+            margin: 15px 0;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            /* دکمه گرد */
+            padding: 12px 20px;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+            /* حرکت دکمه به سمت بالا */
+        }
+
+
+        @media (min-width: 768px) {
+            .desktop-row {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 25px !important;
+            }
+        }
+
+        .chat-wrapper {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+        }
+
+        /* دکمه اصلی */
+        .chat-button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: none;
+            background: linear-gradient(135deg, #4e73df, #1cc88a);
+            color: white;
+            font-size: 22px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .chat-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* باکس چت */
+        .chat-box {
+            position: absolute;
+            bottom: 75px;
+            right: 0;
+            width: 220px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            padding: 10px 0;
+            opacity: 0;
+            transform: translateY(20px);
+            pointer-events: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* وقتی فعال میشه */
+        .chat-box.active {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        .chat-box ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .chat-box li {
+            padding: 10px 20px;
+            transition: background 0.2s;
+        }
+
+        .chat-box li:hover {
+            background: #f8f9fc;
+        }
+
+        .chat-box a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            font-size: 14px;
+        }
+
+        @media (max-width: 767px) {
+            .mt-mobile {
+                margin-top: 2466px !important;
+            }
+        }
+
+        /* استایل مخصوص دسکتاپ - فقط در سایزهای بالای 992px اعمال می‌شود */
+        @media (min-width: 992px) {
+            .desktop-product-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+                margin-top: 0 !important;
+                padding: 0;
+            }
+
+            .desktop-product-card {
+                transition: all 0.3s ease;
+                border: 1px solid #e9ecef;
+                border-radius: 16px;
+                overflow: hidden;
+                background: #ffffff;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .desktop-product-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+                border-color: transparent;
+            }
+
+            .desktop-product-image {
+                padding: 20px 20px 10px 20px;
+                text-align: center;
+                background: #f8f9fa;
+            }
+
+            .desktop-product-image img {
+                max-width: 70%;
+                height: 140px;
+                object-fit: contain;
+                transition: transform 0.3s ease;
+            }
+
+            .desktop-product-card:hover .desktop-product-image img {
+                transform: scale(1.05);
+            }
+
+            .desktop-product-content {
+                padding: 0 20px 20px 20px;
+                text-align: center;
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .desktop-product-title {
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: #212529;
+                margin-bottom: 8px;
+            }
+
+            .desktop-product-description {
+                font-size: 0.85rem;
+                color: #6c757d;
+                line-height: 1.5;
+                margin-bottom: 15px;
+                flex-grow: 1;
+            }
+
+            .desktop-product-button {
+                display: inline-block;
+                width: 80%;
+                margin: 0 auto;
+                padding: 10px 0;
+                background: #212529;
+                color: white;
+                border-radius: 50px;
+                text-decoration: none;
+                font-size: 0.9rem;
+                font-weight: 500;
+                transition: all 0.3s ease;
+                border: 1px solid #212529;
+            }
+
+            .desktop-product-button:hover {
+                background: white;
+                color: #212529;
+                text-decoration: none;
+            }
+
+            /* لینک بدون تغییر ظاهر */
+            .desktop-product-link {
+                text-decoration: none;
+                color: inherit;
+                display: block;
+                height: 100%;
+            }
+
+            /* حذف فاصله از بالای کانتینر */
+            .desktop-container {
+                margin-top: 0 !important;
+                padding-top: 0 !important;
+            }
+
+            .mt-desktop {
+                margin-top: 69px;
+            }
+        }
+
+        /* استایل موبایل (اختیاری) */
+        @media (max-width: 991px) {
+            .desktop-product-grid {
+                display: block;
+            }
+
+            .col-md-3 {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+
+
+            .chat-box ul li {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                /* فاصله بین آیکون و متن */
+                width: 120px;
+                /* طول آیتم دلخواه */
+                direction: ltr;
+                /* مهم: راست‌چین کردن فلکس */
+            }
+
+            .chat-box ul li a {
+                white-space: nowrap;
+                /* جلوگیری از رفتن به خط بعد */
+                font-size: 1.2rem;
+            }
+
+            .chat-box ul li a {
+                margin-left: 30px;
+                /* متن به سمت راست می‌رود */
+                text-decoration: none;
+                color: black;
+            }
     </style>
 </head>
 
@@ -474,11 +766,11 @@
                 <!-- Footer text -->
                 <p class="gv-footer-copyright">
                     <a referrerpolicy='origin' target='_blank'
-                    href='#'>
-                    <img referrerpolicy='origin'
-                        src='https://growvixo.com/customer/images/namad.webp'
-                        alt='' style='cursor:pointer' code=''>
-                </a>
+                        href='https://trustseal.enamad.ir/?id=703000&Code=oBqG9M3Yan78S2nE0Mgw1OyqNHA6eDPA'>
+                        <img referrerpolicy='origin'
+                            src='https://trustseal.enamad.ir/logo.aspx?id=703000&Code=oBqG9M3Yan78S2nE0Mgw1OyqNHA6eDPA'
+                            alt='' style='cursor:pointer' code='oBqG9M3Yan78S2nE0Mgw1OyqNHA6eDPA'>
+                    </a>
                     <br>
                 <div class="footer-copy">
                     © 2025 <strong>Growvixo</strong><br>

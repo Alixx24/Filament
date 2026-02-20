@@ -465,27 +465,24 @@
             </div>
 
             {{-- CTA Section --}}
-            <section class="lux-cta-wrapper">
-                <h2 class="lux-cta-title" style="margin-top: 66px !important;">Հետադարձ կապ և CTA</h2>
-                <p class="lux-cta-desc">
-                    Պատրա՞ստ եք բարձրացնել Ձեր e-commerce բրենդը Հայաստանում՝ Social Media Marketing-ի և
-                    Խանութի կայքի դիզայն-ի միջոցով։ Սկսեք Ձեր աճի ճանապարհը հիմա:
-                </p>
+             <section class="lux-cta-wrapper">
+                <h2 class="lux-cta-title" style="margin-top: 66px !important;">نظرات و انتقاداتتون رو باهامون در میان بدارید</h2>
+
 
                 <form action="/contact-form" method="POST" class="lux-cta-form">
-                    <label class="lux-cta-label" for="name">Անուն և Ազգանուն:</label>
+                    <label class="lux-cta-label" for="name">نام:</label>
                     <input class="lux-cta-input" type="text" id="name" name="name" required>
 
-                    <label class="lux-cta-label" for="email">Էլ. Փոստ:</label>
+                    <label class="lux-cta-label" for="email">ایمیل:</label>
                     <input class="lux-cta-input" type="email" id="email" name="email" required>
 
-                    <label class="lux-cta-label" for="phone">Հեռախոս:</label>
+                    <label class="lux-cta-label" for="phone">شماره تماس:</label>
                     <input class="lux-cta-input" type="tel" id="phone" name="phone" required>
 
-                    <label class="lux-cta-label" for="message">Հաղորդագրություն / Նշումներ:</label>
+                    <label class="lux-cta-label" for="message">متن مدنظرتون:</label>
                     <textarea class="lux-cta-textarea" id="message" name="message" rows="6" required></textarea>
 
-                    <button type="submit" class="lux-cta-button">Ուղարկել</button>
+                    <button type="submit" class="lux-cta-button">تایید</button>
                 </form>
 
                 <p class="lux-cta-alt">
@@ -495,6 +492,7 @@
                     <a href="https://instagram.com/growvixo" target="_blank">Instagram</a>
                 </p>
             </section>
+
 
     </section>
 

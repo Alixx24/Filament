@@ -466,7 +466,7 @@
 
             {{-- CTA Section --}}
             <section class="lux-cta-wrapper">
-                <h2 class="lux-cta-title" style="margin-top: 66px !important;">Հետադարձ կապ և CTA</h2>
+                <h2 class="lux-cta-title" style="margin-top: 66px !important;">نظرات و انتقاداتتون رو باهامون درمیون بدارید</h2>
                 <p class="lux-cta-desc">
                     Պատրա՞ստ եք բարձրացնել Ձեր e-commerce բրենդը Հայաստանում՝ Social Media Marketing-ի և
                     Խանութի կայքի դիզայն-ի միջոցով։ Սկսեք Ձեր աճի ճանապարհը հիմա:

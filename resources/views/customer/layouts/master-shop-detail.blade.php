@@ -109,6 +109,7 @@
             margin-bottom: 15px;
             transition: all 0.3s ease;
             border-radius: 10px;
+            background: white;
             padding: 5px;
             display: inline-block;
         }
@@ -449,6 +450,604 @@
             font-size: 14px;
             color: #ffffff;
         }
+
+        /* استایل‌های اختصاصی مودال */
+        .custom-modal-wrapper {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        .custom-modal-wrapper.show {
+            display: block;
+        }
+
+        .custom-modal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(2px);
+        }
+
+        .custom-modal {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            margin: 0 auto;
+            max-width: 500px;
+            width: 90%;
+            z-index: 10000;
+            outline: 0;
+        }
+
+        .custom-modal-dialog {
+            position: relative;
+            width: 100%;
+            pointer-events: auto;
+        }
+
+        .custom-modal-content {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            outline: 0;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .custom-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            border-bottom: 1px solid #dee2e6;
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+        }
+
+        .custom-modal-title {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 500;
+            line-height: 1.5;
+            color: #212529;
+        }
+
+        .custom-btn-close {
+            box-sizing: content-box;
+            width: 1em;
+            height: 1em;
+            padding: 0.25em;
+            background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+            border: 0;
+            border-radius: 0.25rem;
+            opacity: 0.5;
+            cursor: pointer;
+        }
+
+        .custom-btn-close:hover {
+            opacity: 0.75;
+        }
+
+        .custom-modal-body {
+            position: relative;
+            flex: 1 1 auto;
+            padding: 1rem;
+            color: #212529;
+        }
+
+        .custom-modal-footer {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0.75rem;
+            border-top: 1px solid #dee2e6;
+            gap: 0.5rem;
+        }
+
+        .custom-btn {
+            display: inline-block;
+            font-weight: 400;
+            line-height: 1.5;
+            text-align: center;
+            text-decoration: none;
+            vertical-align: middle;
+            cursor: pointer;
+            user-select: none;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            border-radius: 0.25rem;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            border: 1px solid transparent;
+        }
+
+        .custom-btn-primary {
+            color: #fff;
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+        }
+
+        .custom-btn-primary:hover {
+            background-color: #0b5ed7;
+            border-color: #0a58ca;
+        }
+
+        .custom-btn-secondary {
+            color: #fff;
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+
+        .custom-btn-secondary:hover {
+            background-color: #5c636a;
+            border-color: #565e64;
+        }
+
+        .custom-btn-open {
+            display: inline-block;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            vertical-align: middle;
+            cursor: pointer;
+            user-select: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            border-radius: 0.25rem;
+            background-color: #0d6efd;
+            border: 1px solid #0d6efd;
+            margin: 1rem;
+        }
+
+        .custom-btn-open:hover {
+            background-color: #0b5ed7;
+            border-color: #0a58ca;
+        }
+
+        /* انیمیشن برای مودال */
+        .custom-modal {
+            animation: customModalFadeIn 0.3s ease;
+        }
+
+        @keyframes customModalFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50%) scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(-50%) scale(1);
+            }
+        }
+
+        /* استایل‌های اختصاصی مودال */
+        .unique-modal-wrapper {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .unique-modal-container {
+            width: 90%;
+            max-width: 500px;
+            max-height: 90vh;
+            margin: 0 auto;
+            animation: uniqueModalFadeIn 0.3s ease;
+        }
+
+        @keyframes uniqueModalFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .unique-modal-content {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .unique-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .unique-modal-title {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .unique-modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            line-height: 1;
+            cursor: pointer;
+            color: #666;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        .unique-modal-close:hover {
+            background-color: #e9ecef;
+            color: #333;
+        }
+
+        .unique-modal-body {
+            padding: 20px;
+            max-height: calc(90vh - 130px);
+            overflow-y: auto;
+        }
+
+        .unique-modal-footer {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            padding: 16px 20px;
+            background-color: #f8f9fa;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .unique-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .unique-btn-danger {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .unique-btn-danger:hover {
+            background-color: #c82333;
+        }
+
+        /* کلاس برای نمایش مودال */
+        .unique-modal-wrapper.unique-show {
+            display: flex;
+        }
+
+        /* استایل‌های اضافی برای جلوگیری از تداخل */
+        body.unique-modal-open {
+            overflow: hidden;
+        }
+    </style>
+    <style>
+        <style>.custom-card {
+            border-radius: 20px;
+            /* مرز گرد */
+            overflow: hidden;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            /* سایه نرم */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* انیمیشن حرکت */
+        }
+
+        .custom-card:hover {
+            transform: translateY(-15px);
+            /* حرکت کارت به سمت بالا */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            /* سایه بیشتر */
+        }
+
+        .card-img-top {
+            transition: transform 0.4s ease-in-out;
+            /* انیمیشن تصویر */
+        }
+
+        .custom-card:hover .card-img-top {
+            transform: scale(1.05);
+            /* بزرگ شدن تصویر هنگام هاور */
+        }
+
+        .card-body {
+            background-color: #fff;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .card-text {
+            color: #777;
+            font-size: 1rem;
+            margin: 15px 0;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            /* دکمه گرد */
+            padding: 12px 20px;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+            /* حرکت دکمه به سمت بالا */
+        }
+
+
+        @media (min-width: 768px) {
+            .desktop-row {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 25px !important;
+            }
+        }
+
+        .chat-wrapper {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+        }
+
+        .chat-box ul li {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            /* فاصله بین آیکون و متن */
+            width: 120px;
+            /* طول آیتم دلخواه */
+            direction: ltr;
+            /* مهم: راست‌چین کردن فلکس */
+        }
+
+        .chat-box ul li a {
+            white-space: nowrap;
+            /* جلوگیری از رفتن به خط بعد */
+            font-size: 1.2rem;
+        }
+
+        .chat-box ul li a {
+            margin-left: 30px;
+            /* متن به سمت راست می‌رود */
+            text-decoration: none;
+            color: black;
+        }
+
+        /* دکمه اصلی */
+        .chat-button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: none;
+            background: linear-gradient(135deg, #4e73df, #1cc88a);
+            color: white;
+            font-size: 22px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .chat-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* باکس چت */
+        .chat-box {
+            position: absolute;
+            bottom: 75px;
+            right: 0;
+            width: 220px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            padding: 10px 0;
+            opacity: 0;
+            transform: translateY(20px);
+            pointer-events: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* وقتی فعال میشه */
+        .chat-box.active {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        .chat-box ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .chat-box li {
+            padding: 10px 20px;
+            transition: background 0.2s;
+        }
+
+        .chat-box li:hover {
+            background: #f8f9fc;
+        }
+
+        .chat-box a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            font-size: 14px;
+        }
+
+
+        @media (max-width: 767px) {
+            .mt-mobile {
+                margin-top: 2466px !important;
+            }
+        }
+
+        /* استایل مخصوص دسکتاپ - فقط در سایزهای بالای 992px اعمال می‌شود */
+        @media (min-width: 992px) {
+            .desktop-product-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+                margin-top: 0 !important;
+                padding: 0;
+            }
+
+            .desktop-product-card {
+                transition: all 0.3s ease;
+                border: 1px solid #e9ecef;
+                border-radius: 16px;
+                overflow: hidden;
+                background: #ffffff;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .desktop-product-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+                border-color: transparent;
+            }
+
+            .desktop-product-image {
+                padding: 20px 20px 10px 20px;
+                text-align: center;
+                background: #f8f9fa;
+            }
+
+            .desktop-product-image img {
+                max-width: 70%;
+                height: 140px;
+                object-fit: contain;
+                transition: transform 0.3s ease;
+            }
+
+            .desktop-product-card:hover .desktop-product-image img {
+                transform: scale(1.05);
+            }
+
+            .desktop-product-content {
+                padding: 0 20px 20px 20px;
+                text-align: center;
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .desktop-product-title {
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: #212529;
+                margin-bottom: 8px;
+            }
+
+            .desktop-product-description {
+                font-size: 0.85rem;
+                color: #6c757d;
+                line-height: 1.5;
+                margin-bottom: 15px;
+                flex-grow: 1;
+            }
+
+            .desktop-product-button {
+                display: inline-block;
+                width: 80%;
+                margin: 0 auto;
+                padding: 10px 0;
+                background: #212529;
+                color: white;
+                border-radius: 50px;
+                text-decoration: none;
+                font-size: 0.9rem;
+                font-weight: 500;
+                transition: all 0.3s ease;
+                border: 1px solid #212529;
+            }
+
+            .desktop-product-button:hover {
+                background: white;
+                color: #212529;
+                text-decoration: none;
+            }
+
+            /* لینک بدون تغییر ظاهر */
+            .desktop-product-link {
+                text-decoration: none;
+                color: inherit;
+                display: block;
+                height: 100%;
+            }
+
+            /* حذف فاصله از بالای کانتینر */
+            .desktop-container {
+                margin-top: 0 !important;
+                padding-top: 0 !important;
+            }
+
+            .mt-desktop {
+                margin-top: 69px;
+            }
+        }
+
+        /* استایل موبایل (اختیاری) */
+        @media (max-width: 991px) {
+            .desktop-product-grid {
+                display: block;
+            }
+
+            .col-md-3 {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
     </style>
 </head>
 
@@ -464,13 +1063,15 @@
     </main>
 
     {{-- FOOTER --}}
-    <section style="margin-top:230px !important;" class="gv-footer-wrapper">
-        <footer style="margin-top:380px !important;" class="gv-footer-container text-center">
+    <section style="margin-top:590px !important;">
+        <footer class="gv-footer-container text-center">
             <!-- Footer text -->
             <p class="gv-footer-copyright">
-                <a referrerpolicy='origin' target='_blank' href='#'>
-                    <img referrerpolicy='origin' src='https://growvixo.com/customer/images/namad.webp' alt=''
-                        style='cursor:pointer' code=''>
+                <a referrerpolicy='origin' target='_blank'
+                    href='https://trustseal.enamad.ir/?id=703000&Code=oBqG9M3Yan78S2nE0Mgw1OyqNHA6eDPA'>
+                    <img referrerpolicy='origin'
+                        src='https://trustseal.enamad.ir/logo.aspx?id=703000&Code=oBqG9M3Yan78S2nE0Mgw1OyqNHA6eDPA'
+                        alt='' style='cursor:pointer' code='oBqG9M3Yan78S2nE0Mgw1OyqNHA6eDPA'>
                 </a>
                 <br>
             <div class="footer-copy">
@@ -566,6 +1167,26 @@
         }
     </script>
     <script src="/js/header.js"></script>
+    <script>
+        const chatToggle = document.getElementById("chatToggle");
+        const chatBox = document.getElementById("chatBox");
+
+        // باز و بسته شدن با دکمه
+        chatToggle.addEventListener("click", function(e) {
+            e.stopPropagation(); // جلوگیری از بسته شدن فوری
+            chatBox.classList.toggle("active");
+        });
+
+        // جلوگیری از بسته شدن وقتی داخل باکس کلیک میشه
+        chatBox.addEventListener("click", function(e) {
+            e.stopPropagation();
+        });
+
+        // بستن هنگام کلیک بیرون
+        document.addEventListener("click", function() {
+            chatBox.classList.remove("active");
+        });
+    </script>
 </body>
 
 </html>
