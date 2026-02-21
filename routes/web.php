@@ -61,7 +61,7 @@ Route::get('/اکانت-tradingView/{slug}', [ProductController::class, 'Trading
 // Route::get('/product/gemini-4', [AiProductsController::class, 'setPrice'])->name('product.gemini4');
 
 //pay
-Route::get('/payment', [PaymentController::class, 'pay'])->name('payment.pay'); 
+Route::post('/payment', [PaymentController::class, 'pay'])->name('payment.pay'); 
 Route::get('/payment/callback', [PaymentController::class, 'callback'])->name('payment.callback'); 
 Route::get('/payment/success', [PaymentController::class, 'success'])->name('payment.success'); 
 Route::get('/payment/failed', [PaymentController::class, 'failed'])->name('payment.failed'); 

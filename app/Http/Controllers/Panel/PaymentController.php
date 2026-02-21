@@ -9,17 +9,15 @@ use Shetabit\Multipay\Exceptions\InvalidPaymentException;
 use Illuminate\Http\Request;
 use App\Models\Payment as PaymentModel;
 use App\Models\Order;
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\DB;
+use App\Notifications\OrderStoredNotification;
 
 class PaymentController extends Controller
 {
     public function pay(Request $request)
     {
-        // if (!auth()->check()) {
-        //     return redirect()->route('home')->withErrors(['error' => 'لطفاً وارد حساب کاربری خود شوید.']);
-        // }
-
         $order = Order::find(1);
 
         $amountInRial = 1000;
@@ -38,8 +36,9 @@ class PaymentController extends Controller
                     'currency' => 'R',
                     'status' => 'pending',
                 ]);
+                Notification::route('mail', 'alixcommunity6.ir@gmail.com')
+                    ->notify(new OrderStoredNotification($order));
 
-                // ذخیره اطلاعات برای session
                 session(['payment' => [
                     'user_id' => auth()->id(),
                     'amount' => $amountInRial,
@@ -48,7 +47,6 @@ class PaymentController extends Controller
             });
 
             return $payment->pay()->render();
-
         } catch (\Exception $e) {
             Log::error('Payment Gateway Error: ' . $e->getMessage());
             return redirect()->route('payment.failed')->withErrors(['payment' => $e->getMessage()]);
@@ -94,14 +92,12 @@ class PaymentController extends Controller
             DB::commit();
 
             return redirect()->route('payment.success')->with('payment', $payment);
-
         } catch (InvalidPaymentException $e) {
             DB::rollBack();
             if (isset($payment)) {
                 $payment->update(['status' => 'failed']);
             }
             return redirect()->route('payment.failed')->withErrors(['payment' => $e->getMessage()]);
-
         } catch (\Exception $e) {
             DB::rollBack();
             if (isset($payment)) {
