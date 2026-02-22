@@ -51,7 +51,7 @@
                                 aria-describedby="basic-addon2" />
                             <div class="input-group-append">
                                 <button class="btn btn-outline-secondary ms-3 bg-light text-dark"
-                                    type="button">Ուղարկել</button>
+                                    type="button">ارسال</button>
                             </div>
                         </div>
 
@@ -64,36 +64,29 @@
             {{-- services --}}
 
             <section id="services">
-                <h2>Մեր ծառայությունները</h2>
+                <h2>خدمات ما</h2>
                 <div class="service-cards">
-
                     <div class="card z-show">
-                        <h3>Թվային մարքեթինգ</h3>
+                        <h3>دسترسی به اکانت‌های پرمیوم ChatGPT</h3>
                         <p>
-                            Արդյունավետ թվային մարքեթինգի ռազմավարություններ՝ բիզնեսի ճանաչելիությունը բարձրացնելու և նոր
-                            հաճախորդներ
-                            ներգրավելու համար։
+                            با خرید اکانت‌های پرمیوم <strong>چت جی پی تی</strong>، به آخرین نسخه این ابزار هوش مصنوعی
+                            قدرتمند دسترسی پیدا کرده و تجربه‌ای بی‌نظیر از گفتگو با هوش مصنوعی را خواهید داشت.
                         </p>
                     </div>
-
                     <div class="card z-show">
-                        <h3>Սոցիալական մեդիայի կառավարում</h3>
+                        <h3>دسترسی به اکانت‌های پرمیوم کانوا</h3>
                         <p>
-                            Facebook, Instagram և այլ սոցիալական հարթակների մասնագիտական կառավարում՝ բրենդի աճի և
-                            ներգրավվածության
-                            բարձրացման համար։
+                            از امکانات بی‌نظیر <strong>کانوا</strong> استفاده کنید و طرح‌های گرافیکی حرفه‌ای ایجاد کنید،
+                            بدون نیاز به نرم‌افزارهای پیچیده و هزینه‌های بالا.
                         </p>
                     </div>
-
                     <div class="card z-show">
-                        <h3>SEO օպտիմալացում և վերլուծություն</h3>
+                        <h3>دسترسی به اکانت‌های پرمیوم اسپاتیفای</h3>
                         <p>
-                            Որոնողական համակարգերում տեսանելիության բարելավում և տվյալների խորացված վերլուծություն՝ կայքի
-                            արդյունավետությունը
-                            բարձրացնելու համար։
+                            به میلیون‌ها آهنگ و پادکست با کیفیت عالی دسترسی پیدا کنید و از تجربه موسیقی بی‌نظیر با
+                            <strong>اسپاتیفای</strong> لذت ببرید.
                         </p>
                     </div>
-
                 </div>
             </section>
 
@@ -101,24 +94,7 @@
 
             {{-- Portfolio --}}
 
-            <section id="portfolio">
-                <h2>Մեր աշխատանքները</h2>
-                <div class="projects">
-
-                    <div class="project-card z-show">
-                        <img src="{{ asset('customer/images/project-me.webp') }}" alt="Growvixo նախագծի օրինակ 1՝ թվային մարքեթինգ և կայքի զարգացում">
-                        <h3>Նախագիծ 1</h3>
-                    </div>
-
-                    <div class="project-card z-show">
-                        <img src="{{ asset('customer/images/project-me3.webp') }}"
-                            alt="Growvixo նախագծի օրինակ 2՝ սոցիալական մեդիայի կառավարում և SEO արդյունքներ">
-                        <h3>Նախագիծ 2</h3>
-                    </div>
-
-                </div>
-            </section>
-
+         
             {{-- blog  --}}
 
             <section id="blog" class="z-show">
@@ -141,421 +117,330 @@
             {{-- Contact --}}
 
             <section id="contact">
-                <h2>Կապ մեզ հետ</h2>
-                <p>Կիսվեք ձեր նախագծով կամ հարցով, և մենք կպատասխանենք հնարավորինս արագ:</p>
+                <h2>تماس با ما</h2>
+                <p>اگر سوالی در خصوص خرید اکانت‌های پرمیوم یا نیاز به راهنمایی دارید، لطفاً با ما در تماس باشید. ما در اسرع
+                    وقت به شما پاسخ خواهیم داد.</p>
 
-                <form class=" z-show">
-                    <input class="z-show" type="text" placeholder="Անուն" required>
-                    <input class="z-show" type="email" placeholder="Էլ․ հասցե" required>
-                    <textarea class="z-show" placeholder="Հաղորդագրություն"></textarea>
-                    <button class="z-show" type="submit">Ուղարկել</button>
+                <form class="z-show">
+                    <input class="z-show" type="text" placeholder="نام شما" required>
+                    <input class="z-show" type="email" placeholder="آدرس ایمیل شما" required>
+                    <textarea class="z-show" placeholder="پیام شما" required></textarea>
+                    <button class="z-show" type="submit">ارسال پیام</button>
                 </form>
             </section>
 
 
             {{-- text dont worry --}}
-            <div class="container my-5">
-                <div class="row justify-content-center ">
-                    <div class="col-12 col-md-10 col-lg-8 z-show">
-                        <div class="p-5 rounded shadow-lg z-show bg-home-txt">
-                            <div class="text-center text-dark bg-home-div">
-                                <p><strong>Growvixo</strong> հանդիսանում է առաջատար թվային մարքեթինգի և վեբ դիզայնի
-                                    գործակալություն,
-                                    որը օգնում է բիզնեսներին մեծացնել իրենց առցանց տեսանելիությունը և հասնել նպատակային
-                                    լսարանին:</p>
-
-                                <p>Մենք մասնագիտացած ենք <strong>SEO օպտիմալացման</strong>, սոցիալական մեդիայի կառավարման և
-                                    արդյունավետ թվային մարքեթինգի ռազմավարությունների ստեղծման մեջ, որոնք ապահովում են
-                                    իրական արդյունքներ:</p>
-
-                                <p>Growvixo-ով դուք կստանաք ժամանակակից և օգտվողամետ վեբ կայք, որը գրավում է այցելուներին և
-                                    վերածում նրանց հաճախորդների: Այսպիսով, մենք առաջարկում ենք <strong>դիզայն վեբ կայքերի
-                                        վաճառքի համար</strong>, որը հարմարեցված է ձեր բիզնեսի կարիքներին ու նպատակներին:</p>
-
-                                <p>Մեր թիմը վերլուծում է տվյալները և օպտիմալացնում ձեր թվային կետառները՝ ապահովելու
-                                    առավելագույն վերադարձը և երկարաժամկետ աճը:</p>
-
-                                <p>Growvixo-ն օգնում է բրենդներին բարձրացնել առցանց հեղինակությունը, լինել ավելի տեսանելի և
-                                    արդյունավետորեն հասնել նպատակային լսարանին, գերազանցելով մրցակիցներին: Եթե դուք
-                                    ցանկանում եք ստեղծել <strong>վաճառքի կայք</strong>, մենք պատրաստ ենք օգնել ձեզ:</p>
-
-                                <p>Մենք ստեղծում ենք անհատականացված թվային մարքեթինգի ռազմավարություններ, որոնք կենտրոնացած
-                                    են արդյունքների վրա և աջակցում են ձեր բիզնեսի զարգացմանը:</p>
-
-                                <p>Անկախ նրանից, թե ձեզ անհրաժեշտ է <strong>մասնագիտական վեբ կայքի մշակում</strong>, SEO
-                                    օպտիմալացում կամ առցանց գովազդի ռազմավարություն, Growvixo-ն ձեր վստահելի գործընկերն է:
-                                    <strong>Վաճառքի կայքերի նախագծում(Խանութի կայքի դիզայն)</strong> մեր փորձը բարձրակարգ և արդյունավետ է:
-                                </p>
-
-                                <p>Ընտրելով Growvixo, դուք ստանում եք ռազմավարական գործընկեր, որը օգնում է ավելի շատ
-                                    հաճախորդներ գրավել և մեծացնել վաճառքի ծավալները:</p>
-
-                                <p><strong>Growvixo</strong> – ձեր ճանապարհը դեպի թվային աճ, նորարարություն և իրական
-                                    արդյունքներ առցանց:</p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+           
 
             </head>
 
             <body>
 
 
-                <div class="container py-4">
-                    <div id="desktopCarousel" class="carousel slide d-none d-md-block m-5 z-show" data-bs-ride="carousel">
-                        <div class="carousel-inner ">
-                            <div class="carousel-item active">
-                                <div class="row g-3">
-                                    <!--  SEO -->
-                                    <div class="col-md-4">
-                                        <div class="card card-slider-home shadow-sm">
-                                            <img src="{{ asset('customer/banner/b12.webp') }}" class="card-img-top"
-                                                alt="Growvixo SEO optimizācija – augstas pozīcijas Google meklētājprogrammās">
-                                            <div class="card-body-slider ">
-                                                <h5 class="card-title">SEO Optimēšana</h5>
-                                                <p class="card-text small">Izveidojam stratēģijas, kas palīdz jūsu
-                                                    mājaslapai sasniegt augstākās pozīcijas meklētājos un palielināt
-                                                    organisko trafiku.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!--  Web dizains -->
-                                    <div class="col-md-4">
-                                        <div class="card card-slider-home shadow-sm">
-                                            <img src="{{ asset('customer/banner/b21.webp') }}" loading="lazy"
-                                                class="card-img-top"
-                                                alt="Growvixo՝ մասնագիտական վեբ կայքի մշակում՝ ժամանակակից և օգտվողամետ լուծումներ">
-                                            <div class="card-body-slider">
-                                                <h5 class="card-title">Վեբ Դիզայն</h5>
-                                                <p class="card-text small">
-                                                    Մենք ստեղծում ենք ժամանակակից, օգտվողամետ վեբ կայքեր, որոնք գրավում են
-                                                    այցելուներին
-                                                    և վերածում նրանց հաճախորդների՝ բարձրացնելով բիզնեսի աճը:
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- Sociālie tīkli -->
-                                    <div class="col-md-4">
-                                        <div class="card card-slider-home shadow-sm">
-                                            <img src="{{ asset('customer/banner/b16.webp') }}" loading="lazy"
-                                                class="card-img-top"
-                                                alt="Growvixo սոցիալական մեդիայի կառավարում՝ բրենդի տեսանելիության բարձրացում և հաճախորդների ներգրավվածություն">
-                                            <div class="card-body-slider">
-                                                <h5 class="card-title">Սոցիալական մեդիայի կառավարում</h5>
-                                                <p class="card-text small">
-                                                    Մենք բարձրացնում ենք ձեր բրենդի տեսանելիությունը և հաճախորդների
-                                                    ներգրավվածությունը
-                                                    արդյունավետ սոցիալական մեդիայի ռազմավարությունների միջոցով:
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
+    <div class="container py-4">
+    <div id="desktopCarousel" class="carousel slide d-none d-md-block m-5 z-show" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!-- ChatGPT -->
+            <div class="carousel-item active">
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="card card-slider-home shadow-sm">
+                            <img src="{{ asset('customer/banner/b12.webp') }}" class="card-img-top" alt="اکانت پرمیوم ChatGPT">
+                            <div class="card-body-slider text-end">
+                                <h5 class="card-title">دسترسی به اکانت پرمیوم ChatGPT</h5>
+                                <p class="card-text small">
+                                    با اکانت پرمیوم ChatGPT، از آخرین ویژگی‌های این ابزار هوش مصنوعی قدرتمند بهره‌مند شوید و تجربه‌ای بی‌نظیر از گفتگو با هوش مصنوعی داشته باشید.
+                                </p>
                             </div>
-
-                            <div class="carousel-item">
-                                <div class="row g-3">
-                                    <!--  Digitālā reklāma -->
-                                    <div class="col-md-4">
-                                        <div class="card card-slider-home shadow-sm">
-                                            <img src="{{ asset('customer/banner/b22.webp') }}" loading="lazy"
-                                                class="card-img-top"
-                                                alt="Growvixo թվային գովազդ՝ ROI օպտիմալացված արշավներ և վաճառքի աճ">
-                                            <div class="card-body-slider">
-                                                <h5 class="card-title">Թվային գովազդ</h5>
-                                                <p class="card-text small">
-                                                    Մենք պատրաստում ենք նպատակային թվային գովազդի արշավներ, որոնք ապահովում
-                                                    են առավելագույն վերադարձ
-                                                    և մեծացնում վաճառքի ծավալները:
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- Satura mārketings -->
-                                    <div class="col-md-4">
-                                        <div class="card card-slider-home shadow-sm">
-                                            <img src="{{ asset('customer/banner/b11.webp') }}" loading="lazy"
-                                                class="card-img-top"
-                                                alt="Growvixo բովանդակության մարքեթինգ՝ որակյալ և նպատակային բովանդակություն">
-                                            <div class="card-body-slider">
-                                                <h5 class="card-title">Բովանդակության մարքեթինգ</h5>
-                                                <p class="card-text small">
-                                                    Մենք ստեղծում ենք որակյալ բովանդակություն, որը գրավում է նպատակային
-                                                    լսարանին,
-                                                    բարձրացնում բրենդի հեղինակությունը և ձևավորում երկարաժամկետ
-                                                    հարաբերություններ հաճախորդների հետ:
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- Datu analīze -->
-                                    <div class="col-md-4">
-                                        <div class="card card-slider-home shadow-sm">
-                                            <img src="{{ asset('customer/banner/b24.webp') }}" loading="lazy"
-                                                class="card-img-top"
-                                                alt="Growvixo տվյալների վերլուծություն՝ բարելավման հնարավորություններ և օպտիմալացում">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Տվյալների վերլուծություն և օպտիմալացում</h5>
-                                                <p class="card-text small">
-                                                    Մենք վերլուծում ենք արշավների արդյունքները և օպտիմալացնում
-                                                    ռազմավարությունները՝ ապահովելու
-                                                    երկարաժամկետ աճ և առավելագույն ROI:
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
-
-                        <button class="carousel-control-prev" type="button" data-bs-target="#desktopCarousel"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                            <span class="visually-hidden">قبلی</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#desktopCarousel"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                            <span class="visually-hidden">بعدی</span>
-                        </button>
                     </div>
-                    <div id="mobileCarousel" class="carousel slide d-md-none m-3 z-show" loading="lazy"
-                        data-bs-ride="carousel">
-                        <div class="carousel-inner">
 
-                            <!-- SEO -->
-                            <div class="carousel-item active">
-                                <div class="card card-slider-home shadow-sm">
-                                    <img src="{{ asset('customer/banner/b12.webp') }}" loading="lazy"
-                                        class="card-img-top" alt="SEO Optimēšana">
-                                    <div class="card-body-slider">
-                                        <h5 class="card-title">SEO Optimēšana</h5>
-                                        <p class="card-text small">Izveidojam stratēģijas, kas palīdz jūsu mājaslapai
-                                            sasniegt augstākās pozīcijas meklētājos un palielināt organisko trafiku.</p>
-                                    </div>
-                                </div>
+                    <!-- Canva -->
+                    <div class="col-md-4">
+                        <div class="card card-slider-home shadow-sm">
+                            <img src="{{ asset('customer/banner/b21.webp') }}" loading="lazy" class="card-img-top" alt="اکانت پرمیوم Canva">
+                            <div class="card-body-slider text-end">
+                                <h5 class="card-title">دسترسی به اکانت پرمیوم Canva</h5>
+                                <p class="card-text small">
+                                    از امکانات پیشرفته Canva برای طراحی گرافیکی حرفه‌ای استفاده کنید، بدون نیاز به نرم‌افزارهای پیچیده و هزینه‌های بالا.
+                                </p>
                             </div>
-
-                            <!-- Web Dizains -->
-                            <div class="carousel-item">
-                                <div class="card card-slider-home shadow-sm">
-                                    <img src="{{ asset('customer/banner/b21.webp') }}" loading="lazy"
-                                        class="card-img-top" alt="Web Dizains">
-                                    <div class="card-body-slider">
-                                        <h5 class="card-title">Web Dizains</h5>
-                                        <p class="card-text small">Veidojam modernas, lietotājam draudzīgas mājaslapas, kas
-                                            piesaista apmeklētājus un pārvērš tos par klientiem.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Sociālo Tīklu Pārvaldība -->
-                            <div class="carousel-item">
-                                <div class="card card-slider-home shadow-sm">
-                                    <img src="{{ asset('customer/banner/b16.webp') }}" loading="lazy"
-                                        class="card-img-top" alt="Sociālo Tīklu Pārvaldība">
-                                    <div class="card-body-slider">
-                                        <h5 class="card-title">Sociālo Tīklu Pārvaldība</h5>
-                                        <p class="card-text small">Palielinām jūsu zīmola atpazīstamību un klientu iesaisti
-                                            ar efektīvām sociālo tīklu stratēģijām.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Digitālā Reklāma -->
-                            <div class="carousel-item">
-                                <div class="card card-slider-home shadow-sm">
-                                    <img src="{{ asset('customer/banner/b22.webp') }}" loading="lazy"
-                                        class="card-img-top" alt="Digitālā Reklāma">
-                                    <div class="card-body-slider">
-                                        <h5 class="card-title">Digitālā Reklāma</h5>
-                                        <p class="card-text small">Izstrādājam mērķtiecīgas reklāmas kampaņas, kas
-                                            nodrošina maksimālu atdevi un palielina pārdošanas apjomus.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Satura Mārketings -->
-                            <div class="carousel-item">
-                                <div class="card card-slider-home shadow-sm">
-                                    <img src="{{ asset('customer/banner/b11.webp') }}" loading="lazy"
-                                        class="card-img-top" alt="Satura Mārketings">
-                                    <div class="card-body-slider">
-                                        <h5 class="card-title">Satura Mārketings</h5>
-                                        <p class="card-text small">Radām kvalitatīvu saturu, kas piesaista mērķauditoriju,
-                                            veicina zīmola autoritāti un veido ilgtermiņa attiecības ar klientiem.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Datu Analīze & Optimizācija -->
-                            <div class="carousel-item">
-                                <div class="card card-slider-home shadow-sm">
-                                    <img src="{{ asset('customer/banner/b24.webp') }}" loading="lazy"
-                                        class="card-img-top" alt="Datu Analīze & Optimizācija">
-                                    <div class="card-body-slider">
-                                        <h5 class="card-title">Datu Analīze & Optimizācija</h5>
-                                        <p class="card-text small">Analizējam kampaniju rezultātus un optimizējam
-                                            stratēģijas, lai nodrošinātu ilgtermiņa izaugsmi un maksimālu ROI.</p>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
+                    </div>
 
-                        <!-- contols -->
-                        <button class="carousel-control-prev" type="button" data-bs-target="#mobileCarousel"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                            <span class="visually-hidden">Նախորդ</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#mobileCarousel"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                            <span class="visually-hidden">Հաջորդ</span>
-                        </button>
+                    <!-- Spotify -->
+                    <div class="col-md-4">
+                        <div class="card card-slider-home shadow-sm">
+                            <img src="{{ asset('customer/banner/b16.webp') }}" loading="lazy" class="card-img-top" alt="اکانت پرمیوم Spotify">
+                            <div class="card-body-slider text-end">
+                                <h5 class="card-title">دسترسی به اکانت پرمیوم Spotify</h5>
+                                <p class="card-text small">
+                                    به میلیون‌ها آهنگ و پادکست با کیفیت عالی دسترسی پیدا کنید و از تجربه موسیقی بی‌نظیر با Spotify لذت ببرید.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
 
+            <div class="carousel-item">
+                <div class="row g-3">
+                    <!-- LinkedIn -->
+                    <div class="col-md-4">
+                        <div class="card card-slider-home shadow-sm">
+                            <img src="{{ asset('customer/banner/b22.webp') }}" loading="lazy" class="card-img-top" alt="اکانت پرمیوم LinkedIn">
+                            <div class="card-body-slider text-end">
+                                <h5 class="card-title">دسترسی به اکانت پرمیوم LinkedIn</h5>
+                                <p class="card-text small">
+                                    با خرید اکانت پرمیوم LinkedIn، شبکه‌سازی حرفه‌ای را تجربه کنید و به فرصت‌های شغلی بیشتری دسترسی پیدا کنید.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="text-center text-dark bg-home-div">
-                    <h1>Growvixo – Ստեղծագործ թվային մարքեթինգ և web դիզայն ձեր բիզնեսի աճի համար</h1>
-                    <p>
-                        Մեր <strong>SEO օպտիմիզացված ռազմավարություններով</strong>, սոցիալական ցանցերի կառավարումով և
-                        պրոֆեսիոնալ վեբ կայքի մշակումով մենք կօգնենք ձեր բրենդին հասնել հաջորդ մակարդակին,
-                        ավելացնել տեսանելիությունը առցանց և գրավել ավելի շատ հաճախորդներ:
-                    </p>
+                    <!-- سایر ابزارهای پرمیوم -->
+                    <div class="col-md-4">
+                        <div class="card card-slider-home shadow-sm">
+                            <img src="{{ asset('customer/banner/b11.webp') }}" loading="lazy" class="card-img-top" alt="دسترسی به ابزارهای حرفه‌ای دیگر">
+                            <div class="card-body-slider text-end">
+                                <h5 class="card-title">دسترسی به ابزارهای حرفه‌ای دیگر</h5>
+                                <p class="card-text small">
+                                    ما به شما کمک می‌کنیم تا به ابزارهای پرمیوم دیگری نیز دسترسی پیدا کنید که می‌توانند به رشد کسب‌وکار شما کمک کنند.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- سایر ویژگی‌ها -->
+                    <div class="col-md-4">
+                        <div class="card card-slider-home shadow-sm">
+                            <img src="{{ asset('customer/banner/b24.webp') }}" loading="lazy" class="card-img-top" alt="دسترسی به دیگر ابزارهای حرفه‌ای">
+                            <div class="card-body-slider text-end">
+                                <h5 class="card-title">دسترسی به دیگر ابزارهای حرفه‌ای</h5>
+                                <p class="card-text small">
+                                    با دسترسی به سایر ابزارهای حرفه‌ای، شما می‌توانید در زمینه‌های مختلف از جمله تولید محتوا، طراحی، بازاریابی و شبکه‌سازی حرفه‌ای پیشرفت کنید.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </div>
+
+        <!-- کنترل‌ها -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#desktopCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">قبلی</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#desktopCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">بعدی</span>
+        </button>
+    </div>
+
+    <div id="mobileCarousel" class="carousel slide d-md-none m-3 z-show" loading="lazy" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!-- ChatGPT -->
+            <div class="carousel-item active">
+                <div class="card card-slider-home shadow-sm">
+                    <img src="{{ asset('customer/banner/b12.webp') }}" loading="lazy" class="card-img-top" alt="اکانت پرمیوم ChatGPT">
+                    <div class="card-body-slider text-end">
+                        <h5 class="card-title">دسترسی به اکانت پرمیوم ChatGPT</h5>
+                        <p class="card-text small">
+                            با اکانت پرمیوم ChatGPT، از آخرین ویژگی‌های این ابزار هوش مصنوعی قدرتمند بهره‌مند شوید و تجربه‌ای بی‌نظیر از گفتگو با هوش مصنوعی داشته باشید.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Canva -->
+            <div class="carousel-item">
+                <div class="card card-slider-home shadow-sm">
+                    <img src="{{ asset('customer/banner/b21.webp') }}" loading="lazy" class="card-img-top" alt="اکانت پرمیوم Canva">
+                    <div class="card-body-slider text-end">
+                        <h5 class="card-title">دسترسی به اکانت پرمیوم Canva</h5>
+                        <p class="card-text small">
+                            از امکانات پیشرفته Canva برای طراحی گرافیکی حرفه‌ای استفاده کنید، بدون نیاز به نرم‌افزارهای پیچیده و هزینه‌های بالا.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spotify -->
+            <div class="carousel-item">
+                <div class="card card-slider-home shadow-sm">
+                    <img src="{{ asset('customer/banner/b16.webp') }}" loading="lazy" class="card-img-top" alt="اکانت پرمیوم Spotify">
+                    <div class="card-body-slider text-end">
+                        <h5 class="card-title">دسترسی به اکانت پرمیوم Spotify</h5>
+                        <p class="card-text small">
+                            به میلیون‌ها آهنگ و پادکست با کیفیت عالی دسترسی پیدا کنید و از تجربه موسیقی بی‌نظیر با Spotify لذت ببرید.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="carousel-item">
+                <div class="card card-slider-home shadow-sm">
+                    <img src="{{ asset('customer/banner/b22.webp') }}" loading="lazy" class="card-img-top" alt="اکانت پرمیوم LinkedIn">
+                    <div class="card-body-slider text-end">
+                        <h5 class="card-title">دسترسی به اکانت پرمیوم LinkedIn</h5>
+                        <p class="card-text small">
+                            با خرید اکانت پرمیوم LinkedIn، شبکه‌سازی حرفه‌ای را تجربه کنید و به فرصت‌های شغلی بیشتری دسترسی پیدا کنید.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- سایر ابزارهای پرمیوم -->
+            <div class="carousel-item">
+                <div class="card card-slider-home shadow-sm">
+                    <img src="{{ asset('customer/banner/b11.webp') }}" loading="lazy" class="card-img-top" alt="دسترسی به ابزارهای حرفه‌ای دیگر">
+                    <div class="card-body-slider text-end">
+                        <h5 class="card-title">دسترسی به ابزارهای حرفه‌ای دیگر</h5>
+                        <p class="card-text small">
+                            ما به شما کمک می‌کنیم تا به ابزارهای پرمیوم دیگری نیز دسترسی پیدا کنید که می‌توانند به رشد کسب‌وکار شما کمک کنند.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- کنترل‌ها -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#mobileCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">قبلی</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mobileCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">بعدی</span>
+        </button>
+    </div>
+</div>
+
+
+
 
                 <!-- Accordion -->
                 <div class="accordion mt-5 mb-5" id="accordionExample">
                     <!-- Growvixo Overview -->
-                    <div class="accordion-item">
+                    <div class="accordion-item" style="direction: rtl; text-align: right;">
                         <h2 class="accordion-header" id="headingOne">
                             <button class="z-show accordion-button" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                <strong>Growvixo – Մուլտի-սերվիս թվային մարքեթինգի և web դիզայնի գործակալություն</strong>
+                                <strong>Growvixo – دسترسی به اکانت‌های پرمیوم برای رشد کسب‌وکار شما</strong>
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show"
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body bg-dark text-light">
                                 <p>
-                                    <strong>Growvixo</strong>-ն պրոֆեսիոնալ թվային մարքեթինգի և web դիզայնի գործակալություն
-                                    է, որը օգնում է բիզնեսներին ավելացնել տեսանելիությունը, գրավել նպատակային լսարանը և
-                                    հասնել երկարաժամկետ աճի:
-                                    Մենք համատեղում ենք փորձը, նորարարությունը և ստեղծագործական մոտեցումը՝ ապահովելու
-                                    բարձրորակ թվային լուծումներ:
+                                    <strong>Growvixo</strong> به شما این امکان را می‌دهد که به راحتی و با هزینه‌ای مقرون به
+                                    صرفه به اکانت‌های پرمیوم ابزارهای معروف و کاربردی مانند <strong>ChatGPT</strong>،
+                                    <strong>Canva</strong>، <strong>Spotify</strong>، <strong>LinkedIn</strong> و دیگر
+                                    ابزارهای حرفه‌ای دسترسی پیدا کنید. این ابزارها به شما کمک می‌کنند تا در کسب‌وکار خود به
+                                    موفقیت‌های بزرگ‌تری دست یابید.
                                 </p>
                                 <ul class="ms-3">
-                                    <li><strong>Թվային մարքեթինգի ռազմավարություններ:</strong> անհատականացված, ROI-հիմնված
-                                        ռազմավարություններ ձեր բիզնեսի համար:</li>
-                                    <li><strong>SEO և բովանդակության մարքեթինգ:</strong> օպտիմալացնում ենք կայքի
-                                        բովանդակությունը ՝ բարձրացնելու դիրքերը որոնիչներում և գրավելու որակյալ այցելուների:
-                                    </li>
-                                    <li><strong>Սոցիալական ցանցերի և գովազդային արշավներ:</strong> արդյունավետ լուծումներ
-                                        բրենդի ճանաչելիության և հաճախորդների ներգրավվածության բարձրացման համար:</li>
-                                    <li><strong>Պրոֆեսիոնալ կայքի մշակում:</strong> ժամանակակից, արագ և օգտվողամետ web
-                                        լուծումներ՝ հարմարեցված ձեր բիզնեսի կարիքներին:</li>
-                                    <li><strong>Տվյալների վերլուծություն և օպտիմալացում:</strong> արշավների մշտական հետևում,
-                                        արդյունքների վերլուծություն և բարելավումների իրականացում՝ առավելագույն վերադարձի
-                                        ապահովման համար:</li>
+                                    <li><strong>دسترسی به اکانت‌های پرمیوم:</strong> خرید اکانت‌های پرمیوم برای استفاده از
+                                        آخرین ویژگی‌ها و ابزارهای پیشرفته.</li>
+                                    <li><strong>قیمت مناسب:</strong> دسترسی به ابزارهای حرفه‌ای با قیمت‌های ارزان‌تر نسبت به
+                                        خرید مستقیم اکانت.</li>
+                                    <li><strong>تجربه کاربری بهبود یافته:</strong> استفاده از ابزارهای قدرتمند برای تسهیل
+                                        کارها و افزایش بهره‌وری.</li>
+                                    <li><strong>پشتیبانی حرفه‌ای:</strong> ارائه خدمات پشتیبانی برای حل هرگونه مشکل و
+                                        راهنمایی در استفاده از اکانت‌ها.</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
                     <!-- Friendly & Inspiring Text -->
-                    <div class="accordion-item">
+                    <div class="accordion-item" style="direction: rtl; text-align: right;">
                         <h2 class="accordion-header" id="headingTwo">
                             <button class="z-show accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                🔔 Ընկերական և ոգեշնչող Growvixo
+                                🔔 Growvixo – راحت‌ترین راه برای دسترسی به ابزارهای حرفه‌ای
                             </button>
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body bg-dark text-light">
                                 <p>
-                                    Բարի գալուստ <strong>Growvixo</strong>-ին! Սա այն վայրն է, որտեղ ձեր բիզնեսը կարող է
-                                    հասնել նոր բարձրունքների:
-                                    Մենք համատեղում ենք ստեղծագործական մոտեցում, տվյալների վերլուծություն և ժամանակակից
-                                    թվային մարքեթինգի ռազմավարություններ՝ ապահովելու ավելի մեծ հաճախորդների
-                                    ներգրավվածություն և վաճառքի արդյունքներ:
-                                    Եթե ցանկանում եք աճել, լինել տեսանելի և արդյունավետորեն հասնել նպատակային լսարանին՝
-                                    <strong>Growvixo</strong> ձեր վստահելի գործընկերն է:
+                                    به <strong>Growvixo</strong> خوش آمدید! ما اینجا هستیم تا به شما کمک کنیم به راحتی و با
+                                    هزینه‌ای مناسب به اکانت‌های پرمیوم ابزارهایی مثل <strong>ChatGPT</strong>،
+                                    <strong>Canva</strong>، <strong>Spotify</strong> و <strong>LinkedIn</strong> دسترسی پیدا
+                                    کنید.
+                                    از این ابزارها برای پیشرفت در کسب‌وکار خود و بهبود عملکردهای مختلف استفاده کنید.
+                                </p>
+                                <p>
+                                    اگر به دنبال دسترسی آسان به ابزارهای حرفه‌ای و ایجاد یک تحول در کار خود هستید،
+                                    <strong>Growvixo</strong> انتخاب مناسبی برای شماست.
                                 </p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Short & Brand-focused -->
-                    <div class="accordion-item">
+                    <div class="accordion-item" style="direction: rtl; text-align: right;">
                         <h2 class="accordion-header" id="headingThree">
                             <button class="z-show accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                📣 Կարճ և բրենդակենտրոն Growvixo
+                                📣 با Growvixo از ابزارهای حرفه‌ای استفاده کنید
                             </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body bg-dark text-light">
                                 <p>
-                                    <strong>Growvixo</strong> – ձեր բիզնեսի թվային աճի շարժիչը:
-                                    Մենք ստեղծում ենք խելացի և արդյունավետ թվային մարքեթինգի ռազմավարություններ, որոնք
-                                    օգնում են բրենդներին դառնալ ավելի տեսանելի, արդյունավետ հաղորդակցվել և բարձրացնել
-                                    վաճառքները:
+                                    <strong>Growvixo</strong> به شما این امکان را می‌دهد که از ابزارهای پرمیوم و حرفه‌ای
+                                    مانند <strong>ChatGPT</strong>، <strong>Canva</strong>، <strong>Spotify</strong>،
+                                    <strong>LinkedIn</strong> و دیگر ابزارهای معروف بهره‌مند شوید.
+                                    با خرید اکانت‌های پرمیوم از ما، شما به امکانات جدید و پیشرفته‌تر این ابزارها دست پیدا
+                                    خواهید کرد که می‌تواند به رشد کسب‌وکار شما کمک کند.
                                 </p>
                                 <p>
-                                    <strong>Growvixo</strong>-ի հետ դուք ստանում եք վստահելի գործընկեր, որը ապահովում է աճ,
-                                    նորարարություն և իրական արդյունքներ թվային միջավայրում:
+                                    این ابزارها به شما کمک می‌کنند تا در زمینه‌های مختلف، از جمله تولید محتوا، طراحی
+                                    گرافیکی، موسیقی، و شبکه‌سازی حرفه‌ای، یک گام بزرگ به سوی موفقیت بردارید.
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- New Accordion Section: Design Your Online Store -->
-                    <div class="accordion-item">
+                    <!-- New Accordion Section: طراحی فروشگاه آنلاین -->
+                    <div class="accordion-item" style="direction: rtl; text-align: right;">
                         <h2 class="accordion-header" id="headingFour">
                             <button class="z-show accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                🛒 Տեղեկություններ Growvixo-ի կողմից՝ Առցանց խանութի նախագծում (Խանութի կայքի դիզայն)
+                                🛒 اطلاعات از Growvixo – طراحی و فروشگاه آنلاین
                             </button>
                         </h2>
                         <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body bg-dark text-light">
                                 <p>
-                                    Եթե ցանկանում եք ստեղծել հաջողված առցանց խանութ, <strong>Growvixo</strong> ձեր լավագույն
-                                    ընտրությունն է: Մենք ստեղծում ենք պրոֆեսիոնալ առցանց խանութներ, որոնք ներառում են
-                                    ժամանակակից դիզայն, լիովին պատասխանատու կայք և հեշտ կառավարման համակարգեր:
+                                    اگر به دنبال دسترسی به ابزارهای حرفه‌ای برای ایجاد یک فروشگاه آنلاین موفق هستید،
+                                    <strong>Growvixo</strong> بهترین انتخاب برای شماست.
+                                    ما به شما کمک می‌کنیم تا با استفاده از ابزارهای پیشرفته، طراحی حرفه‌ای و کاربرپسند برای
+                                    فروشگاه آنلاین خود ایجاد کنید.
                                 </p>
                                 <ul class="ms-3">
-                                    <li><strong>Հարմարեցված դիզայն</strong>՝ Ձեր բիզնեսի կարիքներին համապատասխան:</li>
-                                    <li><strong>Անվտանգ առցանց վճարումներ</strong>՝ ապահով վճարման մեթոդներ՝ հաճախորդներին
-                                        ապահով գրանցման և վճարման հնարավորություն տալու համար:</li>
-                                    <li><strong>SEO օպտիմիզացում</strong>՝ Ձեր խանութի տեսանելիությունը բարձրացնելու համար:
-                                    </li>
-                                    <li><strong>Հարմարեցված CMS</strong>՝ հեշտ կառավարելի պլատֆորմներ՝ Ձեր ապրանքների և
-                                        պատվերների հետևում մնալու համար:</li>
-                                    <li><strong>Ազգային և միջազգային առաքում</strong>՝ պրոֆեսիոնալ առաքման տարբերակներ:</li>
+                                    <li><strong>طراحی فروشگاه آنلاین حرفه‌ای</strong> – طراحی زیبا و کاربردی برای جذب
+                                        مشتریان بیشتر.</li>
+                                    <li><strong>ابزارهای پیشرفته</strong> – دسترسی به ابزارهای پرمیوم برای بهینه‌سازی
+                                        فرآیندهای فروشگاهی.</li>
+                                    <li><strong>پشتیبانی 24/7</strong> – پشتیبانی شبانه‌روزی برای حل مشکلات و بهبود عملکرد
+                                        فروشگاه.</li>
+                                    <li><strong>نصب و راه‌اندازی سریع</strong> – راه‌اندازی سریع و آسان فروشگاه آنلاین شما
+                                        بدون هیچ مشکلی.</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                <a referrerpolicy='origin' target='_blank' href='https://trustseal.enamad.ir/?id=703000&Code=oBqG9M3Yan78S2nE0Mgw1OyqNHA6eDPA'><img referrerpolicy='origin' src='https://trustseal.enamad.ir/logo.aspx?id=703000&Code=oBqG9M3Yan78S2nE0Mgw1OyqNHA6eDPA' alt='' style='cursor:pointer' code='oBqG9M3Yan78S2nE0Mgw1OyqNHA6eDPA'></a>
+                <a referrerpolicy='origin' target='_blank'
+                    href='https://trustseal.enamad.ir/?id=703000&Code=oBqG9M3Yan78S2nE0Mgw1OyqNHA6eDPA'><img
+                        referrerpolicy='origin'
+                        src='https://trustseal.enamad.ir/logo.aspx?id=703000&Code=oBqG9M3Yan78S2nE0Mgw1OyqNHA6eDPA'
+                        alt='' style='cursor:pointer' code='oBqG9M3Yan78S2nE0Mgw1OyqNHA6eDPA'></a>
         </div>
     </section>
 @endsection
