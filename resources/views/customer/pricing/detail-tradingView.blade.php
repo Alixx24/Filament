@@ -171,7 +171,9 @@
                                                                                 <form method="POST"
                                                                                     action="{{ route('payment.pay', $product->price) }}">
                                                                                     @csrf
-                                                                                    <!-- هشدار فوری (FOMO - ترس از دست دادن) -->
+
+                                                                                      <input type="hidden" name="price" value="{{ $product->price }}">
+
                                                                                     <div class="alert alert-warning py-2 mb-3"
                                                                                         role="alert"
                                                                                         style="background-color: #fff3cd; border-color: #ffecb5;">

@@ -20,14 +20,13 @@ class PaymentController extends Controller
     {
         $order = Order::find(1);
 
-        $amountInRial = 1000;
+        $amountInRial = $request->price;
 
         $invoice = (new Invoice)->amount($amountInRial);
 
         try {
             $payment = Payment::via('zarinpal')->purchase($invoice, function ($driver, $transactionId) use ($order, $amountInRial) {
 
-                // ذخیره تراکنش در DB
                 PaymentModel::create([
                     'order_id' => $order->id,
                     'user_id' => auth()->id(),

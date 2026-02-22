@@ -66,6 +66,7 @@
         <div class="row justify-content-center align-items-center">
 
             {{-- Step-by-Step Process --}}
+
             <body>
                 <section class="shop-product-detail-wrapper py-4">
                     <div class="shop-container">
@@ -171,6 +172,9 @@
                                                                                 <form method="POST"
                                                                                     action="{{ route('payment.pay', $product->price) }}">
                                                                                     @csrf
+                                                                                    <input type="hidden" name="price"
+                                                                                        value="{{ $product->price }}">
+
                                                                                     <!-- هشدار فوری (FOMO - ترس از دست دادن) -->
                                                                                     <div class="alert alert-warning py-2 mb-3"
                                                                                         role="alert"
@@ -191,6 +195,7 @@
                                                                                             اشتراک
                                                                                         </label>
                                                                                         <input type="email"
+                                                                                            name="email"
                                                                                             class="form-control"
                                                                                             id="exampleInputEmail1"
                                                                                             aria-describedby="emailHelp"
@@ -202,6 +207,29 @@
                                                                                         </div>
                                                                                     </div>
 
+                                                                                   
+
+                                                                                      <div class="mb-3">
+                                                                                        <label for="exampleInputEmail1"
+                                                                                            class="form-label fw-bold">
+                                                                                            <i class="bi bi-envelope"></i>شماره تماس
+                                                                                        </label>
+                                                                                        <input type="tel"
+                                                                                            name="phone"
+                                                                                            class="form-control"
+                                                                                            id="exampleInputEmail1"
+                                                                                            aria-describedby="emailHelp"
+                                                                                            placeholder="09123456789"
+                                                                                            dir="ltr">
+                                                                                        <div id="emailHelp"
+                                                                                            class="form-text small text-muted mt-1">
+                                                                                           
+                                                                                            شماره تماس جهت ارتباط کارشناس
+                                                                                            درصورت بروز مشکل
+                                                                                       
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    
                                                                                     <div class="mb-4">
                                                                                         <label for="exampleInputPassword1"
                                                                                             class="form-label fw-bold">
@@ -347,7 +375,7 @@
                     const chatBox = document.getElementById("chatBox");
 
                     chatToggle.addEventListener("click", function(e) {
-                        e.stopPropagation(); 
+                        e.stopPropagation();
                         chatBox.classList.toggle("active");
                     });
 
