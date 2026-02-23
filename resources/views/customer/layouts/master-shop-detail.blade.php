@@ -1612,6 +1612,48 @@
                     line-height: 1.8;
                 }
     </style>
+     <style>
+        .nowrapfont {
+            white-space: nowrap;
+            font-size: 0.7rem
+        }
+
+        .mt-detail {
+            margin-top: 226px;
+        }
+
+        .mt-big {
+            margin-top: 460px;
+        }
+
+        .mt-modal-detail {
+            margin-top: 30px;
+        }
+
+        .alert-modal {
+            background-color: #fff3cd;
+            border-color: #ffecb5;
+        }
+
+        .success-modal {
+            margin-top: -20px;
+        }
+
+        .finish-pay-btn {
+            background-color: #28a745;
+            border-color: #28a745;
+            margin-top: -10px;
+        }
+
+        .pay-btn-modal {
+            background-color: green;
+            margin-top: -25px;
+        }
+
+        .font-sm{
+            font-size: 0.75rem; opacity: 0.9;
+        }
+    </style>
 </head>
 
 <body>
