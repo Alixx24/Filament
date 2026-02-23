@@ -9,6 +9,7 @@ use Shetabit\Multipay\Exceptions\InvalidPaymentException;
 use Illuminate\Http\Request;
 use App\Models\Payment as PaymentModel;
 use App\Models\Order;
+use App\Models\Product;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\DB;
@@ -16,14 +17,26 @@ use App\Notifications\OrderStoredNotification;
 
 class PaymentController extends Controller
 {
-    public function pay(Request $request)
+    public function pay(Product $product, Request $request)
     {
+
         $order = Order::find(1);
 
-        $amountInRial = $request->price;
+        $amountInRial = (int) $product->price; 
 
         $invoice = (new Invoice)->amount($amountInRial);
+        $inputs = $request->all();
+        $order = Order::create([
+            'user_id' => 13,
+            'product_id' => $product->id,
+            'email' => $inputs['email'],
+            'username' => $inputs['username'],
+            'password' => $inputs['password'],
+            'phone' => $inputs['phone'],
+            'amount' => $amountInRial,
+            'status' => 'pending',
 
+        ]);
         try {
             $payment = Payment::via('zarinpal')->purchase($invoice, function ($driver, $transactionId) use ($order, $amountInRial) {
 

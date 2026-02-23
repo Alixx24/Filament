@@ -41,6 +41,12 @@
 
 {{-- ====================== Content Section ====================== --}}
 @section('content')
+   <style>
+                                                                                    .nowrapfont {
+                                                                                        white-space: nowrap;
+                                                                                        font-size: 0.7rem
+                                                                                    }
+                                                                                </style>
     <div class="chat-wrapper">
         <button class="chat-button" id="chatToggle">
             <i class="bi bi-chat-dots fs-1"></i>
@@ -88,7 +94,7 @@
                                         <div class="row g-0 me-2" style="margin-top:260px;">
 
                                             <div class="col-lg-6 col-md-12 bg-light rounded-5 border border-primary"
-                                                style="margin-top:330px;">
+                                                style="margin-top:460px;">
                                                 <div class="shop-info-wrapper">
                                                     <div class="shop-title-wrapper">
                                                         <h1 class="shop-product-title">{{ $product->name }}</h1>
@@ -157,37 +163,43 @@
                                                             <div class="custom-modal unique-modal" id="uniqueModal"
                                                                 tabindex="-1" aria-hidden="true">
                                                                 <div class="custom-modal-dialog unique-modal-dialog">
-                                                                    <div class="custom-modal-content unique-modal-content">
+                                                                    <div class="custom-modal-content unique-modal-content"
+                                                                        style="margin-top:30px;">
 
                                                                         <div
                                                                             class="custom-modal-footer unique-modal-footer">
-                                                                            <div class="px-3 py-2">
+                                                                            <div class="px-1 py-2">
+
+                                                                             
                                                                                 <div
                                                                                     class="d-flex justify-content-center gap-3 mb-3 text-muted small">
-                                                                                    <span>🔒 پرداخت امن</span>
-                                                                                    <span>⚡ آنی و مطمئن</span>
-                                                                                    <span>✅ ضمانت بازگشت وجه</span>
+                                                                                    <span class="nowrapfont">🔒
+                                                                                        پرداخت امن</span>
+                                                                                    <span class="nowrapfont">⚡ آنی و
+                                                                                        مطمئن</span>
+                                                                                    <span class="nowrapfont">✅ ضمانت بازگشت
+                                                                                        وجه</span>
                                                                                 </div>
-
                                                                                 <form method="POST"
-                                                                                    action="{{ route('payment.pay', $product->price) }}">
+                                                                                    action="{{ route('payment.pay', $product) }}">
                                                                                     @csrf
-                                                                                    <input type="hidden" name="price"
-                                                                                        value="{{ $product->price }}">
+                                                                                    <input type="hidden"
+                                                                                        name="product_id"
+                                                                                        value="{{ $product->id }}">
 
-                                                                                    <!-- هشدار فوری (FOMO - ترس از دست دادن) -->
-                                                                                    <div class="alert alert-warning py-2 mb-3"
+                                                                                    <div class="alert alert-warning py-2 mb-1"
                                                                                         role="alert"
                                                                                         style="background-color: #fff3cd; border-color: #ffecb5;">
                                                                                         <small class="d-block text-center">
-                                                                                            <span class="fw-bold">⏰ فقط تا
+                                                                                            <span class="fw-bold fs-6">⏰
+                                                                                                فقط تا
                                                                                                 ۵ ساعت
                                                                                                 آینده!</span> ایمیل دسترسی
                                                                                             ارسال می‌شود
                                                                                         </small>
                                                                                     </div>
 
-                                                                                    <div class="mb-3">
+                                                                                    <div class="mb-1">
                                                                                         <label for="exampleInputEmail1"
                                                                                             class="form-label fw-bold">
                                                                                             <i class="bi bi-envelope"></i>
@@ -203,16 +215,17 @@
                                                                                             dir="ltr">
                                                                                         <div id="emailHelp"
                                                                                             class="form-text small text-muted mt-1">
-                                                                                            ایمیل شما نزد ما محفوظ است
                                                                                         </div>
                                                                                     </div>
 
-                                                                                   
 
-                                                                                      <div class="mb-3">
+
+                                                                                    <div class="mb-1">
                                                                                         <label for="exampleInputEmail1"
                                                                                             class="form-label fw-bold">
-                                                                                            <i class="bi bi-envelope"></i>شماره تماس
+                                                                                            <i
+                                                                                                class="bi bi-envelope ms-1"></i>شماره
+                                                                                            تماس
                                                                                         </label>
                                                                                         <input type="tel"
                                                                                             name="phone"
@@ -223,14 +236,10 @@
                                                                                             dir="ltr">
                                                                                         <div id="emailHelp"
                                                                                             class="form-text small text-muted mt-1">
-                                                                                           
-                                                                                            شماره تماس جهت ارتباط کارشناس
-                                                                                            درصورت بروز مشکل
-                                                                                       
                                                                                         </div>
                                                                                     </div>
-                                                                                    
-                                                                                    <div class="mb-4">
+
+                                                                                    <div class="mb-1">
                                                                                         <label for="exampleInputPassword1"
                                                                                             class="form-label fw-bold">
                                                                                             <i class="bi bi-lock"></i>
@@ -241,37 +250,55 @@
                                                                                             class="form-control"
                                                                                             id="exampleInputPassword1"
                                                                                             placeholder="••••••••"
+                                                                                            name="password"
                                                                                             dir="ltr">
                                                                                         <small
                                                                                             class="form-text text-muted d-block mt-1">
                                                                                         </small>
                                                                                     </div>
 
+                                                                                    <div class="mb-1">
+                                                                                        <label for="exampleInputPassword1"
+                                                                                            class="form-label fw-bold">
+                                                                                            <i class="bi bi-lock"></i>
+                                                                                            درصورتیکه دارای user name است:
+                                                                                        </label>
+                                                                                        <input type="text"
+                                                                                            class="form-control"
+                                                                                            id="exampleInputPassword1"
+                                                                                            placeholder="jack666"
+                                                                                            name="username"
+                                                                                            dir="ltr">
+                                                                                        <small
+                                                                                            class="form-text text-muted d-block">
+                                                                                        </small>
+                                                                                    </div>
+
+
                                                                                     <div
-                                                                                        class="bg-light p-2 rounded mb-3 small">
+                                                                                        class="bg-light p-2 rounded mb-1 small">
                                                                                         <div
                                                                                             class="d-flex align-items-center gap-2 mt-1">
+                                                                                            <span class="text-success fs-5"
+                                                                                                style="margin-top:-20px;">✓</span>
                                                                                             <span
-                                                                                                class="text-success fs-5">✓</span>
-                                                                                            <span>پشتیبانی ۲۴ ساعته</span>
+                                                                                                style="margin-top:-20px;">پشتیبانی
+                                                                                                ۲۴ ساعته</span>
                                                                                         </div>
                                                                                     </div>
 
                                                                                     <div class="text-center">
                                                                                         <button type="submit"
-                                                                                            class="btn btn-primary w-100 py-2 fw-bold"
-                                                                                            style="background-color: #28a745; border-color: #28a745;">
+                                                                                            class="btn btn-primary w-100 py-1 fw-bold"
+                                                                                            style="background-color: #28a745; border-color: #28a745; margin-top:-10px;">
                                                                                             <span>✨ تکمیل خرید و
                                                                                                 پرداخت</span>
-                                                                                            <small class="d-block mt-1"
+                                                                                            <small class="d-block"
                                                                                                 style="font-size: 0.75rem; opacity: 0.9;">پرداخت
                                                                                                 امن با تمام کارت‌ها</small>
                                                                                         </button>
 
-                                                                                        <p
-                                                                                            class="text-muted small mt-2 mb-0">
-                                                                                            👥 بیش از ۱۰,۰۰۰ کاربر عضو
-                                                                                        </p>
+
                                                                                     </div>
                                                                                 </form>
                                                                             </div>

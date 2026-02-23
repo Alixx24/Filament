@@ -8,9 +8,11 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Order extends Model
 {
     protected $guarded = ['id'];
-    protected $fillable = ['phone', 'email', 'title','user_id','description'];
+    protected $fillable = ['phone', 'email', 'title','user_id','description','password','username'];
     public function payments(): HasMany
     {
         return $this->hasMany(Payment::class);
     }
 }
+
+

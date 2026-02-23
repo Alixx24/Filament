@@ -1626,7 +1626,7 @@
     </main>
 
     {{-- FOOTER --}}
-    <section style="margin-top:630px !important;">
+    <section style="margin-top:730px !important;">
         <footer class="gv-footer-container text-center">
             <!-- Footer text -->
             <p>
