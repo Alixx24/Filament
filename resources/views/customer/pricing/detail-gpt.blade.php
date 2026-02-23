@@ -74,7 +74,7 @@
                             <ol class="shop-breadcrumb bg-transparent p-0 mb-0">
                                 <li class="shop-breadcrumb-item"><a href="{{ route('home') }}"
                                         class="shop-link-muted">خانه</a></li>
-                                <li class="shop-breadcrumb-item"><a href="{{ route('customer.pricing.chatgpt.index') }}"
+                                <li class="shop-breadcrumb-item"><a href="{{ route('customer.pricing.spotify.index') }}"
                                         class="shop-link-muted">محصولات</a></li>
                                 <li class="shop-breadcrumb-item shop-active text-primary" aria-current="page">
                                     {{ $product->name }}</li>
@@ -85,10 +85,10 @@
                             <div class="row justify-content-center align-items-center">
                                 <div class="col-12">
                                     <div>
-                                        <div class="row g-0 me-2" style="margin-top:260px;">
+                                        <div class="row g-0" style="margin-top:300px;">>
 
                                             <div class="col-lg-6 col-md-12 bg-light rounded-5 border border-primary"
-                                                style="margin-top:330px;">
+                                                style="margin-top:360px; ">
                                                 <div class="shop-info-wrapper">
                                                     <div class="shop-title-wrapper">
                                                         <h1 class="shop-product-title">{{ $product->name }}</h1>
@@ -247,6 +247,25 @@
                                                                                         </small>
                                                                                     </div>
 
+
+                                                                                    <div class="mb-3">
+                                                                                        <label for="exampleInputEmail1"
+                                                                                            class="form-label fw-bold">
+                                                                                            <i class="bi bi-envelope"></i>
+                                                                                          شماره موبایل
+                                                                                        </label>
+                                                                                        <input type="email"
+                                                                                            class="form-control"
+                                                                                            id="exampleInputEmail1"
+                                                                                            aria-describedby="emailHelp"
+                                                                                            placeholder="example@email.com"
+                                                                                            dir="ltr">
+                                                                                        <div id="emailHelp"
+                                                                                            class="form-text small text-muted mt-1">
+                                                                                            شماره تماس برای زمانیکه تیم
+                                                                                            پشتیبانی نیاز به ارتباط با شما
+                                                                                            داشت </div>
+                                                                                    </div>
                                                                                     <div
                                                                                         class="bg-light p-2 rounded mb-3 small">
                                                                                         <div
@@ -285,7 +304,8 @@
                                                         <div class="text-center">
                                                             <button type="button"
                                                                 class="w-75 custom-btn-open unique-btn-open"
-                                                                id="uniqueOpenModalBtn" style="background-color:green;">
+                                                                id="uniqueOpenModalBtn"
+                                                                style="background-color:green; margin-top:-25px;">
                                                                 پرداخت
                                                             </button>
                                                         </div>
@@ -388,11 +408,7 @@
                     });
                 </script>
 
-
-
                 {{-- CTA Section --}}
-
-
 
                 </section>
 

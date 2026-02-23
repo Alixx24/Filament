@@ -685,9 +685,16 @@
                 </li>
 
                 <li data-link="tradingview">
-                    <a class="menu-item" href="{{ route('customer.pricing.TradingView.index') }}">
+                    <a class="menu-item" href="{{ route('customer.pricing.Tradingview.index') }}">
                         <img src="/customer/images/tradingview.webp" alt="TradingView" class="me-2 ms-2 mb-1">
                         <span>اکانت TradingView</span>
+                    </a>
+                </li>
+
+                  <li data-link="tradingview">
+                    <a class="menu-item" href="{{ route('customer.pricing.linkedIn.index') }}">
+                        <img src="/customer/images/linkedIn.webp" alt="TradingView" class="me-2 ms-2 mb-1">
+                        <span>اکانت LinkedIn</span>
                     </a>
                 </li>
             </ul>

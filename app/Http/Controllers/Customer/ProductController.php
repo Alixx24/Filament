@@ -100,14 +100,14 @@ class ProductController extends Controller
         return view('customer.pricing.spotify', compact('products'));
     }
 
-     public function spotifyDetail($slug)
+    public function spotifyDetail($slug)
     {
         $product = Product::where('slug', $slug)->get()[0];
 
         return view('customer.pricing.detail-spotify', compact('product'));
     }
 
-      public function tradingViewPricing()
+    public function tradingViewPricing()
     {
         $products = Product::where(function ($query) {
             $query->where('name', 'LIKE', '%tradingView %')
@@ -119,10 +119,29 @@ class ProductController extends Controller
         return view('customer.pricing.tradingView ', compact('products'));
     }
 
-     public function TradingViewDetail($slug)
+    public function TradingViewDetail($slug)
     {
         $product = Product::where('slug', $slug)->get()[0];
 
         return view('customer.pricing.detail-tradingView', compact('product'));
+    }
+
+    public function linkedInPricing()
+    {
+       $products = Product::where(function ($query) {
+            $query->where('name', 'LIKE', '%linkedIn %')
+                ->orWhere->orWhere('name', 'LIKE', '%linkedIn %');
+        })
+            ->where('status', 1)
+            ->get();
+
+        return view('customer.pricing.linkedIn ', compact('products'));
+    }
+
+    public function linkedInDetail($slug)
+    {
+        $product = Product::where('slug', $slug)->get()[0];
+
+        return view('customer.pricing.detail-linkedIn', compact('product'));
     }
 }
