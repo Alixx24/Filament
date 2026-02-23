@@ -291,7 +291,7 @@
             }
 
             .mt-desktop {
-                margin-top: 69px;
+                margin-top: 60px;
             }
         }
 
@@ -310,9 +310,9 @@
     <section id="social-media-marketing" class="p-4 m-3 p-mt-head border border-primary rounded-3">
 
 
-        <h3 style="text-align: right; ">!<strong> بدون دردسر TradingView اکانت</strong></h3>
+        <h3 style="text-align: right; ">!<strong> بدون دردسر LinkedIn اکانت</strong></h3>
         <p style="text-align: right; font-family: Vazir, Tahoma, Arial, sans-serif; line-height: 1.8;">
-            با توجه به محدودیت‌های موجود برای کاربران ایرانی در دسترسی به TradingView ما فرآیند ثبت‌نام و خرید را برای شما
+            با توجه به محدودیت‌های موجود برای کاربران ایرانی در دسترسی به LinkedIn ما فرآیند ثبت‌نام و خرید را برای شما
             آسان
             کرده‌ایم. اکانت‌های مدنظر شما عزیزان را، به آسانی تنها در کوتاه‌ترین زمان ممکن در اختیار شما قرار می‌گیرد
         </p>
@@ -357,7 +357,6 @@
                 <button class="chat-button" id="chatToggle">
                     <i class="bi bi-chat-dots fs-1"></i>
                 </button>
-
                 <div class="chat-box fs-1" id="chatBox">
                     <ul>
                         <li>
@@ -375,6 +374,7 @@
                     </ul>
                 </div>
             </div>
+
 
             <script>
                 const chatToggle = document.getElementById("chatToggle");
@@ -409,11 +409,11 @@
                         <div class="row">
                             @foreach ($products as $product)
                                 <div class="col-12 mb-4">
-                                    <a href="{{ route('customer.doc.tradingview.detail', ['slug' => $product->slug]) }}"
+                                    <a href="{{ route('customer.doc.linkedIn.detail', ['slug' => $product->slug]) }}"
                                         class="text-decoration-none text-dark">
                                         <div class="card custom-card h-100" itemscope itemtype="https://schema.org/Product">
                                             <div class="text-center p-4">
-                                                <img src="/customer/images/tradingView.webp" class="card-img-top mb-3 mt-3"
+                                                <img src="/customer/images/linkedIn.webp" class="card-img-top"
                                                     style="max-width: 80%; height: auto;" alt="{{ $product->name }}"
                                                     title="{{ $product->name }}">
                                             </div>
@@ -439,11 +439,11 @@
                         <div class="desktop-product-grid">
                             @foreach ($products as $product)
                                 <div>
-                                    <a href="{{ route('customer.doc.tradingview.detail', ['slug' => $product->slug]) }}"
+                                    <a href="{{ route('customer.doc.linkedIn.detail', ['slug' => $product->slug]) }}"
                                         class="desktop-product-link">
                                         <div class="desktop-product-card">
                                             <div class="desktop-product-image">
-                                                <img src="/customer/images/tradingView.webp" alt="{{ $product->name }}"
+                                                <img src="/customer/images/linkedIn.webp" alt="{{ $product->name }}"
                                                     title="{{ $product->name }}">
                                             </div>
                                             <div class="desktop-product-content">
@@ -465,8 +465,9 @@
             </div>
 
             {{-- CTA Section --}}
-             <section class="lux-cta-wrapper">
-                <h2 class="lux-cta-title" style="margin-top: 66px !important;">نظرات و انتقاداتتون رو باهامون در میان بدارید</h2>
+            <section class="lux-cta-wrapper">
+                <h2 class="lux-cta-title" style="margin-top: 66px !important;">نظرات و انتقاداتتون رو باهامون در میان بدارید
+                </h2>
 
 
                 <form action="/contact-form" method="POST" class="lux-cta-form">

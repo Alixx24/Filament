@@ -80,7 +80,7 @@
                             <ol class="shop-breadcrumb bg-transparent p-0 mb-0">
                                 <li class="shop-breadcrumb-item"><a href="{{ route('home') }}"
                                         class="shop-link-muted">خانه</a></li>
-                                <li class="shop-breadcrumb-item"><a href="{{ route('customer.pricing.chatgpt.index') }}"
+                                <li class="shop-breadcrumb-item"><a href="{{ route('customer.pricing.spotify.index') }}"
                                         class="shop-link-muted">محصولات</a></li>
                                 <li class="shop-breadcrumb-item shop-active text-primary" aria-current="page">
                                     {{ $product->name }}</li>
@@ -91,7 +91,7 @@
                             <div class="row justify-content-center align-items-center">
                                 <div class="col-12">
                                     <div>
-                                        <div class="row g-0 me-2" style="margin-top:260px;">
+                                        <div class="row g-0" style="margin-top:300px;">>
 
                                             <div class="col-lg-6 col-md-12 bg-light rounded-5 border border-primary"
                                                 style="margin-top:460px;">
@@ -312,7 +312,8 @@
                                                         <div class="text-center">
                                                             <button type="button"
                                                                 class="w-75 custom-btn-open unique-btn-open"
-                                                                id="uniqueOpenModalBtn" style="background-color:green;">
+                                                                id="uniqueOpenModalBtn"
+                                                                style="background-color:green; margin-top:-25px;">
                                                                 پرداخت
                                                             </button>
                                                         </div>
@@ -415,11 +416,7 @@
                     });
                 </script>
 
-
-
                 {{-- CTA Section --}}
-
-
 
                 </section>
 
