@@ -1,4 +1,4 @@
-@extends('customer.layouts.master')
+@extends('customer.layouts.master-home')
 @section('title', 'Growvixo')
 
 @section('content')
@@ -97,21 +97,7 @@
          
             {{-- blog  --}}
 
-            <section id="blog" class="z-show">
-                <h2>Բլոգ</h2>
-                <div class="blog-posts z-show">
-                    @foreach ($posts as $post)
-                        <div class="post-card z-show">
-                            <h3>{{ $post['title'] }}</h3>
-                            <p>{{ \Illuminate\Support\Str::limit($post['summary'], 42, '...') }}</p>
-                            <a class="btn btn-success" href="{{ route('customer.post.show', $post['slug']) }}">
-                                Կարդալ ավելին
-                            </a>
-                        </div>
-                    @endforeach
-                </div>
-            </section>
-
+         
 
 
             {{-- Contact --}}
