@@ -1,9 +1,7 @@
-@extends('customer.layouts.master-home')
+@extends('layouts.masters')
 @section('title', 'Growvixo')
 
 @section('content')
-
-
 
     <section>
         <div class="container" id="info">
@@ -422,11 +420,7 @@
                         </div>
                     </div>
                 </div>
-                <a referrerpolicy='origin' target='_blank'
-                    href='https://trustseal.enamad.ir/?id=703000&Code=oBqG9M3Yan78S2nE0Mgw1OyqNHA6eDPA'><img
-                        referrerpolicy='origin'
-                        src='https://trustseal.enamad.ir/logo.aspx?id=703000&Code=oBqG9M3Yan78S2nE0Mgw1OyqNHA6eDPA'
-                        alt='' style='cursor:pointer' code='oBqG9M3Yan78S2nE0Mgw1OyqNHA6eDPA'></a>
+               
         </div>
     </section>
 @endsection
