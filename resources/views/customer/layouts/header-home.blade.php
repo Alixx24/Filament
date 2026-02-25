@@ -3,10 +3,12 @@
         <div class="logo"> <span class="logo-primary">Grow</span><span class="logo-secondary">vixo</span>
         </div>
         <ul class="nav-links">
-            <li><a href="#">Գլխավոր</a></li>
-            <li><a href="#">Ծառայություններ</a></li>
-            <li><a href="#">Պորտֆոլիո</a></li>
-            <li><a href="#">Բլոգ</a></li>
+            <li><a href="#">پشتیبانی تلگرام</a></li>
+            <li><a href="#">اکانت Gemini</a></li>
+            <li><a href="#">اکانت Cursor</a></li>
+            <li><a href="#">اکانت Claude</a></li>
+             <li><a href="#">اکانت TradingView</a></li>
+              <li><a href="#">اکانت LinkedIn</a></li>
             <li><a class="btn-primary" href="#">Կապ</a></li>
         </ul>
 

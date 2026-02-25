@@ -1,4 +1,4 @@
-@extends('customer.layouts.master-home')
+@extends('customer.layouts.masters')
 @section('title', 'Growvixo')
 
 @section('content')
