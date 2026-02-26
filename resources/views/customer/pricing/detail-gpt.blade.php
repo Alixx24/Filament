@@ -41,7 +41,7 @@
 
 {{-- ====================== Content Section ====================== --}}
 @section('content')
-   
+
     <div class="chat-wrapper">
         <button class="chat-button" id="chatToggle">
             <i class="bi bi-chat-dots fs-1"></i>
@@ -50,15 +50,15 @@
             <ul>
                 <li>
                     <i class="fs-1 bi bi-telegram"></i>
-                    <a href="https://t.me/alixx24">پشتیبانی تلگرام</a>
+                    <a href="https://t.me/alixx24" class="fs-6">پشتیبانی تلگرام</a>
                 </li>
                 <li>
                     <i class="fs-1 bi bi-whatsapp"></i>
-                    <a href="#">پشتیبانی واتس اب</a>
+                    <a href="#" class="fs-6">پشتیبانی واتس اب</a>
                 </li>
                 <li>
                     <i class="fs-1 bi bi-envelope-at"></i>
-                    <a href="mailto:alixcommunity6.ir@gmail.com">پشتیبانی ایمیل</a>
+                    <a href="mailto:alixcommunity6.ir@gmail.com" class="fs-6">پشتیبانی ایمیل</a>
                 </li>
             </ul>
         </div>
@@ -75,7 +75,7 @@
                             <ol class="shop-breadcrumb bg-transparent p-0 mb-0">
                                 <li class="shop-breadcrumb-item"><a href="{{ route('home') }}"
                                         class="shop-link-muted">خانه</a></li>
-                                <li class="shop-breadcrumb-item"><a href="{{ route('customer.pricing.spotify.index') }}"
+                                <li class="shop-breadcrumb-item"><a href="{{ route('customer.pricing.chatgpt.index') }}"
                                         class="shop-link-muted">محصولات</a></li>
                                 <li class="shop-breadcrumb-item shop-active text-primary" aria-current="page">
                                     {{ $product->name }}</li>
@@ -193,10 +193,12 @@
                                                                                     </div>
                                                                                     <div class="mb-1">
                                                                                         <label for="exampleInputEmail1"
-                                                                                            class="form-label fw-bold">
-                                                                                            <i class="bi bi-envelope"></i>
-                                                                                            ایمیل برای
-                                                                                            اشتراک
+                                                                                            class="form-label fw-bold d-flex align-items-center">
+                                                                                           <i
+                                                                                                class="bi bi-envelope ms-1"></i><span
+                                                                                                class="font-modal-label">ایمیل
+                                                                                                برای اشتراک</span>
+                                                                                           
                                                                                         </label>
                                                                                         <input type="email"
                                                                                             name="email"
@@ -214,10 +216,12 @@
 
                                                                                     <div class="mb-1">
                                                                                         <label for="exampleInputEmail1"
-                                                                                            class="form-label fw-bold">
-                                                                                            <i
-                                                                                                class="bi bi-envelope ms-1"></i>شماره
-                                                                                            تماس
+                                                                                            class="form-label fw-bold d-flex align-items-center">
+                                                                                           <i
+                                                                                                class="bi bi-telephone ms-1"></i><span
+                                                                                                class="font-modal-label">
+                                                                                                 شماره تماس</span>
+                                                                                           
                                                                                         </label>
                                                                                         <input type="tel"
                                                                                             name="phone"
@@ -232,11 +236,13 @@
                                                                                     </div>
 
                                                                                     <div class="mb-1">
-                                                                                        <label for="exampleInputPassword1"
-                                                                                            class="form-label fw-bold">
-                                                                                            <i class="bi bi-lock"></i>
-                                                                                            پسورد مدنظر برای
-                                                                                            اشتراک
+                                                                                         <label for="exampleInputEmail1"
+                                                                                            class="form-label fw-bold d-flex align-items-center">
+                                                                                           <i
+                                                                                                class="bi bi-lock ms-1"></i><span
+                                                                                                class="font-modal-label">
+                                                                                                  بسورد مدنظر برای اشتراک</span>
+                                                                                           
                                                                                         </label>
                                                                                         <input type="password"
                                                                                             class="form-control"
@@ -250,10 +256,13 @@
                                                                                     </div>
 
                                                                                     <div class="mb-1">
-                                                                                        <label for="exampleInputPassword1"
-                                                                                            class="form-label fw-bold">
-                                                                                            <i class="bi bi-lock"></i>
-                                                                                            درصورتیکه دارای user name است:
+                                                                                         <label for="exampleInputEmail1"
+                                                                                            class="form-label fw-bold d-flex align-items-center">
+                                                                                           <i
+                                                                                                class="bi bi-lock ms-1"></i><span
+                                                                                                 class="font-modal-label">
+                                                                                                  درصورتیکه دارای username میباشد</span>
+                                                                                           
                                                                                         </label>
                                                                                         <input type="text"
                                                                                             class="form-control"
@@ -266,17 +275,24 @@
                                                                                         </small>
                                                                                     </div>
 
-
-                                                                                    <div
-                                                                                        class="bg-light p-2 rounded mb-1 small">
-                                                                                        <div
-                                                                                            class="d-flex align-items-center gap-2 mt-1">
-                                                                                            <span
-                                                                                                class="text-success fs-5 success-modal">✓</span>
-                                                                                            <spa class="success-modal">
-                                                                                                پشتیبانی
-                                                                                                ۲۴ ساعته</span>
-                                                                                        </div>
+                                                                                  <div class="mb-3">
+                                                                                         <label for="exampleInputEmail1"
+                                                                                            class="form-label fw-bold d-flex align-items-center">
+                                                                                           <i
+                                                                                                class="bi bi-lock ms-1"></i><span
+                                                                                                 class="font-modal-label">
+                                                                                                  درصورتیکه نیاز به توضیحات میباشد</span>
+                                                                                           
+                                                                                        </label>
+                                                                                        <input type="text"
+                                                                                            class="form-control"
+                                                                                            id="exampleInputPassword1"
+                                                                                            placeholder="نیاز فوری دارم ..."
+                                                                                            name="description"
+                                                                                            dir="ltr">
+                                                                                        <small
+                                                                                            class="form-text text-muted d-block">
+                                                                                        </small>
                                                                                     </div>
 
                                                                                     <div class="text-center">
@@ -284,8 +300,8 @@
                                                                                             class="btn btn-primary w-100 py-1 fw-bold finish-pay-btn">
                                                                                             <span>✨ تکمیل خرید و
                                                                                                 پرداخت</span>
-                                                                                            <small class="d-block font-sm"
-                                                                                               >پرداخت
+                                                                                            <small
+                                                                                                class="d-block font-sm">پرداخت
                                                                                                 امن با تمام کارت‌ها</small>
                                                                                         </button>
 
@@ -413,3 +429,5 @@
                 <script src="../js/header.js"></script>
 
             @endsection
+
+            

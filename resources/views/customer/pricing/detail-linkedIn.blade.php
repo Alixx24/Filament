@@ -41,6 +41,7 @@
 
 {{-- ====================== Content Section ====================== --}}
 @section('content')
+
     <div class="chat-wrapper">
         <button class="chat-button" id="chatToggle">
             <i class="bi bi-chat-dots fs-1"></i>
@@ -49,15 +50,15 @@
             <ul>
                 <li>
                     <i class="fs-1 bi bi-telegram"></i>
-                    <a href="https://t.me/alixx24">پشتیبانی تلگرام</a>
+                    <a href="https://t.me/alixx24" class="fs-6">پشتیبانی تلگرام</a>
                 </li>
                 <li>
                     <i class="fs-1 bi bi-whatsapp"></i>
-                    <a href="#">پشتیبانی واتس اب</a>
+                    <a href="#" class="fs-6">پشتیبانی واتس اب</a>
                 </li>
                 <li>
                     <i class="fs-1 bi bi-envelope-at"></i>
-                    <a href="mailto:alixcommunity6.ir@gmail.com">پشتیبانی ایمیل</a>
+                    <a href="mailto:alixcommunity6.ir@gmail.com" class="fs-6">پشتیبانی ایمیل</a>
                 </li>
             </ul>
         </div>
@@ -74,7 +75,7 @@
                             <ol class="shop-breadcrumb bg-transparent p-0 mb-0">
                                 <li class="shop-breadcrumb-item"><a href="{{ route('home') }}"
                                         class="shop-link-muted">خانه</a></li>
-                                <li class="shop-breadcrumb-item"><a href="{{ route('customer.pricing.spotify.index') }}"
+                                <li class="shop-breadcrumb-item"><a href="{{ route('customer.pricing.linkedin.index') }}"
                                         class="shop-link-muted">محصولات</a></li>
                                 <li class="shop-breadcrumb-item shop-active text-primary" aria-current="page">
                                     {{ $product->name }}</li>
@@ -85,10 +86,9 @@
                             <div class="row justify-content-center align-items-center">
                                 <div class="col-12">
                                     <div>
-                                        <div class="row g-0" style="margin-top:300px;">>
+                                        <div class="row g-0 mt-detail">
 
-                                            <div class="col-lg-6 col-md-12 bg-light rounded-5 border border-primary"
-                                                style="margin-top:360px; ">
+                                            <div class="col-lg-6 col-md-12 bg-light rounded-5 border border-primary mt-big">
                                                 <div class="shop-info-wrapper">
                                                     <div class="shop-title-wrapper">
                                                         <h1 class="shop-product-title">{{ $product->name }}</h1>
@@ -157,113 +157,155 @@
                                                             <div class="custom-modal unique-modal" id="uniqueModal"
                                                                 tabindex="-1" aria-hidden="true">
                                                                 <div class="custom-modal-dialog unique-modal-dialog">
-                                                                    <div class="custom-modal-content unique-modal-content">
+                                                                    <div
+                                                                        class="custom-modal-content unique-modal-content mt-modal-detail">
 
                                                                         <div
                                                                             class="custom-modal-footer unique-modal-footer">
-                                                                            <div class="px-3 py-2">
+                                                                            <div class="px-1 py-2">
+
+
                                                                                 <div
                                                                                     class="d-flex justify-content-center gap-3 mb-3 text-muted small">
-                                                                                    <span>🔒 پرداخت امن</span>
-                                                                                    <span>⚡ آنی و مطمئن</span>
-                                                                                    <span>✅ ضمانت بازگشت وجه</span>
+                                                                                    <span class="nowrapfont">🔒
+                                                                                        پرداخت امن</span>
+                                                                                    <span class="nowrapfont">⚡ آنی و
+                                                                                        مطمئن</span>
+                                                                                    <span class="nowrapfont">✅ ضمانت بازگشت
+                                                                                        وجه</span>
                                                                                 </div>
-
                                                                                 <form method="POST"
-                                                                                    action="{{ route('payment.pay', $product->price) }}">
+                                                                                    action="{{ route('payment.pay', $product) }}">
                                                                                     @csrf
-                                                                                    <!-- هشدار فوری (FOMO - ترس از دست دادن) -->
-                                                                                    <div class="alert alert-warning py-2 mb-3"
-                                                                                        role="alert"
-                                                                                        style="background-color: #fff3cd; border-color: #ffecb5;">
+                                                                                    <input type="hidden"
+                                                                                        name="product_id"
+                                                                                        value="{{ $product->id }}">
+
+                                                                                    <div class="alert alert-warning py-2 mb-1 alert-modal"
+                                                                                        role="alert">
                                                                                         <small class="d-block text-center">
-                                                                                            <span class="fw-bold">⏰ فقط تا
+                                                                                            <span class="fw-bold fs-6">⏰
+                                                                                                فقط تا
                                                                                                 ۵ ساعت
                                                                                                 آینده!</span> ایمیل دسترسی
                                                                                             ارسال می‌شود
                                                                                         </small>
                                                                                     </div>
-
-                                                                                    <div class="mb-3">
+                                                                                    <div class="mb-1">
                                                                                         <label for="exampleInputEmail1"
-                                                                                            class="form-label fw-bold">
-                                                                                            <i class="bi bi-envelope"></i>
-                                                                                            ایمیل برای
-                                                                                            اشتراک
+                                                                                            class="form-label fw-bold d-flex align-items-center">
+                                                                                           <i
+                                                                                                class="bi bi-envelope ms-1"></i><span
+                                                                                                class="font-modal-label">ایمیل
+                                                                                                برای اشتراک</span>
+                                                                                           
                                                                                         </label>
                                                                                         <input type="email"
+                                                                                            name="email"
                                                                                             class="form-control"
                                                                                             id="exampleInputEmail1"
                                                                                             aria-describedby="emailHelp"
                                                                                             placeholder="example@email.com"
-                                                                                            dir="ltr">
+                                                                                            dir="ltr" required>
                                                                                         <div id="emailHelp"
                                                                                             class="form-text small text-muted mt-1">
-                                                                                            ایمیل شما نزد ما محفوظ است
                                                                                         </div>
                                                                                     </div>
 
-                                                                                    <div class="mb-4">
-                                                                                        <label for="exampleInputPassword1"
-                                                                                            class="form-label fw-bold">
-                                                                                            <i class="bi bi-lock"></i>
-                                                                                            پسورد مدنظر برای
-                                                                                            اشتراک
+
+
+                                                                                    <div class="mb-1">
+                                                                                        <label for="exampleInputEmail1"
+                                                                                            class="form-label fw-bold d-flex align-items-center">
+                                                                                           <i
+                                                                                                class="bi bi-telephone ms-1"></i><span
+                                                                                                class="font-modal-label">
+                                                                                                 شماره تماس</span>
+                                                                                           
+                                                                                        </label>
+                                                                                        <input type="tel"
+                                                                                            name="phone"
+                                                                                            class="form-control"
+                                                                                            id="exampleInputEmail1"
+                                                                                            aria-describedby="emailHelp"
+                                                                                            placeholder="09123456789"
+                                                                                            dir="ltr" required>
+                                                                                        <div id="emailHelp"
+                                                                                            class="form-text small text-muted mt-1">
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div class="mb-1">
+                                                                                         <label for="exampleInputEmail1"
+                                                                                            class="form-label fw-bold d-flex align-items-center">
+                                                                                           <i
+                                                                                                class="bi bi-lock ms-1"></i><span
+                                                                                                class="font-modal-label">
+                                                                                                  بسورد مدنظر برای اشتراک</span>
+                                                                                           
                                                                                         </label>
                                                                                         <input type="password"
                                                                                             class="form-control"
                                                                                             id="exampleInputPassword1"
                                                                                             placeholder="••••••••"
-                                                                                            dir="ltr">
+                                                                                            name="password" dir="ltr"
+                                                                                            required>
                                                                                         <small
                                                                                             class="form-text text-muted d-block mt-1">
                                                                                         </small>
                                                                                     </div>
 
-
-                                                                                    <div class="mb-3">
-                                                                                        <label for="exampleInputEmail1"
-                                                                                            class="form-label fw-bold">
-                                                                                            <i class="bi bi-envelope"></i>
-                                                                                          شماره موبایل
+                                                                                    <div class="mb-1">
+                                                                                         <label for="exampleInputEmail1"
+                                                                                            class="form-label fw-bold d-flex align-items-center">
+                                                                                           <i
+                                                                                                class="bi bi-lock ms-1"></i><span
+                                                                                                 class="font-modal-label">
+                                                                                                  درصورتیکه دارای username میباشد</span>
+                                                                                           
                                                                                         </label>
-                                                                                        <input type="email"
+                                                                                        <input type="text"
                                                                                             class="form-control"
-                                                                                            id="exampleInputEmail1"
-                                                                                            aria-describedby="emailHelp"
-                                                                                            placeholder="example@email.com"
+                                                                                            id="exampleInputPassword1"
+                                                                                            placeholder="jack666"
+                                                                                            name="username"
                                                                                             dir="ltr">
-                                                                                        <div id="emailHelp"
-                                                                                            class="form-text small text-muted mt-1">
-                                                                                            شماره تماس برای زمانیکه تیم
-                                                                                            پشتیبانی نیاز به ارتباط با شما
-                                                                                            داشت </div>
+                                                                                        <small
+                                                                                            class="form-text text-muted d-block">
+                                                                                        </small>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="bg-light p-2 rounded mb-3 small">
-                                                                                        <div
-                                                                                            class="d-flex align-items-center gap-2 mt-1">
-                                                                                            <span
-                                                                                                class="text-success fs-5">✓</span>
-                                                                                            <span>پشتیبانی ۲۴ ساعته</span>
-                                                                                        </div>
+
+                                                                                  <div class="mb-3">
+                                                                                         <label for="exampleInputEmail1"
+                                                                                            class="form-label fw-bold d-flex align-items-center">
+                                                                                           <i
+                                                                                                class="bi bi-lock ms-1"></i><span
+                                                                                                 class="font-modal-label">
+                                                                                                  درصورتیکه نیاز به توضیحات میباشد</span>
+                                                                                           
+                                                                                        </label>
+                                                                                        <input type="text"
+                                                                                            class="form-control"
+                                                                                            id="exampleInputPassword1"
+                                                                                            placeholder="نیاز فوری دارم ..."
+                                                                                            name="description"
+                                                                                            dir="ltr">
+                                                                                        <small
+                                                                                            class="form-text text-muted d-block">
+                                                                                        </small>
                                                                                     </div>
 
                                                                                     <div class="text-center">
                                                                                         <button type="submit"
-                                                                                            class="btn btn-primary w-100 py-2 fw-bold"
-                                                                                            style="background-color: #28a745; border-color: #28a745;">
+                                                                                            class="btn btn-primary w-100 py-1 fw-bold finish-pay-btn">
                                                                                             <span>✨ تکمیل خرید و
                                                                                                 پرداخت</span>
-                                                                                            <small class="d-block mt-1"
-                                                                                                style="font-size: 0.75rem; opacity: 0.9;">پرداخت
+                                                                                            <small
+                                                                                                class="d-block font-sm">پرداخت
                                                                                                 امن با تمام کارت‌ها</small>
                                                                                         </button>
 
-                                                                                        <p
-                                                                                            class="text-muted small mt-2 mb-0">
-                                                                                            👥 بیش از ۱۰,۰۰۰ کاربر عضو
-                                                                                        </p>
+
                                                                                     </div>
                                                                                 </form>
                                                                             </div>
@@ -276,9 +318,8 @@
 
                                                         <div class="text-center">
                                                             <button type="button"
-                                                                class="w-75 custom-btn-open unique-btn-open"
-                                                                id="uniqueOpenModalBtn"
-                                                                style="background-color:green; margin-top:-25px;">
+                                                                class="w-75 custom-btn-open unique-btn-open pay-btn-modal"
+                                                                id="uniqueOpenModalBtn">
                                                                 پرداخت
                                                             </button>
                                                         </div>
@@ -388,3 +429,5 @@
                 <script src="../js/header.js"></script>
 
             @endsection
+
+            
