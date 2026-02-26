@@ -1,4 +1,4 @@
-@extends('customer.layouts.masters')
+@extends('layouts.masters')
 @section('title', 'Growvixo')
 
 @section('content')
@@ -423,10 +423,11 @@
                     </div>
                 </div>
                 <a referrerpolicy='origin' target='_blank'
-                    href='https://trustseal.enamad.ir/?id=703000&Code=oBqG9M3Yan78S2nE0Mgw1OyqNHA6eDPA'><img
-                        referrerpolicy='origin'
-                        src='https://trustseal.enamad.ir/logo.aspx?id=703000&Code=oBqG9M3Yan78S2nE0Mgw1OyqNHA6eDPA'
-                        alt='' style='cursor:pointer' code='oBqG9M3Yan78S2nE0Mgw1OyqNHA6eDPA'></a>
+                    href='#'>
+                    <img referrerpolicy='origin'
+                        src='customer/images/logo.webp'
+                        alt='' style='cursor:pointer' code=''>
+                </a>
         </div>
     </section>
 @endsection

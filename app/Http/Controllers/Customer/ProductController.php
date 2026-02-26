@@ -27,7 +27,7 @@ class ProductController extends Controller
 
     public function chatGemeniPricing()
     {
-        $products = Product::where('name', 'LIKE', '%Gemini%')
+        $products = Product::where('name', 'LIKE', '%Google%')
             ->where('status', 1)
             ->get();
 

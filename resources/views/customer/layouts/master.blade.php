@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>@yield('title', 'Growvixo')</title>
     @include('customer.layouts.head-tag')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shabnam-font/4.0.0/font-face.min.css">
 </head>
 <style>
      
