@@ -2,12 +2,8 @@
 @section('title', 'Growvixo')
 
 @section('content')
-
-
-
     <section>
         <div class="container" id="info">
-
 
             <div id="uniqueCarouselExample" class="carousel slide unique-carousel-container z-show" data-bs-ride="carousel">
                 <div class="carousel-inner unique-carousel-inner z-show">

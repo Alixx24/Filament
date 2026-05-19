@@ -1,323 +1,184 @@
-@extends('customer.layouts.master-shop')
+```html
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- ═          شروع کدهای SEO در تگ <head> صفحه            ═ -->
+<!-- ═══════════════════════════════════════════════════════════ -->
 
-{{-- ====================== Title Section ====================== --}}
-@section('title', 'Խանութի կայքի դիզայն և Social Media Marketing Հայաստանում – GrowVixo')
+@section('title', 'انواع اکانت ChatGPT + مقایسه کامل | رایگان، Go، Plus، Enterprise')
+<!-- 📌 Meta Description - خط ۲-۳: این را در تگ <meta name="description"> قرار دهید -->
+{{-- Indexing & Crawling --}}
+<meta name="robots" content="index, follow">
 
-{{-- ====================== Meta Section ====================== --}}
-@section('meta')
-    {{-- Indexing & Crawling --}}
-    <meta name="robots" content="index, follow">
+<!-- 📌 Meta Description - خط ۲-۳: این را در تگ <meta name="description"> قرار دهید -->
+<meta name="description"
+    content="کدام اکانت ChatGPT مناسب شماست؟ مقایسه کامل اکانت‌های رایگان، Go، Plus، Business و Enterprise + قیمت، ویژگی‌ها و بهترین انتخاب برای هر کاربر">
 
-    {{-- Page Title --}}
-    <title>Խանութի կայքի դիզայն և Social Media Marketing Հայաստանում – GrowVixo</title>
+<!-- 📌 Meta Keywords - خط ۴: این را در تگ <meta name="keywords"> قرار دهید -->
+<meta name="keywords"
+    content="اکانت ChatGPT, اشتراک ChatGPT, قیمت ChatGPT Plus, تفاوت اکانت ChatGPT, نسخه رایگان ChatGPT, ChatGPT Go, ChatGPT Business, ChatGPT Enterprise, خرید اکانت ChatGPT">
 
-    {{-- Meta Description --}}
-    <meta name="description"
-        content="Բարձրացրեք Ձեր e-commerce բրենդի և խանութի կայքի տեսանելիությունը Հայաստանում՝ fully responsive Խանութի կայքի դիզայն, Social Media Marketing, Instagram & Facebook ինտեգրացիա, KPI tracking և measurable sales growth. Սկսեք հիմա GrowVixo-ով.">
+<!-- 📌 Open Graph (شبکه‌های اجتماعی) - خط ۵-۱۲ -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="انواع اکانت ChatGPT + مقایسه کامل | بهترین انتخاب را پیدا کنید">
+<meta property="og:description"
+    content="مقایسه کامل اکانت‌های رایگان، Go، Plus، Business و Enterprise ChatGPT با قیمت و امکانات هر پلن">
+<meta property="og:url" content="https://yourwebsite.com/chatgpt-accounts-comparison">
+<meta property="og:image" content="https://yourwebsite.com/images/chatgpt-accounts.jpg">
+<meta property="og:site_name" content="نام سایت شما">
 
-    {{-- Author & Publisher --}}
-    <meta name="author" content="GrowVixo">
-    <meta name="publisher" content="GrowVixo">
+<!-- 📌 Twitter Card - خط ۱۳-۱۸ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="انواع اکانت ChatGPT + مقایسه کامل">
+<meta name="twitter:description" content="کدام اکانت ChatGPT مناسب شماست؟ بررسی کامل قیمت و امکانات هر پلن">
+<meta name="twitter:image" content="https://yourwebsite.com/images/chatgpt-accounts.jpg">
 
-    {{-- Open Graph (Facebook & LinkedIn) --}}
-    <meta property="og:title" content="Խանութի կայքի դիզայն և Social Media Marketing Հայաստանում – GrowVixo">
-    <meta property="og:description"
-        content="Բարձրացրեք Ձեր e-commerce բրենդի և խանութի կայքի տեսանելիությունը Հայաստանում՝ Instagram, Facebook և Telegram ինտեգրացիա, KPI tracking և measurable growth. Սկսեք հիմա GrowVixo-ով.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:image" content="{{ asset('images/social-media-marketing-banner.webp') }}">
-    <meta property="og:image:alt" content="Խանութի կայքի դիզայն Հայաստանում և Social Media Marketing ինտեգրացիա">
+<!-- 📌 Canonical URL - خط ۱۹ -->
+<link rel="canonical" href="https://yourwebsite.com/chatgpt-accounts-comparison">
 
-    {{-- Twitter Card --}}
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Խանութի կայքի դիզայն և Social Media Marketing Հայաստանում – GrowVixo">
-    <meta name="twitter:description"
-        content="Բարձրացրեք Ձեր e-commerce բրենդի և խանութի կայքի տեսանելիությունը Հայաստանում՝ Instagram, Facebook ինտեգրացիա և measurable sales growth. Սկսեք հիմա GrowVixo-ով.">
-    <meta name="twitter:image" content="{{ asset('images/social-media-marketing-banner.webp') }}">
+<!-- 📌 Robots - خط ۲۰ -->
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
-    {{-- Canonical --}}
-    <link rel="canonical" href="{{ url()->current() }}">
-@endsection
+<!-- 📌 Author & Publisher - خط ۲۱-۲۲ -->
+<meta name="author" content="علی محمدی">
+<meta name="publisher" content="نام سایت شما">
 
-{{-- ====================== Content Section ====================== --}}
-@section('content')
+<!-- 📌 Language - خط ۲۳ -->
+<meta name="language" content="fa">
 
-    <section id="social-media-marketing" class="p-4 m-3 bg-light p-mt-head border border-primary rounded-3">
-
-        <h1>Խանութի կայքի դիզայն և Social Media Marketing Հայաստանում</h1>
-        <p>
-            Հայաստանի e-commerce շուկան շարունակ աճում է, և բիզնեսների համար կարևոր է ունենալ ոչ միայն գեղեցիկ և
-            fully responsive <strong>Խանութի կայքի դիզայն</strong>, այլև արդյունավետ Social Media presence:
-            Մեր թիմը առաջարկում է ամբողջական լուծումներ՝ Facebook, Instagram, Telegram և այլ հարթակներում բրենդի
-            տեսանելիությունը բարձրացնելու, հաճախորդների ներգրավվածությունը մեծացնելու և առցանց վաճառքը առաջացնելու համար:
-        </p>
+<!-- 📌 Charset - خط ۲۴ -->
+<meta charset="UTF-8">
 
 
-        {{-- Step-by-Step Process --}}
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- ═           پایان کدهای SEO در تگ <head>                 ═ -->
+<!-- ═══════════════════════════════════════════════════════════ -->
 
-        <style>
-            .custom-card {
-                border-radius: 20px;
-                /* مرز گرد */
-                overflow: hidden;
-                box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-                /* سایه نرم */
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                /* انیمیشن حرکت */
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- ═          شروع اسکیمایی (Schema Markup) در تگ <head>    ═ -->
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "انواع اکانت ChatGPT (رایگان، Go، Plus، Business و Enterprise) + مقایسه کامل",
+        "description": "راهنمای کامل انواع اکانت ChatGPT با مقایسه ویژگی‌ها، قیمت و بهترین انتخاب برای هر کاربر",
+        "image": [
+            "https://yourwebsite.com/images/chatgpt-accounts.jpg"
+        ],
+        "author": {
+            "@type": "Person",
+            "name": "علی محمدی",
+            "url": "https://yourwebsite.com/author/ali-mohammadi"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "نام سایت شما",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://yourwebsite.com/images/logo.png",
+                "width": 600,
+                "height": 60
             }
-
-            .custom-card:hover {
-                transform: translateY(-15px);
-                /* حرکت کارت به سمت بالا */
-                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-                /* سایه بیشتر */
+        },
+        "datePublished": "2026-03-15",
+        "dateModified": "2026-03-15",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://yourwebsite.com/chatgpt-accounts-comparison"
+        },
+        "articleSection": "هوش مصنوعی",
+        "keywords": [
+            "اکانت ChatGPT",
+            "اشتراک ChatGPT",
+            "قیمت ChatGPT Plus",
+            "تفاوت اکانت ChatGPT",
+            "نسخه رایگان ChatGPT",
+            "ChatGPT Go",
+            "ChatGPT Business",
+            "ChatGPT Enterprise"
+        ],
+        "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "price": "10.00",
+            "availability": "https://schema.org/InStock",
+            "url": "https://chat.openai.com/pricing"
+        },
+        "review": {
+            "@type": "Review",
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "4.8",
+                "bestRating": "5"
+            },
+            "author": {
+                "@type": "Person",
+                "name": "کاربران ChatGPT"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "OpenAI"
             }
-
-            .card-img-top {
-                transition: transform 0.4s ease-in-out;
-                /* انیمیشن تصویر */
-            }
-
-            .custom-card:hover .card-img-top {
-                transform: scale(1.05);
-                /* بزرگ شدن تصویر هنگام هاور */
-            }
-
-            .card-body {
-                background-color: #fff;
-                padding: 25px;
-                text-align: center;
-            }
-
-            .card-title {
-                font-size: 1.5rem;
-                font-weight: bold;
-                color: #333;
-            }
-
-            .card-text {
-                color: #777;
-                font-size: 1rem;
-                margin: 15px 0;
-            }
-
-            .btn-primary {
-                background-color: #007bff;
-                border-color: #007bff;
-                font-size: 1rem;
-                font-weight: 600;
-                border-radius: 50px;
-                /* دکمه گرد */
-                padding: 12px 20px;
-            }
-
-            .btn-primary:hover {
-                background-color: #0056b3;
-                transform: translateY(-3px);
-                /* حرکت دکمه به سمت بالا */
-            }
-        </style>
-        </head>
-
-        <body>
-
-            <!-- محتوای صفحه -->
-            <div class="row justify-content-center align-items-center" style="height: 100vh;">
-                <h1 class="text-center mb-5" itemprop="name">خرید اکانت ChatGpt - قیمت مناسب و خدمات ویژه</h1>
-
-                <div class="row ms-2">
-                    <!-- کارت 1 -->
-                    <div class="col-md-3 col-sm-6 col-12 mb-4">
-                        <div class="card custom-card" itemscope itemtype="https://schema.org/Product">
-                            <div style="padding: 20px; text-align: center;">
-                                <img src="/customer/images/cgatgpt.webp" class="card-img-top"
-                                    style="max-width: 80%; height: auto; display: inline-block;"
-                                    alt="کارت معرفی اکانت جمنای با تصویر جذاب" title="کارت خرید اکانت جمنای">
-                            </div>
-                            <div class="text-center">
-                                <h2 class="card-title" itemprop="name">ChatGpt Go اکانت</h2>
-                                <p class="card-text" itemprop="description">اکانت جمنای با قیمت مناسب و ویژگی‌های خاص.
-                                    بهترین انتخاب برای خرید ارز دیجیتال.</p>
-                                <a href="#" class="btn btn-primary" aria-label="خرید اکانت جمنای 1"
-                                    itemprop="url">خرید الآن</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- کارت 2 -->
-                    <div class="col-md-3 col-sm-6 col-12 mb-4">
-                        <div class="card custom-card" itemscope itemtype="https://schema.org/Product">
-                            <div style="padding: 20px; text-align: center;">
-                                <img src="/customer/images/cgatgpt.webp" class="card-img-top"
-                                    style="max-width: 80%; height: auto; display: inline-block;"
-                                    alt="کارت معرفی اکانت جمنای با تصویر جذاب" title="کارت خرید اکانت جمنای">
-                            </div>
-                            <div class="text-center">
-                                <h2 class="card-title" itemprop="name">ChatGpt Plus اکانت</h2>
-                                <p class="card-text" itemprop="description">اکانت جمنای با امنیت بالا و قیمت رقابتی. امکان
-                                    خرید سریع و راحت.</p>
-                                <a href="#" class="btn btn-primary" aria-label="خرید اکانت جمنای 2"
-                                    itemprop="url">خرید الآن</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- کارت 3 -->
-                    <div class="col-md-3 col-sm-6 col-12 mb-4">
-                        <div class="card custom-card" itemscope itemtype="https://schema.org/Product">
-                            <div style="padding: 20px; text-align: center;">
-                                <img src="/customer/images/cgatgpt.webp" class="card-img-top"
-                                    style="max-width: 80%; height: auto; display: inline-block;"
-                                    alt="کارت معرفی اکانت جمنای با تصویر جذاب" title="کارت خرید اکانت جمنای">
-                            </div>
-                            <div class="text-center">
-                                <h2 class="card-title" itemprop="name">ChatGpt Pro اکانت</h2>
-                                <p class="card-text" itemprop="description">اکانت جمنای برای تریدرهای حرفه‌ای. قیمت مناسب و
-                                    سرعت بالا در خرید و فروش.</p>
-                                <a href="#" class="btn btn-primary" aria-label="خرید اکانت جمنای 3"
-                                    itemprop="url">خرید الآن</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- کارت 4 -->
-                    <div class="col-md-3 col-sm-6 col-12 mb-4">
-                        <div class="card custom-card" itemscope itemtype="https://schema.org/Product">
-                            <div style="padding: 20px; text-align: center;">
-                                <img src="/customer/images/cgatgpt.webp" class="card-img-top"
-                                    style="max-width: 80%; height: auto; display: inline-block;"
-                                    alt="کارت معرفی اکانت جمنای با تصویر جذاب" title="کارت خرید اکانت جمنای">
-                            </div>
-                            <div class="text-center">
-                                <h2 class="card-title" itemprop="name">اکانت جمنای 4</h2>
-                                <p class="card-text" itemprop="description">یکی دیگر از اکانت‌های با کیفیت جمنای. امنیت
-                                    بالا
-                                    و قیمت مناسب برای شما.</p>
-                                <a href="#" class="btn btn-primary" aria-label="خرید اکانت جمنای 4"
-                                    itemprop="url">خرید الآن</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <h1 class="text-center mb-5" itemprop="name">خرید اکانت جمنای - قیمت مناسب و خدمات ویژه</h1>
-                <div class="row ms-2">
-                    <!-- کارت 1 -->
-                   <div class="col-md-3 col-sm-6 col-12 mb-4">
-                        <div class="card custom-card" itemscope itemtype="https://schema.org/Product">
-                            <div style="padding: 20px; text-align: center; margin-top:65px;margin-bottom:65px;">
-                                <img src="/customer/images/gemeni.webp" class="card-img-top"
-                                    style="max-width: 80%; height: auto; display: inline-block;"
-                                    alt="کارت معرفی اکانت جمنای با تصویر جذاب" title="کارت خرید اکانت جمنای">
-                            </div>
-                            <div class="text-center">
-                                <h2 class="card-title" itemprop="name">اکانت جمنای 1</h2>
-                                <p class="card-text" itemprop="description">اکانت جمنای با قیمت مناسب و ویژگی‌های خاص.
-                                    بهترین انتخاب برای خرید ارز دیجیتال.</p>
-                                <a href="#" class="btn btn-primary" aria-label="خرید اکانت جمنای 1"
-                                    itemprop="url">خرید الآن</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- کارت 2 -->
-                    <div class="col-md-3 col-sm-6 col-12 mb-4">
-                        <div class="card custom-card" itemscope itemtype="https://schema.org/Product">
-                            <div style="padding: 20px; text-align: center; margin-top:65px;margin-bottom:65px;">
-                                <img src="/customer/images/gemeni.webp" class="card-img-top"
-                                    style="max-width: 80%; height: auto; display: inline-block;"
-                                    alt="کارت معرفی اکانت جمنای با تصویر جذاب" title="کارت خرید اکانت جمنای">
-                            </div>
-                            <div class="text-center">
-                                <h2 class="card-title" itemprop="name">اکانت جمنای 2</h2>
-                                <p class="card-text" itemprop="description">اکانت جمنای با امنیت بالا و قیمت رقابتی. امکان
-                                    خرید سریع و راحت.</p>
-                                <a href="#" class="btn btn-primary" aria-label="خرید اکانت جمنای 2"
-                                    itemprop="url">خرید الآن</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- کارت 3 -->
-                 <div class="col-md-3 col-sm-6 col-12 mb-4">
-                        <div class="card custom-card" itemscope itemtype="https://schema.org/Product">
-                            <div style="padding: 20px; text-align: center; margin-top:65px;margin-bottom:65px;">
-                                <img src="/customer/images/gemeni.webp" class="card-img-top"
-                                    style="max-width: 80%; height: auto; display: inline-block;"
-                                    alt="کارت معرفی اکانت جمنای با تصویر جذاب" title="کارت خرید اکانت جمنای">
-                            </div>
-                            <div class="text-center">
-                                <h2 class="card-title" itemprop="name">اکانت جمنای 3</h2>
-                                <p class="card-text" itemprop="description">اکانت جمنای برای تریدرهای حرفه‌ای. قیمت مناسب
-                                    و
-                                    سرعت بالا در خرید و فروش.</p>
-                                <a href="#" class="btn btn-primary" aria-label="خرید اکانت جمنای 3"
-                                    itemprop="url">خرید الآن</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- کارت 4 -->
-                     <div class="col-md-3 col-sm-6 col-12 mb-4">
-                        <div class="card custom-card" itemscope itemtype="https://schema.org/Product">
-                            <div style="padding: 20px; text-align: center; margin-top:65px;margin-bottom:65px;">
-                                <img src="/customer/images/gemeni.webp" class="card-img-top"
-                                    style="max-width: 80%; height: auto; display: inline-block;"
-                                    alt="کارت معرفی اکانت جمنای با تصویر جذاب" title="کارت خرید اکانت جمنای">
-                            </div>
-                            <div class="text-center">
-                                <h2 class="card-title" itemprop="name">اکانت جمنای 4</h2>
-                                <p class="card-text" itemprop="description">یکی دیگر از اکانت‌های با کیفیت جمنای. امنیت
-                                    بالا
-                                    و قیمت مناسب برای شما.</p>
-                                <a href="#" class="btn btn-primary" aria-label="خرید اکانت جمنای 4"
-                                    itemprop="url">خرید الآن</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <li style="margin-top: 1500px !important;">
-                <strong>Support & Continuous Growth:</strong>
-                <ul>
-                    <li>Training for internal teams → managing Social Media channels</li>
-                    <li>Continuous strategy updates → aligned with market trends</li>
-                    <li>Ongoing optimization → maximize ROI and engagement</li>
-                </ul>
-            </li>
-            </ol>
-
-            {{-- CTA Section --}}
-             <section class="lux-cta-wrapper">
-                <h2 class="lux-cta-title" style="margin-top: 66px !important;">نظرات و انتقاداتتون رو باهامون در میان بدارید</h2>
-
-
-                <form action="/contact-form" method="POST" class="lux-cta-form">
-                    <label class="lux-cta-label" for="name">نام:</label>
-                    <input class="lux-cta-input" type="text" id="name" name="name" required>
-
-                    <label class="lux-cta-label" for="email">ایمیل:</label>
-                    <input class="lux-cta-input" type="email" id="email" name="email" required>
-
-                    <label class="lux-cta-label" for="phone">شماره تماس:</label>
-                    <input class="lux-cta-input" type="tel" id="phone" name="phone" required>
-
-                    <label class="lux-cta-label" for="message">متن مدنظرتون:</label>
-                    <textarea class="lux-cta-textarea" id="message" name="message" rows="6" required></textarea>
-
-                    <button type="submit" class="lux-cta-button">تایید</button>
-                </form>
-
-                <p class="lux-cta-alt">
-                    Alternate Contact:
-                    <a href="https://wa.me/989020160120" target="_blank">WhatsApp</a> |
-                    <a href="https://t.me/yourtelegram" target="_blank">Telegram</a> |
-                    <a href="https://instagram.com/growvixo" target="_blank">Instagram</a>
-                </p>
-            </section>
-
-    </section>
-
-    <script src="../js/header.js"></script>
-
-@endsection
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "12543"
+        },
+        "hasPart": [{
+                    "@type": "SoftwareApplication",
+                    "name": "ChatGPT Free",
+                    "applicationCategory": "CommunicationApplication",
+                    "operatingSystem": "Web",
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "0",
+                        "priceCurrency": "USD"
+                    }
+                },
+                {
+                    "@type": "SoftwareApplication",
+                    "name": "ChatGPT Go",
+                    "applicationCategory": "CommunicationApplication",
+                    "operatingSystem": "Web, iOS, Android",
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "10.00",
+                        "priceCurrency": "USD"
+                    }
+                },
+                {
+                    "@type": "SoftwareApplication",
+                    "name": "ChatGPT Plus",
+                    "applicationCategory": "CommunicationApplication",
+                    "operatingSystem": "Web, iOS, Android",
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "20.00",
+                        "priceCurrency": "USD"
+                    }
+                },
+                {
+                    "@type": "SoftwareApplication",
+                    "name": "ChatGPT Business",
+                    "applicationCategory": "CommunicationApplication",
+                    "operatingSystem": "Web, iOS, Android",
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "25.00",
+                        "priceCurrency": "USD",
+                        "priceSpecification": {
+                            "@type": "PriceSpecification",
+                            "price": "25.00",
+                            "priceCurrency": "USD",
+                            "unitText": "per member per month"
+                        }
+                    }
+                },
+                {
+                    "@type": "SoftwareApplication",
+                    "name": "ChatGPT Enterprise",
+                    "applicationCategory": "CommunicationApplication",
+                    "operatingSystem

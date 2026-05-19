@@ -56,22 +56,7 @@
             font-weight: 700;
         }
 
-        .cta-btn {
-            display: inline-block;
-            padding: 14px 32px;
-            background: #4f46e5;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
-            transition: 0.3s ease;
-        }
-
-        .cta-btn:hover {
-            background: #3730a3;
-            transform: translateY(-3px);
-        }
+    
 
         /* Responsive */
         @media (max-width:768px) {

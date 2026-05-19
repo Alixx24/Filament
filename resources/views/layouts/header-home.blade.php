@@ -14,15 +14,9 @@
             <li><a href="{{ route('customer.pricing.linkedIn.index') }}">LinkedIn اکانت</a></li>
             <li><a class="btn-primary" href="{{ route('home') }}">خانه</a></li>
         </ul>
-
     </nav>
-    <style>
-        body {
-            font-family: 'Shabnam', sans-serif;
-        }
-    </style>
-    <div id="particles-js"></div>
 
+    <div id="particles-js"></div>
 
     <div class="hero-content">
         <h1>
@@ -38,9 +32,10 @@
 
         <strong>ChatGPT</strong>، <strong>Gemini</strong>، <strong>Cursor</strong>، <strong>Canva</strong>،
         <strong>Spotify</strong>,<strong>LinkedIn</strong>،
-        <br>
 
         {{-- start btn --}}
-        <a class="cta-btn mt-4" href="#" id="start">شروع کنید</a>
+        <div class="mt-4">
+            <a class="cta-btn" id="start" href="#">شروع کنید</a>
+        </div>
     </div>
 </header>

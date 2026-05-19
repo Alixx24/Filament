@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Customer;
 
 use App\Http\Controllers\Controller;
+use App\Models\Post;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -11,7 +12,7 @@ class ProductController extends Controller
     public function index()
     {
         dd('index');
-    }
+    } 
 
     public function chatGpt()
     {
@@ -22,7 +23,8 @@ class ProductController extends Controller
             ->where('status', 1)
             ->get();
 
-        return view('customer.pricing.chatgpt', compact('products'));
+        $productPost = Post::where('id', 666)->get();
+        return view('customer.pricing.chatgpt', compact('products', 'productPost'));
     }
 
     public function chatGemeniPricing()
@@ -128,7 +130,7 @@ class ProductController extends Controller
 
     public function linkedInPricing()
     {
-       $products = Product::where(function ($query) {
+        $products = Product::where(function ($query) {
             $query->where('name', 'LIKE', '%linkedIn %')
                 ->orWhere->orWhere('name', 'LIKE', '%linkedIn %');
         })
@@ -143,5 +145,24 @@ class ProductController extends Controller
         $product = Product::where('slug', $slug)->get()[0];
 
         return view('customer.pricing.detail-linkedIn', compact('product'));
+    }
+
+    public function canvaPricing()
+    {
+        $products = Product::where(function ($query) {
+            $query->where('name', 'LIKE', '%canva %')
+                ->orWhere->orWhere('name', 'LIKE', '%canva %');
+        })
+            ->where('status', 1)
+            ->get();
+
+        return view('customer.pricing.canva ', compact('products'));
+    }
+
+    public function CanvaDetail($slug)
+    {
+        $product = Product::where('slug', $slug)->get()[0];
+
+        return view('customer.pricing.detail-canva', compact('product'));
     }
 }

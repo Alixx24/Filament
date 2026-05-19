@@ -28,35 +28,40 @@ Route::get('/services/khanuti-kayqi-dizayn-armenia', [HomeController::class, 'se
 
 Route::get('/post/{slug}', [PostController::class, 'show'])->name('customer.post.show');
 
-Route::get('/اکانت-chatgpt', [ProductController::class, 'chatGpt'])->name('customer.pricing.chatgpt.index');
-Route::get('/اکانت-ai', [PostController::class, 'chatAiPricing'])->name('customer.pricing.ai.index');
-Route::get('/اکانت-gemini', [ProductController::class, 'chatGemeniPricing'])->name('customer.pricing.gemini.index');
-Route::get('/اکانت-claude', [ProductController::class, 'chatClaudePricing'])->name('customer.pricing.claude.index');
-Route::get('/اکانت-cursor', [ProductController::class, 'chatCursorPricing'])->name('customer.pricing.cursor.index');
-Route::get('/اکانت-spotify', [ProductController::class, 'spotifyPricing'])->name('customer.pricing.spotify.index');
-Route::get('/اکانت-tradingview', [ProductController::class, 'tradingViewPricing'])->name('customer.pricing.Tradingview.index');
-Route::get('/اکانت-linkedIn', [ProductController::class, 'linkedInPricing'])->name('customer.pricing.linkedIn.index');
+Route::get('/account-chatgpt', [ProductController::class, 'chatGpt'])->name('customer.pricing.chatgpt.index');
+Route::get('/account-ai', [PostController::class, 'chatAiPricing'])->name('customer.pricing.ai.index');
+Route::get('/account-gemini', [ProductController::class, 'chatGemeniPricing'])->name('customer.pricing.gemini.index');
+Route::get('/account-claude', [ProductController::class, 'chatClaudePricing'])->name('customer.pricing.claude.index');
+Route::get('/account-cursor', [ProductController::class, 'chatCursorPricing'])->name('customer.pricing.cursor.index');
+Route::get('/account-spotify', [ProductController::class, 'spotifyPricing'])->name('customer.pricing.spotify.index');
+Route::get('/account-tradingview', [ProductController::class, 'tradingViewPricing'])->name('customer.pricing.Tradingview.index');
+Route::get('/account-linkedIn', [ProductController::class, 'linkedInPricing'])->name('customer.pricing.linkedIn.index');
+Route::get('/account-canva', [ProductController::class, 'canvaPricing'])->name('customer.pricing.canva.index');
+
 
 //ChatGpt
-Route::get('/اکانت-chatgpt/{slug}', [ProductController::class, 'chatGptDetail'])->name('customer.doc.chatgpt.detail');
+Route::get('/account-chatgpt/{slug}', [ProductController::class, 'chatGptDetail'])->name('customer.doc.chatgpt.detail');
+
+//ChatGpt
+Route::get('/account-canva/{slug}', [ProductController::class, 'canvaDetail'])->name('customer.doc.canva.detail');
 
 //gemini
-Route::get('/اکانت-gemini/{slug}', [ProductController::class, 'geminiDetail'])->name('customer.doc.gemini.detail');
+Route::get('/account-gemini/{slug}', [ProductController::class, 'geminiDetail'])->name('customer.doc.gemini.detail');
 
 //claude
-Route::get('/اکانت-claude/{slug}', [ProductController::class, 'claudeDetail'])->name('customer.doc.claude.detail');
+Route::get('/account-claude/{slug}', [ProductController::class, 'claudeDetail'])->name('customer.doc.claude.detail');
 
 //claude
-Route::get('/اکانت-cursor/{slug}', [ProductController::class, 'cursorDetail'])->name('customer.doc.cursor.detail');
+Route::get('/account-cursor/{slug}', [ProductController::class, 'cursorDetail'])->name('customer.doc.cursor.detail');
 
 //claude
-Route::get('/اکانت-spotify/{slug}', [ProductController::class, 'spotifyDetail'])->name('customer.doc.spotify.detail');
+Route::get('/account-spotify/{slug}', [ProductController::class, 'spotifyDetail'])->name('customer.doc.spotify.detail');
 
 //spotify
-Route::get('/اکانت-tradingView/{slug}', [ProductController::class, 'TradingViewDetail'])->name('customer.doc.tradingview.detail');
+Route::get('/account-tradingView/{slug}', [ProductController::class, 'TradingViewDetail'])->name('customer.doc.tradingview.detail');
 
 //spotify
-Route::get('/اکانت-linkedIn/{slug}', [ProductController::class, 'linkedInDetail'])->name('customer.doc.linkedIn.detail');
+Route::get('/account-linkedIn/{slug}', [ProductController::class, 'linkedInDetail'])->name('customer.doc.linkedIn.detail');
 
 
 //ai products
@@ -66,7 +71,7 @@ Route::get('/اکانت-linkedIn/{slug}', [ProductController::class, 'linkedInDe
 // Route::get('/product/gemini-4', [AiProductsController::class, 'setPrice'])->name('product.gemini4');
 
 //pay
-Route::post('/payment', [PaymentController::class, 'pay'])->name('payment.pay'); 
+Route::post('/payment/{product}', [PaymentController::class, 'pay'])->name('payment.pay'); 
 Route::get('/payment/callback', [PaymentController::class, 'callback'])->name('payment.callback'); 
 Route::get('/payment/success', [PaymentController::class, 'success'])->name('payment.success'); 
 Route::get('/payment/failed', [PaymentController::class, 'failed'])->name('payment.failed'); 

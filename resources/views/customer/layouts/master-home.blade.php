@@ -364,7 +364,7 @@
 
     <div id="particles-js" class="style-particles" style=""></div>
 
-    @include('customer.layouts.header-home')
+    @include('customer.layouts.header')
 
     <main class="hero-section">
         @yield('content')
@@ -542,15 +542,18 @@
     const chatToggle = document.getElementById("chatToggle");
     const chatBox = document.getElementById("chatBox");
 
+    // باز و بسته شدن با دکمه
     chatToggle.addEventListener("click", function(e) {
-        e.stopPropagation(); 
+        e.stopPropagation(); // جلوگیری از بسته شدن فوری
         chatBox.classList.toggle("active");
     });
 
+    // جلوگیری از بسته شدن وقتی داخل باکس کلیک میشه
     chatBox.addEventListener("click", function(e) {
         e.stopPropagation();
     });
 
+    // بستن هنگام کلیک بیرون
     document.addEventListener("click", function() {
         chatBox.classList.remove("active");
     });

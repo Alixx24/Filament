@@ -59,7 +59,7 @@ class PostForm
                             ->default('draft')
                             ->required(),
 
-                        TagsInput::make('tags')->required(),
+                        TagsInput::make('tags')->nullable(),
                         FileUpload::make('thumbnail')->disk('public')->directory('thumbnails')->default(null),
 
                         TextInput::make('alt_text')

@@ -1,5 +1,4 @@
 <header>
-
     <div class="container">
         <div class="logo">
             <a href="{{ route('home') }}" class="text-decoration-none">
@@ -12,7 +11,7 @@
 
                 <li data-link="home" class="active">
                     <a class="menu-item me-2 fs-3" href="{{ route('home') }}">
-                        <span>خدمات</span>
+                        <span class="fw-bold">خدمات</span>
                     </a>
                 </li>
 
@@ -20,76 +19,96 @@
                     <a class="menu-item" href="{{ route('customer.pricing.chatgpt.index') }}">
                         <img src="/customer/images/cgatgpt.webp" alt="ChatGPT"
                             class="me-2 ms-2 mb-1 img-chatgpt-sidebar">
-                        <span>اکانت ChatGPT</span>
+                        <span class="fw-bold">اکانت ChatGPT</span>
                     </a>
                 </li>
 
                 <li data-link="gemini">
-                    <a class="menu-item top-btn-sidebar" href="{{ route('customer.pricing.gemini.index') }}">
+                    <a class="menu-item" href="{{ route('customer.pricing.gemini.index') }}">
                         <img src="/customer/images/gemini.webp" alt="Gemini" class="me-2 ms-2 mb-1">
-                        <span>اکانت Gemini</span>
+                        <span class="fw-bold">اکانت Gemini</span>
                     </a>
                 </li>
 
                 <li data-link="cursor">
-                    <a class="menu-item top-btn-sidebar" href="{{ route('customer.pricing.cursor.index') }}">
+                    <a class="menu-item" href="{{ route('customer.pricing.cursor.index') }}">
                         <img src="/customer/images/cursor.webp" alt="Cursor" class="me-2 ms-2 mb-1">
-                        <span>اکانت Cursor</span>
+                        <span class="fw-bold">اکانت Cursor</span>
                     </a>
                 </li>
 
                 <li data-link="claude">
-                    <a class="menu-item top-btn-sidebar" href="{{ route('customer.pricing.claude.index') }}">
+                    <a class="menu-item" href="{{ route('customer.pricing.claude.index') }}">
                         <img src="/customer/images/claude.webp" alt="Claude" class="me-2 ms-2 mb-1">
-                        <span>اکانت Claude</span>
+                        <span class="fw-bold">اکانت Claude</span>
                     </a>
                 </li>
 
                 <li data-link="spotify">
-                    <a class="menu-item top-btn-sidebar" href="{{ route('customer.pricing.spotify.index') }}">
+                    <a class="menu-item" href="{{ route('customer.pricing.spotify.index') }}">
                         <img src="/customer/images/spotify.webp" alt="Spotify" class="me-2 ms-2 mb-1">
-                        <span>اکانت Spotify</span>
+                        <span class="fw-bold">اکانت Spotify</span>
                     </a>
                 </li>
 
                 <li data-link="tradingview">
-                    <a class="menu-item top-btn-sidebar" href="{{ route('customer.pricing.Tradingview.index') }}">
+                    <a class="menu-item" href="{{ route('customer.pricing.Tradingview.index') }}">
                         <img src="/customer/images/tradingview.webp" alt="TradingView" class="me-2 ms-2 mb-1">
-                        <span>اکانت TradingView</span>
+                        <span class="fw-bold">اکانت TradingView</span>
                     </a>
                 </li>
 
                 <li data-link="tradingview">
-                    <a class="menu-item top-btn-sidebar" href="{{ route('customer.pricing.linkedIn.index') }}">
+                    <a class="menu-item" href="{{ route('customer.pricing.canva.index') }}">
+                        <img src="/customer/images/canva.webp" alt="Canva" class="me-2 ms-2 mb-1">
+                        <span class="fw-bold">اکانت canva</span>
+                    </a>
+                </li>
+
+                {{-- <li data-link="tradingview">
+                    <a class="menu-item" href="{{ route('customer.pricing.linkedIn.index') }}">
                         <img src="/customer/images/linkedIn.webp" alt="TradingView" class="me-2 ms-2 mb-1">
-                        <span>اکانت LinkedIn</span>
+                        <span class="fw-bold">اکانت LinkedIn</span>
+                    </a>
+                </li> --}}
+
+
+                <li data-link="home" class="active">
+                    <a class="menu-item me-2 fs-3" href="{{ route('home') }}">
+                        <span class="fw-bold">گیفت کارت ها</span>
+                    </a>
+                </li>
+
+                <li data-link="tradingview">
+                    <a class="menu-item" href="{{ route('customer.pricing.canva.index') }}">
+                        <img src="/customer/images/canva.webp" alt="Canva" class="me-2 ms-2 mb-1">
+                        <span class="fw-bold">گیفت کارت آمازون</span>
+                    </a>
+                </li>
+
+                <li data-link="tradingview">
+                    <a class="menu-item" href="{{ route('customer.pricing.canva.index') }}">
+                        <img src="/customer/images/canva.webp" alt="Canva" class="me-2 ms-2 mb-1">
+                        <span class="fw-bold">گیفت کارت xbox</span>
+                    </a>
+                </li>
+
+                <li data-link="tradingview">
+                    <a class="menu-item" href="{{ route('customer.pricing.canva.index') }}">
+                        <img src="/customer/images/canva.webp" alt="Canva" class="me-2 ms-2 mb-1">
+                        <span class="fw-bold">گیفت کارت xbox</span>
+                    </a>
+                </li>
+
+                <li data-link="tradingview">
+                    <a class="menu-item" href="{{ route('customer.pricing.canva.index') }}">
+                        <img src="/customer/images/canva.webp" alt="Canva" class="me-2 ms-2 mb-1">
+                        <span class="fw-bold">گیفت کارت xbox</span>
                     </a>
                 </li>
             </ul>
         </nav>
-        @auth
-            <form action="{{ route('logout.post') }}" method="POST" class="d-inline">
-                @csrf
-                <button type="submit" class="btn btn-outline-danger ms-2">
-                    Log out
-                </button>
-                <a href="{{ route('dashboard.index', auth()->user()->id) }}"
-                    class="btn btn-outline-primary ms-2">داشبورد</a>
 
-            </form>
-        @endauth
-        @if (auth()->guest())
-            <form class="d-flex">
-                <button type="button" class="btn btn-outline-success me-2" data-bs-toggle="modal"
-                    data-bs-target="#loginModal">
-                    ورود
-                </button>
-
-
-                <a class="btn btn-outline-primary" type="submit" data-bs-toggle="modal"
-                    data-bs-target="#registerModal">ثبت نام</a>
-            </form>
-        @endif
         <div class="hamburger" id="hamburger">
             <span></span>
             <span></span>

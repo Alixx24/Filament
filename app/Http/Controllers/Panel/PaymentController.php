@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\DB;
 use App\Notifications\OrderStoredNotification;
+use Illuminate\Support\Facades\Validator;
 
 class PaymentController extends Controller
 {
@@ -22,20 +23,38 @@ class PaymentController extends Controller
 
         $order = Order::find(1);
 
-        $amountInRial = (int) $product->price; 
+        $amountInRial = (int) $product->price;
+
+
 
         $invoice = (new Invoice)->amount($amountInRial);
+
         $inputs = $request->all();
+        $validator = Validator::make($inputs, [
+            'email' => ['required', 'email', 'max:255'],
+            'username' => ['string', 'max:100', 'nullable'],
+            'password' => ['required', 'string'],
+            'phone' => ['nullable', 'regex:/^\+?\d{10,14}$/'],
+            'description' => ['string', 'nullable'],
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'errors' => $validator->errors()
+            ], 422);
+        }
+        $validated = $validator->validated();
         $order = Order::create([
             'user_id' => 13,
             'product_id' => $product->id,
-            'email' => $inputs['email'],
-            'username' => $inputs['username'],
-            'password' => $inputs['password'],
-            'phone' => $inputs['phone'],
+            'email' => $validated['email'],
+            'username' => $validated['username'] ?? null,
+            'description' => $validated['description'] ?? null,
+            'phone' => $validated['phone'] ?? null,
+            'password' => $validated['password'],
             'amount' => $amountInRial,
             'status' => 'pending',
-
+            'product_id' => $product->id,
         ]);
         try {
             $payment = Payment::via('zarinpal')->purchase($invoice, function ($driver, $transactionId) use ($order, $amountInRial) {
@@ -47,6 +66,7 @@ class PaymentController extends Controller
                     'amount' => $amountInRial,
                     'currency' => 'R',
                     'status' => 'pending',
+                    'title' => '',
                 ]);
                 Notification::route('mail', 'alixcommunity6.ir@gmail.com')
                     ->notify(new OrderStoredNotification($order));

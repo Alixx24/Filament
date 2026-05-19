@@ -796,7 +796,7 @@ header {
     background-color: #333;
     color: #fff;
     padding: 40px 0;
-    z-index: 1000 !important;
+    z-index: 0 !important;
 }
 
 
@@ -1034,3 +1034,19 @@ header {
     opacity: .5;
 }
 
+
+    @media (min-width: 1200px) {
+            .logo-primary {
+                margin-left: -176px !important;
+            }
+
+            .logo-secondary {
+                margin-left: 0px !important;
+            }
+        }
+
+.nav-menu {
+    max-height: 100vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* روان‌تر در موبایل */
+}
