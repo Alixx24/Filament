@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-@yield('lang')
-
+<html @yield('lang')>
 <head>
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <title>@yield('title', 'HRM Project')</title>
+    @yield('meta')
 
     @include('customer.layouts.head-tag-content')
-
 </head>
 
 <body class="bg-of-body">
