@@ -34,7 +34,7 @@ class PaymentController extends Controller
             'email' => ['required', 'email', 'max:255'],
             'username' => ['string', 'max:100', 'nullable'],
             'password' => ['required', 'string'],
-            'phone' => ['nullable', 'regex:/^\+?\d{10,14}$/'],
+            'phone' => ['nullable'],
             'description' => ['string', 'nullable'],
         ]);
 

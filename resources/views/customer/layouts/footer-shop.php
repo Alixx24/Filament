@@ -1,4 +1,4 @@
- <section class=" ">
+ <section class="fixed-bottom text-white text-center py-3">
         <footer class="text-center  div-footer">
             <div class="container ">
                 <p>
