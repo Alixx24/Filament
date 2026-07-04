@@ -3055,18 +3055,28 @@
           }
       }
 
-          @media (min-width: 1200px) {
-            .logo-primary {
-                margin-left: -176px !important;
-            }
+      @media (min-width: 1200px) {
+          .logo-primary {
+              margin-left: -176px !important;
+          }
 
-            .logo-secondary {
-                margin-left: 0px !important;
-            }
-        }
+          .logo-secondary {
+              margin-left: 0px !important;
+          }
+      }
 
-.nav-menu {
-    max-height: 100vh;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch; /* روان‌تر در موبایل */
-}
+      .nav-menu {
+          max-height: 100vh;
+          overflow-y: auto;
+          -webkit-overflow-scrolling: touch;
+      }
+
+      .img-tradingview-hom {
+          max-width: 80%;
+          height: auto;
+      }
+
+      .img-canva-home {
+          max-width: 80%;
+          height: auto;
+      }
