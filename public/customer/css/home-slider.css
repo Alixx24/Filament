@@ -1,0 +1,388 @@
+                #info {
+                    overflow-x: clip;
+                }
+
+                @supports not (overflow-x: clip) {
+                    #info {
+                        overflow-x: hidden;
+                    }
+                }
+
+                .p3d {
+                    --p3d-radius: 18px;
+                    /* میزان جابه‌جایی اسلاید هنگام ورود/خروج: در موبایل کوچک می‌شود */
+                    --p3d-shift: clamp(24px, 6vw, 70px);
+                    position: relative;
+                    direction: ltr;
+                    width: 100%;
+                    max-width: 100%;
+                    aspect-ratio: 16 / 6;
+                    min-height: 260px;
+                    max-height: 72vh;
+                    border-radius: var(--p3d-radius);
+                    isolation: isolate;
+                    overflow: visible;
+                }
+
+                /* پس‌زمینه‌ی محو: بیرون‌زدگی فقط عمودی (بالا/پایین)،
+               از چپ و راست دقیقاً هم‌عرض اسلایدر — دیگر از کادر بیرون نمی‌زند */
+                .p3d__bg {
+                    position: absolute;
+                    inset: -20px 0;
+                    z-index: -1;
+                    overflow: hidden;
+                    border-radius: calc(var(--p3d-radius) + 8px);
+                    pointer-events: none;
+                }
+
+                .p3d__bg-layer {
+                    position: absolute;
+                    inset: 0;
+                    background-size: cover;
+                    background-position: center;
+                    filter: blur(22px) brightness(.65) saturate(1.1);
+                    transform: scale(1.15);
+                    opacity: 0;
+                    transition: opacity 1.1s ease;
+                }
+
+                .p3d__bg-layer.is-visible {
+                    opacity: 1;
+                }
+
+                .p3d__stage {
+                    position: absolute;
+                    inset: 0;
+                    perspective: 1000px;
+                }
+
+                .p3d__inner {
+                    position: absolute;
+                    inset: 0;
+                    transform-style: preserve-3d;
+                    will-change: transform;
+                }
+
+                .p3d__slide {
+                    position: absolute;
+                    inset: 0;
+                    margin: 0;
+                    border-radius: var(--p3d-radius);
+                    overflow: hidden;
+                    opacity: 0;
+                    pointer-events: none;
+                    transform: translateX(calc(var(--p3d-shift) * var(--dir, 1))) scale(.96);
+                    transition: opacity .9s cubic-bezier(.4, 0, .2, 1),
+                        transform .9s cubic-bezier(.4, 0, .2, 1);
+                    box-shadow: 0 25px 60px -20px rgba(0, 0, 0, .55);
+                }
+
+                .p3d__slide.is-current {
+                    opacity: 1;
+                    pointer-events: auto;
+                    transform: translateX(0) scale(1);
+                }
+
+                .p3d__slide.is-leaving {
+                    opacity: 0;
+                    transform: translateX(calc(var(--p3d-shift) * var(--dir, 1) * -1)) scale(1.05);
+                }
+
+                .p3d__img {
+                    position: absolute;
+                    inset: 0;
+                    background-size: cover;
+                    background-position: center;
+                    transform: translate3d(calc(var(--tx, 0px) * -1), calc(var(--ty, 0px) * -1), 0) scale(1.12);
+                    will-change: transform;
+                }
+
+                .p3d__arrow {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    z-index: 5;
+                    width: 46px;
+                    height: 46px;
+                    border: 0;
+                    border-radius: 50%;
+                    display: grid;
+                    place-items: center;
+                    background: rgba(255, 255, 255, .18);
+                    color: #fff;
+                    font-size: 1.4rem;
+                    line-height: 1;
+                    cursor: pointer;
+                    backdrop-filter: blur(6px);
+                    transition: background .3s ease, transform .3s ease;
+                }
+
+                .p3d__arrow:hover,
+                .p3d__arrow:focus-visible {
+                    background: rgba(255, 255, 255, .35);
+                    transform: translateY(-50%) scale(1.08);
+                    outline: none;
+                }
+
+                .p3d__arrow:focus-visible {
+                    box-shadow: 0 0 0 3px rgba(255, 255, 255, .6);
+                }
+
+                .p3d__arrow--prev {
+                    left: 12px;
+                }
+
+                .p3d__arrow--next {
+                    right: 12px;
+                }
+
+                .p3d__dots {
+                    position: absolute;
+                    left: 50%;
+                    bottom: 12px;
+                    transform: translateX(-50%);
+                    z-index: 5;
+                    display: flex;
+                    gap: 8px;
+                }
+
+                .p3d__dot {
+                    width: 9px;
+                    height: 9px;
+                    border: 0;
+                    border-radius: 999px;
+                    background: rgba(255, 255, 255, .45);
+                    cursor: pointer;
+                    padding: 0;
+                    transition: width .35s ease, background .35s ease;
+                }
+
+                .p3d__dot.is-active {
+                    width: 26px;
+                    background: #fff;
+                }
+
+                @media (max-width: 650px) {
+                    .p3d {
+                        aspect-ratio: 16 / 9;
+                        min-height: 190px;
+                    }
+
+                    /* در موبایل چرخش سه‌بعدی خاموش است؛ پس همه چیز داخل کادر بماند */
+                    .p3d__bg {
+                        inset: 0;
+                    }
+
+                    .p3d__slide {
+                        box-shadow: 0 12px 30px -14px rgba(0, 0, 0, .5);
+                    }
+
+                    .p3d__arrow {
+                        width: 38px;
+                        height: 38px;
+                        font-size: 1.1rem;
+                    }
+                }
+
+                @media (prefers-reduced-motion: reduce) {
+
+                    .p3d__slide,
+                    .p3d__bg-layer {
+                        transition-duration: .01s;
+                    }
+                }
+
+                body {
+                    margin: 0;
+                    font-family: tahoma, sans-serif;
+                    background: #f8fafc;
+                }
+
+                /* HERO SECTION */
+                .hero {
+                    width: 100%;
+                    padding: 100px 20px;
+                    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+                }
+
+                .hero-content {
+                    max-width: 1200px;
+                    /* عرض عریض */
+                    width: 100%;
+                    margin: 0 auto;
+                }
+
+                .hero-content h1 {
+                    font-size: 48px;
+                    line-height: 1.5;
+                    font-weight: 800;
+                    margin-bottom: 30px;
+                    color: #111827;
+                }
+
+                .hero-content p {
+                    max-width: 950px;
+                    /* پاراگراف عریض */
+                    font-size: 18px;
+                    line-height: 2;
+                    color: #4b5563;
+                    margin-bottom: 40px;
+                }
+
+                .hero-content strong {
+                    color: #4f46e5;
+                    font-weight: 700;
+                }
+
+
+
+                /* Responsive */
+                @media (max-width:768px) {
+                    .hero {
+                        padding: 70px 15px;
+                    }
+
+                    .hero-content h1 {
+                        font-size: 32px;
+                    }
+
+                    .hero-content p {
+                        font-size: 16px;
+                    }
+                }
+
+                .faq-acc {
+                    width: 700px;
+                    max-width: 100%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    font-family: 'Source Sans Pro', sans-serif;
+                    direction: ltr;
+                    font-size: 16px;
+                    box-sizing: border-box;
+                    position: relative;
+                    z-index: 50;
+                }
+
+                .faq-acc *,
+                .faq-acc *::before,
+                .faq-acc *::after {
+                    box-sizing: border-box;
+                }
+
+                .faq-acc__main-title {
+                    margin-bottom: 40px;
+                    text-align: center;
+                    font-family: 'Abril Fatface', cursive;
+                    font-size: 32px;
+                    color: #2e8074;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .faq-acc__main-title::before,
+                .faq-acc__main-title::after {
+                    content: '';
+                    display: block;
+                    margin: 0 20px;
+                    flex: 1;
+                    border-bottom: 1px solid #2e8074;
+                }
+
+                /* رادیوها مخفی‌اند؛ کلیک روی label تیکشان می‌زند */
+                .faq-acc input[type='radio'] {
+                    display: none;
+                }
+
+                .faq-acc__item {
+                    display: block;
+                    margin-bottom: 10px;
+                    position: relative;
+                    z-index: 51;
+                }
+
+                .faq-acc__title {
+                    padding: 10px 30px;
+                    border-radius: 30px;
+                    color: #2e8074;
+                    border: 1px solid;
+                    font-weight: 700;
+                    cursor: pointer;
+                    transition: all 0.2s;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                .faq-acc__title::after {
+                    content: '\25bc';
+                    display: inline-block;
+                    font-size: 12px;
+                    transition: transform 0.2s;
+                }
+
+                .faq-acc__content {
+                    width: 95%;
+                    margin: 0 auto;
+                    padding: 0 30px;
+                    line-height: 1.6;
+                    color: #2e8074;
+                    border: 1px solid;
+                    border-width: 0 1px;
+                    height: 0;
+                    opacity: 0;
+                    visibility: hidden;
+                    overflow: hidden;
+                    transition: all 0.2s;
+                }
+
+                /* ---- منطق باز شدن ---- */
+                .faq-acc input[type='radio']:checked+.faq-acc__item .faq-acc__title {
+                    color: #fff;
+                    border-color: #2e8074;
+                    background-color: #2e8074;
+                }
+
+                .faq-acc input[type='radio']:checked+.faq-acc__item .faq-acc__title::after {
+                    transform: rotate(180deg);
+                }
+
+                .faq-acc input[type='radio']:checked+.faq-acc__item .faq-acc__content {
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                    height: auto;
+                    opacity: 1;
+                    visibility: visible;
+                    transition: all 0.3s, opacity 0.7s;
+                }
+
+                @media (max-width: 768px) {
+                    .faq-acc {
+                        width: auto;
+                        padding: 0 20px;
+                    }
+                }
+
+                .faq-acc {
+                    direction: rtl;
+                    font-family: inherit;
+                    /* فونت فارسی خود سایت */
+                }
+
+                .faq-acc__main-title {
+                    font-family: inherit;
+                    /* Abril Fatface حروف فارسی ندارد */
+                    font-weight: 700;
+                }
+
+                .faq-acc__content p:last-child,
+                .faq-acc__content ul:last-child {
+                    margin-bottom: 0;
+                }
+
+                .faq-acc__content ul {
+                    margin: 10px 0 0;
+                    padding-right: 20px;
+                    padding-left: 0;
+                }
